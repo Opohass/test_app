@@ -6,14 +6,14 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>905</width>
-    <height>525</height>
+    <width>941</width>
+    <height>565</height>
    </rect>
   </property>
   <property name="minimumSize">
    <size>
-    <width>905</width>
-    <height>525</height>
+    <width>941</width>
+    <height>565</height>
    </size>
   </property>
   <property name="maximumSize">
@@ -36,25 +36,62 @@
      <rect>
       <x>10</x>
       <y>10</y>
-      <width>888</width>
-      <height>487</height>
+      <width>925</width>
+      <height>527</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout_2">
      <item>
-      <widget class="QLabel" name="label_question">
-       <property name="font">
-        <font>
-         <pointsize>20</pointsize>
-        </font>
-       </property>
-       <property name="text">
-        <string>You are building an ML model to detect anomalies in real-time sensor data.&lt;br&gt;You will use Pub/Sub to handle incoming requests.&lt;br&gt; You want to store the results for analytics and visualization.&lt;br&gt;How should you configure the pipeline?</string>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
-       </property>
-      </widget>
+      <layout class="QHBoxLayout" name="horizontalLayout_7">
+       <item>
+        <widget class="QLabel" name="label_question">
+         <property name="minimumSize">
+          <size>
+           <width>800</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>20</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>You are building an ML model to detect anomalies in real-time sensor data.&lt;br&gt;You will use Pub/Sub to handle incoming requests.&lt;br&gt; You want to store the results for analytics and visualization.&lt;br&gt;How should you configure the pipeline?</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout">
+         <item>
+          <widget class="QLabel" name="label_timer">
+           <property name="font">
+            <font>
+             <family>Arial</family>
+             <pointsize>16</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>time&lt;br&gt;remening</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_2">
+           <property name="text">
+            <string>TextLabel</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
      </item>
      <item>
       <layout class="QGridLayout" name="gridLayout_2">
