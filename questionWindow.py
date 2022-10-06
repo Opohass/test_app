@@ -9,10 +9,16 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+import json
+import os
 
 
 class Ui_QuestionWindow(object):
-    def setupUi(self, QuestionWindow):
+    def setupUi(self, QuestionWindow, data_file, show_ans, is_timer, num_questions):
+        self.quiz_data = data_file
+        self.show_answers = show_ans
+        self.is_timer = is_timer
+        self.num_questions = num_questions
         QuestionWindow.setObjectName("QuestionWindow")
         QuestionWindow.resize(941, 565)
         QuestionWindow.setMinimumSize(QtCore.QSize(941, 565))
@@ -146,11 +152,11 @@ class Ui_QuestionWindow(object):
         self.pushButton_next.setText(_translate("QuestionWindow", "next question"))
 
 
-if __name__ == "__main__":
-    import sys
-    app = QtWidgets.QApplication(sys.argv)
-    QuestionWindow = QtWidgets.QMainWindow()
-    ui = Ui_QuestionWindow()
-    ui.setupUi(QuestionWindow)
-    QuestionWindow.show()
-    sys.exit(app.exec_())
+# if __name__ == "__main__":
+#     import sys
+#     app = QtWidgets.QApplication(sys.argv)
+#     QuestionWindow = QtWidgets.QMainWindow()
+#     ui = Ui_QuestionWindow()
+#     ui.setupUi(QuestionWindow)
+#     QuestionWindow.show()
+#     sys.exit(app.exec_())
