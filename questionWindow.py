@@ -165,7 +165,13 @@ class Ui_QuestionWindow(object):
         #for test
         print(f"log: {self.curent_ques_number}")
         if self.curent_ques_number<self.num_questions:
+            #change previous button label
+            if self.pushButton_previous.text()=="no more": self.pushButton_previous.setText("previous question")
+            
+            
             #!todo change label to new question in position self.curent_ques_number
+            #enbale previous_Button
+            self.pushButton_previous.setEnabled(True)
             pass
         elif self.curent_ques_number==self.num_questions:
             #!todo change nextquestion label to end test
@@ -180,13 +186,12 @@ class Ui_QuestionWindow(object):
     def previous_question(self):
         #for test
         print(f"log: {self.curent_ques_number}")
-        if self.curent_ques_number>0:
-            self.curent_ques_number-=1
-            #!todo change label to new question in position self.curent_ques_number
-            pass
-        else:
+        self.curent_ques_number-=1
+        #!todo change label to new question in position self.curent_ques_number
+        if self.curent_ques_number==0:
             #!todo change nextquestion label to end test
             self.pushButton_previous.setText("no more")
+            self.pushButton_previous.setEnabled(False)
             pass
     
         
