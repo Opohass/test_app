@@ -9,10 +9,12 @@
 
 
 import datetime
+from operator import imod
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtCore import QTimer,QDateTime
 import json
 import os
+import numpy as np
 
 
 class Ui_QuestionWindow(object):
@@ -21,6 +23,7 @@ class Ui_QuestionWindow(object):
         self.show_answers = show_ans
         self.is_timer = is_timer
         self.num_questions = num_questions
+        self.curent_ques_number =0
         QuestionWindow.setObjectName("QuestionWindow")
         QuestionWindow.resize(941, 565)
         QuestionWindow.setMinimumSize(QtCore.QSize(941, 565))
@@ -135,7 +138,11 @@ class Ui_QuestionWindow(object):
 
         self.retranslateUi(QuestionWindow)
         QtCore.QMetaObject.connectSlotsByName(QuestionWindow)
-
+        #button
+        self.pushButton_next.clicked.connect(self.next_question)
+        self.pushButton_previous.clicked.connect(self.previous_question)
+        #SaveAnswer
+        self.UserAnswer=np.zeros(self.num_questions)
         #timer'
         self.quiz_timeMins=120
         self.label_2.setText("02:00:00")
@@ -152,6 +159,39 @@ class Ui_QuestionWindow(object):
             #!end queq?
         else:
             self.label_2.setText(str(datetime.timedelta(seconds=time)))  
+            
+    def next_question(self):
+        self.curent_ques_number+=1
+        #for test
+        print(f"log: {self.curent_ques_number}")
+        if self.curent_ques_number<self.num_questions:
+            #!todo change label to new question in position self.curent_ques_number
+            pass
+        elif self.curent_ques_number==self.num_questions:
+            #!todo change nextquestion label to end test
+            self.pushButton_next.setText("end test")
+            pass
+        else:
+            #!todo end test
+             #for test
+            print("log: end test")
+            pass
+    
+    def previous_question(self):
+        #for test
+        print(f"log: {self.curent_ques_number}")
+        if self.curent_ques_number>0:
+            self.curent_ques_number-=1
+            #!todo change label to new question in position self.curent_ques_number
+            pass
+        else:
+            #!todo change nextquestion label to end test
+            self.pushButton_previous.setText("no more")
+            pass
+    
+        
+        
+    
     def retranslateUi(self, QuestionWindow):
         _translate = QtCore.QCoreApplication.translate
         QuestionWindow.setWindowTitle(_translate("QuestionWindow", "MainWindow"))

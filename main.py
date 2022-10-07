@@ -12,6 +12,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 from questionWindow import Ui_QuestionWindow
 import json
 import os
+from random import sample
 
 
 class Ui_MainWindow(object):
@@ -237,6 +238,9 @@ class Ui_MainWindow(object):
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
+    
+    
+    
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
@@ -264,8 +268,13 @@ class Ui_MainWindow(object):
         show_ans = self.radioButton_show.isChecked()
         is_timer = self.radioButton_timer.isChecked()
         num_questions = self.spinBox_questiionNum.value()
+        #sample questions
+        random_questions_number = sample(self.data["questions"].keys(),k=num_questions)
+        #user_questions==[questions ,answers ,images ]
+        user_questions= [[self.data["questions"][i],self.data["answers"][i] ,self.data["images"][i] ] for i in random_questions_number ]
+      
         self.ui = Ui_QuestionWindow()
-        self.ui.setupUi(self.MainWindow, self.data, show_ans, is_timer, num_questions)
+        self.ui.setupUi(self.MainWindow, user_questions, show_ans, is_timer, num_questions)
         self.MainWindow.show()
             
 
