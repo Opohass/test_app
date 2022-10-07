@@ -66,46 +66,46 @@ class Ui_QuestionWindow(object):
         self.verticalLayout_2.addLayout(self.horizontalLayout_7)
         self.gridLayout_2 = QtWidgets.QGridLayout()
         self.gridLayout_2.setObjectName("gridLayout_2")
-        self.radioButton_c = QtWidgets.QRadioButton(self.verticalLayoutWidget)
-        self.radioButton_c.setObjectName("radioButton_c")
-        self.gridLayout_2.addWidget(self.radioButton_c, 2, 0, 1, 1)
-        self.radioButton_b = QtWidgets.QRadioButton(self.verticalLayoutWidget)
-        self.radioButton_b.setObjectName("radioButton_b")
-        self.gridLayout_2.addWidget(self.radioButton_b, 1, 0, 1, 1)
-        self.label_b = QtWidgets.QLabel(self.verticalLayoutWidget)
-        self.label_b.setMinimumSize(QtCore.QSize(840, 70))
-        font = QtGui.QFont()
-        font.setPointSize(16)
-        self.label_b.setFont(font)
-        self.label_b.setObjectName("label_b")
-        self.gridLayout_2.addWidget(self.label_b, 1, 1, 1, 1)
-        self.label_a = QtWidgets.QLabel(self.verticalLayoutWidget)
-        self.label_a.setMinimumSize(QtCore.QSize(840, 70))
-        font = QtGui.QFont()
-        font.setPointSize(16)
-        self.label_a.setFont(font)
-        self.label_a.setObjectName("label_a")
-        self.gridLayout_2.addWidget(self.label_a, 0, 1, 1, 1)
-        self.radioButton_a = QtWidgets.QRadioButton(self.verticalLayoutWidget)
-        self.radioButton_a.setObjectName("radioButton_a")
-        self.gridLayout_2.addWidget(self.radioButton_a, 0, 0, 1, 1)
-        self.radioButton_d = QtWidgets.QRadioButton(self.verticalLayoutWidget)
-        self.radioButton_d.setObjectName("radioButton_d")
-        self.gridLayout_2.addWidget(self.radioButton_d, 3, 0, 1, 1)
-        self.label_c = QtWidgets.QLabel(self.verticalLayoutWidget)
-        self.label_c.setMinimumSize(QtCore.QSize(840, 70))
-        font = QtGui.QFont()
-        font.setPointSize(16)
-        self.label_c.setFont(font)
-        self.label_c.setObjectName("label_c")
-        self.gridLayout_2.addWidget(self.label_c, 2, 1, 1, 1)
-        self.label_d = QtWidgets.QLabel(self.verticalLayoutWidget)
-        self.label_d.setMinimumSize(QtCore.QSize(840, 70))
-        font = QtGui.QFont()
-        font.setPointSize(16)
-        self.label_d.setFont(font)
-        self.label_d.setObjectName("label_d")
-        self.gridLayout_2.addWidget(self.label_d, 3, 1, 1, 1)
+        # self.radioButton_c = QtWidgets.QRadioButton(self.verticalLayoutWidget)
+        # self.radioButton_c.setObjectName("radioButton_c")
+        # self.gridLayout_2.addWidget(self.radioButton_c, 2, 0, 1, 1)
+        # self.radioButton_b = QtWidgets.QRadioButton(self.verticalLayoutWidget)
+        # self.radioButton_b.setObjectName("radioButton_b")
+        # self.gridLayout_2.addWidget(self.radioButton_b, 1, 0, 1, 1)
+        # self.label_b = QtWidgets.QLabel(self.verticalLayoutWidget)
+        # self.label_b.setMinimumSize(QtCore.QSize(840, 70))
+        # font = QtGui.QFont()
+        # font.setPointSize(16)
+        # self.label_b.setFont(font)
+        # self.label_b.setObjectName("label_b")
+        # self.gridLayout_2.addWidget(self.label_b, 1, 1, 1, 1)
+        # self.label_a = QtWidgets.QLabel(self.verticalLayoutWidget)
+        # self.label_a.setMinimumSize(QtCore.QSize(840, 70))
+        # font = QtGui.QFont()
+        # font.setPointSize(16)
+        # self.label_a.setFont(font)
+        # self.label_a.setObjectName("label_a")
+        # self.gridLayout_2.addWidget(self.label_a, 0, 1, 1, 1)
+        # self.radioButton_a = QtWidgets.QRadioButton(self.verticalLayoutWidget)
+        # self.radioButton_a.setObjectName("radioButton_a")
+        # self.gridLayout_2.addWidget(self.radioButton_a, 0, 0, 1, 1)
+        # self.radioButton_d = QtWidgets.QRadioButton(self.verticalLayoutWidget)
+        # self.radioButton_d.setObjectName("radioButton_d")
+        # self.gridLayout_2.addWidget(self.radioButton_d, 3, 0, 1, 1)
+        # self.label_c = QtWidgets.QLabel(self.verticalLayoutWidget)
+        # self.label_c.setMinimumSize(QtCore.QSize(840, 70))
+        # font = QtGui.QFont()
+        # font.setPointSize(16)
+        # self.label_c.setFont(font)
+        # self.label_c.setObjectName("label_c")
+        # self.gridLayout_2.addWidget(self.label_c, 2, 1, 1, 1)
+        # self.label_d = QtWidgets.QLabel(self.verticalLayoutWidget)
+        # self.label_d.setMinimumSize(QtCore.QSize(840, 70))
+        # font = QtGui.QFont()
+        # font.setPointSize(16)
+        # self.label_d.setFont(font)
+        # self.label_d.setObjectName("label_d")
+        # self.gridLayout_2.addWidget(self.label_d, 3, 1, 1, 1)
         self.verticalLayout_2.addLayout(self.gridLayout_2)
         self.horizontalLayout = QtWidgets.QHBoxLayout()
         self.horizontalLayout.setObjectName("horizontalLayout")
@@ -136,13 +136,18 @@ class Ui_QuestionWindow(object):
         self.statusbar.setObjectName("statusbar")
         QuestionWindow.setStatusBar(self.statusbar)
 
-        self.retranslateUi(QuestionWindow)
+        # self.retranslateUi(QuestionWindow)
         QtCore.QMetaObject.connectSlotsByName(QuestionWindow)
         #button
         self.pushButton_next.clicked.connect(self.next_question)
         self.pushButton_previous.clicked.connect(self.previous_question)
         #SaveAnswer
         self.UserAnswer=np.zeros(self.num_questions)
+        # Call Update Question
+        self.update_question()
+        # Set Button Text
+        self.pushButton_next.setText("Next Question")
+        self.pushButton_previous.setText("No Previous")
         #timer'
         self.quiz_timeMins=120
         self.label_2.setText("02:00:00")
@@ -164,18 +169,19 @@ class Ui_QuestionWindow(object):
         self.curent_ques_number+=1
         #for test
         print(f"log: {self.curent_ques_number}")
-        if self.curent_ques_number<self.num_questions:
+        self.update_question()
+        if self.curent_ques_number<self.num_questions-1:
             #change previous button label
-            if self.pushButton_previous.text()=="no more": self.pushButton_previous.setText("previous question")
+            if self.pushButton_previous.text()=="No Previous": self.pushButton_previous.setText("previous question")
             
             
             #!todo change label to new question in position self.curent_ques_number
             #enbale previous_Button
             self.pushButton_previous.setEnabled(True)
             pass
-        elif self.curent_ques_number==self.num_questions:
+        elif self.curent_ques_number==self.num_questions-1:
             #!todo change nextquestion label to end test
-            self.pushButton_next.setText("end test")
+            self.pushButton_next.setText("End Test")
             pass
         else:
             #!todo end test
@@ -188,11 +194,37 @@ class Ui_QuestionWindow(object):
         print(f"log: {self.curent_ques_number}")
         self.curent_ques_number-=1
         #!todo change label to new question in position self.curent_ques_number
+        self.update_question()
         if self.curent_ques_number==0:
             #!todo change nextquestion label to end test
-            self.pushButton_previous.setText("no more")
+            self.pushButton_previous.setText("No Previous")
             self.pushButton_previous.setEnabled(False)
             pass
+        if self.curent_ques_number == self.num_questions - 2:
+            self.pushButton_next.setText("Next Question")
+            self.pushButton_previous.setText("Previous Question")
+            
+    def update_question(self):
+        self.clear_layout()
+        self.label_question.setText(self.quiz_data[self.curent_ques_number][0])
+        pos = 0
+        for i in self.quiz_data[self.curent_ques_number][1].keys():
+            radio = QtWidgets.QRadioButton(self.verticalLayoutWidget)
+            radio.setObjectName(f"radioButton_{i}")
+            self.gridLayout_2.addWidget(radio, pos, 0, 1, 1)
+            label = QtWidgets.QLabel(self.verticalLayoutWidget)
+            label.setMinimumSize(QtCore.QSize(840, 70))
+            font = QtGui.QFont()
+            font.setPointSize(16)
+            label.setFont(font)
+            label.setObjectName(f"label_ans_{i}")
+            label.setText(i + ". " + self.quiz_data[self.curent_ques_number][1][i][0])
+            self.gridLayout_2.addWidget(label, pos, 1, 1, 1)
+            if self.UserAnswer[self.curent_ques_number] == i:
+                radio.toggle(True)
+            pos += 1
+            
+            
     
         
         
@@ -213,6 +245,10 @@ class Ui_QuestionWindow(object):
         self.label_d.setText(_translate("QuestionWindow", "1 = BigQuery, 2 = AI Platform, 3 = Cloud Storage"))
         self.pushButton_previous.setText(_translate("QuestionWindow", "previous question"))
         self.pushButton_next.setText(_translate("QuestionWindow", "next question"))
+    
+    def clear_layout(self):
+        for i in reversed(range(self.gridLayout_2.count())): 
+            self.gridLayout_2.itemAt(i).widget().setParent(None)
 
 
 # if __name__ == "__main__":
