@@ -137,17 +137,21 @@ class Ui_QuestionWindow(object):
         QtCore.QMetaObject.connectSlotsByName(QuestionWindow)
 
         #timer'
+        self.quiz_timeMins=120
         self.label_2.setText("02:00:00")
         self.timer=QTimer()
         self.timer.timeout.connect(self.showTime)
-        self.timer.start(2000)
+        self.timer.start(1000)
         self.startTime=QDateTime.currentDateTime()
     def showTime(self):
-        #time=self.timer.remainingTime()
-        time= (120*60)+(QDateTime.currentDateTime().secsTo(self.startTime))
-        print(time)
-        #timeDisplay=time.toString('yyyy-MM-dd hh:mm:ss dddd')
-        self.label_2.setText(str(datetime.timedelta(seconds=time)))  
+        time= (self.quiz_timeMins*60)+(QDateTime.currentDateTime().secsTo(self.startTime))
+        #check if time end
+        if time<=0:
+            self.timer.stop()
+            self.label_2.setText("Time end")  
+            #!end queq?
+        else:
+            self.label_2.setText(str(datetime.timedelta(seconds=time)))  
     def retranslateUi(self, QuestionWindow):
         _translate = QtCore.QCoreApplication.translate
         QuestionWindow.setWindowTitle(_translate("QuestionWindow", "MainWindow"))
