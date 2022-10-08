@@ -14,12 +14,15 @@ import os
 # [<ANSWER_F (You Can Leave Empty If There Is No Option)>, False],
 # [<ANSWER_G (You Can Leave Empty If There Is No Option)>, False],
 # [<ANSWER_H (You Can Leave Empty If There Is No Option)>, False],
-# <IMAGE NAME> or False
+# <IMAGE NAME> or False,
+# <MULTI-CHOICE> (True Or False)
 # ]
 
 text_to_add = [
     # Question 29
+    # Question String
     "",
+    # Options (A - G) - Only A, B, C And D Are Required
     ["", False],
     ["", False],
     ["", False],
@@ -28,13 +31,16 @@ text_to_add = [
     ["", False],
     ["", False],
     ["", False],
+    # Image Name And quiz (i.e "developer/example.png"), If no Image Then Leave Empty
+    False,
+    # Is Question Multiple Choice, If It Is Then Change To True
     False
 ]
 path = os.getcwd() + "/quiz_data/ml_questions.json"
 f = open(path, 'r')
 data = json.load(f)
 f.close()
-for i in range(0, len(text_to_add), 10):
+for i in range(0, len(text_to_add), 11):
     next_pos = str(int(list(data["questions"].keys())[-1]) + 1)
     print()
     data["questions"][next_pos] = text_to_add[i]
@@ -49,6 +55,7 @@ for i in range(0, len(text_to_add), 10):
                     data["answers"][next_pos]["H"] = text_to_add[i+8]
         
     data["images"][next_pos] = text_to_add[i+9]
+    data["multi_choice"][next_pos] = text_to_add[i+10]
         
 f = open(path, 'w')
 json.dump(data, f, indent=4)

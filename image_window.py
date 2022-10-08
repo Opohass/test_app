@@ -28,13 +28,3 @@ class Ui_Image(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("Question Image", "Question Image"))
-
-
-# def show_image(img_path):
-#     import sys
-#     app = QtWidgets.QApplication(sys.argv)
-#     MainWindow = QtWidgets.QMainWindow()
-#     ui = Ui_Image()
-#     ui.setupUi(MainWindow, img_path)
-#     MainWindow.show()
-#     # sys.exit(app.exec_())

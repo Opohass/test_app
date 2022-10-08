@@ -152,14 +152,13 @@ class Ui_QuestionWindow(object):
         self.pushButton_next.setText("Next Question")
         self.pushButton_previous.setText("No Previous")
         #timer'
-        self.quiz_timeMins=120
-        self.label_2.setText("02:00:00")
+        self.label_2.setText("00:00:00")
         self.timer=QTimer()
         self.timer.timeout.connect(self.showTime)
         self.timer.start(1000)
         self.startTime=QDateTime.currentDateTime()
     def showTime(self):
-        time= (self.quiz_timeMins*60)+(QDateTime.currentDateTime().secsTo(self.startTime))
+        time= (self.num_questions*120)+(QDateTime.currentDateTime().secsTo(self.startTime))
         #check if time end
         if time<=0:
             self.timer.stop()
