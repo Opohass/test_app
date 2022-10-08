@@ -271,7 +271,7 @@ class Ui_MainWindow(object):
         #sample questions
         random_questions_number = sample(self.data["questions"].keys(),k=num_questions)
         #user_questions==[questions ,answers ,images ]
-        user_questions= [[self.data["questions"][i],self.data["answers"][i] ,self.data["images"][i] ] for i in random_questions_number ]
+        user_questions= [[self.data["questions"][i],self.data["answers"][i] ,self.data["images"][i], self.data["multiple_choice"][i] ] for i in random_questions_number ]
       
         self.ui = Ui_QuestionWindow()
         self.ui.setupUi(self.MainWindow, user_questions, show_ans, is_timer, num_questions)

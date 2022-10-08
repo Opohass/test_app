@@ -12,9 +12,8 @@ import datetime
 from operator import imod
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtCore import QTimer,QDateTime
-import json
 import os
-import numpy as np
+from image_window import Ui_Image
 
 
 class Ui_QuestionWindow(object):
@@ -48,6 +47,7 @@ class Ui_QuestionWindow(object):
         self.label_question.setFont(font)
         self.label_question.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignTop)
         self.label_question.setObjectName("label_question")
+        self.label_question.setWordWrap(True)
         self.horizontalLayout_7.addWidget(self.label_question)
         self.verticalLayout = QtWidgets.QVBoxLayout()
         self.verticalLayout.setObjectName("verticalLayout")
@@ -66,6 +66,7 @@ class Ui_QuestionWindow(object):
         self.verticalLayout_2.addLayout(self.horizontalLayout_7)
         self.gridLayout_2 = QtWidgets.QGridLayout()
         self.gridLayout_2.setObjectName("gridLayout_2")
+        #region hard coded demo
         # self.radioButton_c = QtWidgets.QRadioButton(self.verticalLayoutWidget)
         # self.radioButton_c.setObjectName("radioButton_c")
         # self.gridLayout_2.addWidget(self.radioButton_c, 2, 0, 1, 1)
@@ -106,6 +107,8 @@ class Ui_QuestionWindow(object):
         # self.label_d.setFont(font)
         # self.label_d.setObjectName("label_d")
         # self.gridLayout_2.addWidget(self.label_d, 3, 1, 1, 1)
+        
+        # endregion
         self.verticalLayout_2.addLayout(self.gridLayout_2)
         self.horizontalLayout = QtWidgets.QHBoxLayout()
         self.horizontalLayout.setObjectName("horizontalLayout")
@@ -142,7 +145,7 @@ class Ui_QuestionWindow(object):
         self.pushButton_next.clicked.connect(self.next_question)
         self.pushButton_previous.clicked.connect(self.previous_question)
         #SaveAnswer
-        self.UserAnswer=np.zeros(self.num_questions)
+        self.UserAnswer=[False for i in range(self.num_questions)]
         # Call Update Question
         self.update_question()
         # Set Button Text
@@ -166,6 +169,7 @@ class Ui_QuestionWindow(object):
             self.label_2.setText(str(datetime.timedelta(seconds=time)))  
             
     def next_question(self):
+        self.submit_answer()
         self.curent_ques_number+=1
         #for test
         print(f"log: {self.curent_ques_number}")
@@ -192,6 +196,7 @@ class Ui_QuestionWindow(object):
     def previous_question(self):
         #for test
         print(f"log: {self.curent_ques_number}")
+        self.submit_answer()
         self.curent_ques_number-=1
         #!todo change label to new question in position self.curent_ques_number
         self.update_question()
@@ -209,9 +214,14 @@ class Ui_QuestionWindow(object):
         self.label_question.setText(self.quiz_data[self.curent_ques_number][0])
         pos = 0
         for i in self.quiz_data[self.curent_ques_number][1].keys():
-            radio = QtWidgets.QRadioButton(self.verticalLayoutWidget)
-            radio.setObjectName(f"radioButton_{i}")
-            self.gridLayout_2.addWidget(radio, pos, 0, 1, 1)
+            multiple_choice = self.quiz_data[self.curent_ques_number][-1]
+            if multiple_choice:
+                button = QtWidgets.QCheckBox(self.verticalLayoutWidget)
+                button.setObjectName(f"checkBox_{i}")
+            else:
+                button = QtWidgets.QRadioButton(self.verticalLayoutWidget)
+                button.setObjectName(f"radioButton_{i}")
+            self.gridLayout_2.addWidget(button, pos, 0, 1, 1)
             label = QtWidgets.QLabel(self.verticalLayoutWidget)
             label.setMinimumSize(QtCore.QSize(840, 70))
             font = QtGui.QFont()
@@ -219,10 +229,42 @@ class Ui_QuestionWindow(object):
             label.setFont(font)
             label.setObjectName(f"label_ans_{i}")
             label.setText(i + ". " + self.quiz_data[self.curent_ques_number][1][i][0])
+            label.setWordWrap(True)
             self.gridLayout_2.addWidget(label, pos, 1, 1, 1)
-            if self.UserAnswer[self.curent_ques_number] == i:
-                radio.toggle(True)
+            if multiple_choice:
+                if self.UserAnswer[self.curent_ques_number]:
+                    if i in self.UserAnswer[self.curent_ques_number]:
+                        button.toggle()
+            else:
+                if self.UserAnswer[self.curent_ques_number] == i:
+                    button.toggle()
+            if self.quiz_data[self.curent_ques_number][-2]:
+                self.show_image()
             pos += 1
+        
+    def submit_answer(self):
+        pos = 0
+        multiple_choice = self.quiz_data[self.curent_ques_number][-1]
+        if multiple_choice:
+            self.UserAnswer[self.curent_ques_number] = []
+        for i in self.quiz_data[self.curent_ques_number][1].keys():
+            if multiple_choice:
+                if self.gridLayout_2.itemAtPosition(pos,0).widget().isChecked():
+                    self.UserAnswer[self.curent_ques_number].append(i)
+            else:
+                if self.gridLayout_2.itemAtPosition(pos,0).widget().isChecked():
+                    self.UserAnswer[self.curent_ques_number] = i
+            pos += 1
+        
+    def show_image(self):
+        path = os.getcwd() + "/quiz_data/images/" + self.quiz_data[self.curent_ques_number][-2]
+        print(path)
+        self.imageWindow = QtWidgets.QMainWindow()
+        self.imageUi = Ui_Image()
+        self.imageUi.setupUi(self.imageWindow, path)
+        self.imageWindow.show()
+        
+        
             
             
     
