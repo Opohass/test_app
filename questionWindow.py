@@ -14,6 +14,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtCore import QTimer,QDateTime
 import os
 from image_window import Ui_Image
+from result_window import Ui_Results
 
 
 class Ui_QuestionWindow(object):
@@ -262,6 +263,14 @@ class Ui_QuestionWindow(object):
         self.imageUi = Ui_Image()
         self.imageUi.setupUi(self.imageWindow, path)
         self.imageWindow.show()
+    
+    def calculate_score(self):
+        pass
+    
+    def show_results(self):
+        # correct color: #2c702b, incorrect result: #750404
+        self.resultWindow = QtWidgets.QMainWindow()
+        self.resultUi = Ui_Results()
         
         
             
@@ -270,22 +279,22 @@ class Ui_QuestionWindow(object):
         
         
     
-    def retranslateUi(self, QuestionWindow):
-        _translate = QtCore.QCoreApplication.translate
-        QuestionWindow.setWindowTitle(_translate("QuestionWindow", "MainWindow"))
-        self.label_question.setText(_translate("QuestionWindow", "You are building an ML model to detect anomalies in real-time sensor data.<br>You will use Pub/Sub to handle incoming requests.<br> You want to store the results for analytics and visualization.<br>How should you configure the pipeline?"))
-        self.label_timer.setText(_translate("QuestionWindow", "time<br>remening"))
-        #self.label_2.setText(_translate("QuestionWindow", "TextLabel"))
-        self.radioButton_c.setText(_translate("QuestionWindow", "C"))
-        self.radioButton_b.setText(_translate("QuestionWindow", "B"))
-        self.label_b.setText(_translate("QuestionWindow", "1 = DataProc, 2 = AutoML, 3 = Cloud Bigtable"))
-        self.label_a.setText(_translate("QuestionWindow", "1 = Dataflow, 2 = AI Platform, 3 = BigQuery"))
-        self.radioButton_a.setText(_translate("QuestionWindow", "A"))
-        self.radioButton_d.setText(_translate("QuestionWindow", "D"))
-        self.label_c.setText(_translate("QuestionWindow", "1 = BigQuery, 2 = AutoML, 3 = Cloud Functions"))
-        self.label_d.setText(_translate("QuestionWindow", "1 = BigQuery, 2 = AI Platform, 3 = Cloud Storage"))
-        self.pushButton_previous.setText(_translate("QuestionWindow", "previous question"))
-        self.pushButton_next.setText(_translate("QuestionWindow", "next question"))
+    # def retranslateUi(self, QuestionWindow):
+    #     _translate = QtCore.QCoreApplication.translate
+    #     QuestionWindow.setWindowTitle(_translate("QuestionWindow", "MainWindow"))
+    #     self.label_question.setText(_translate("QuestionWindow", "You are building an ML model to detect anomalies in real-time sensor data.<br>You will use Pub/Sub to handle incoming requests.<br> You want to store the results for analytics and visualization.<br>How should you configure the pipeline?"))
+    #     self.label_timer.setText(_translate("QuestionWindow", "time<br>remening"))
+    #     #self.label_2.setText(_translate("QuestionWindow", "TextLabel"))
+    #     self.radioButton_c.setText(_translate("QuestionWindow", "C"))
+    #     self.radioButton_b.setText(_translate("QuestionWindow", "B"))
+    #     self.label_b.setText(_translate("QuestionWindow", "1 = DataProc, 2 = AutoML, 3 = Cloud Bigtable"))
+    #     self.label_a.setText(_translate("QuestionWindow", "1 = Dataflow, 2 = AI Platform, 3 = BigQuery"))
+    #     self.radioButton_a.setText(_translate("QuestionWindow", "A"))
+    #     self.radioButton_d.setText(_translate("QuestionWindow", "D"))
+    #     self.label_c.setText(_translate("QuestionWindow", "1 = BigQuery, 2 = AutoML, 3 = Cloud Functions"))
+    #     self.label_d.setText(_translate("QuestionWindow", "1 = BigQuery, 2 = AI Platform, 3 = Cloud Storage"))
+    #     self.pushButton_previous.setText(_translate("QuestionWindow", "previous question"))
+    #     self.pushButton_next.setText(_translate("QuestionWindow", "next question"))
     
     def clear_layout(self):
         for i in reversed(range(self.gridLayout_2.count())): 
