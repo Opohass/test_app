@@ -12,6 +12,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 import sys
 
 from questionWindow import Ui_QuestionWindow
+from addQuize import Ui_addQuizeWindow
 
 import json
 import os
