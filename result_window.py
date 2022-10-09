@@ -10,9 +10,12 @@
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 
+from main import Ui_MainWindow
+
 
 class Ui_Results(object):
-    def setupUi(self, MainWindow, score, quiz_data, userAnswers, correct_answers):
+    #def setupUi(self, MainWindow, score, quiz_data, userAnswers, correct_answers):
+    def setupUi(self,MainWindow,quiz_data,userAnswers):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(800, 600)
         font = QtGui.QFont()
@@ -20,10 +23,12 @@ class Ui_Results(object):
         MainWindow.setFont(font)
         MainWindow.setStyleSheet("")
         # Our Code
-        self.score = score
+        
         self.quiz_data = quiz_data
         self.userAnswers = userAnswers
-        self.correct_answers = correct_answers
+        self.score, self.correct_answers= self.calculate_score()
+        # self.score = score
+        # self.correct_answers = correct_answers
         # end
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
@@ -69,6 +74,11 @@ class Ui_Results(object):
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
+        #set _list
+        self.set_list()
+        #button
+        self.pushButton.clicked.connect(self.back_mainwindow)
+        
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
@@ -86,18 +96,39 @@ class Ui_Results(object):
             item = QtWidgets.QListWidgetItem()
             inp_str = ''
             if self.correct_answers[i]:
+                inp_str = "Correct Answer\n"+ "You Answered: " + ", ".join(self.userAnswers[i]) + "\n"
+                item.setText(inp_str)
                 item.setBackground(QtGui.QColor('#2c702b'))
-                inp_str = "Correct Answer\n"
             else:
+                inp_str = "Incorrect Answer\n"+ "You Answered: " + ", ".join(self.userAnswers[i]) + "\n"+" the Correct Answers is "+", ".join(self.Right_Anser[i])
+                item.setText(inp_str)
                 item.setBackground(QtGui.QColor('#750404'))
-                inp_str = "Incorrect Answer\n"
-            if self.quiz_data[i][-1]:
-                if self.correct_answers[i]:
-                    inp_str = inp_str + "You Answered: " + ", ".join(self.userAnswers[i]) + "\n"
+            # if self.quiz_data[i][-1]:
+            #     if self.correct_answers[i]:
+            #         inp_str = inp_str + "You Answered: " + ", ".join(self.userAnswers[i]) + "\n"
+            
+            self.listWidget.addItem(item)
                     
-                    
-
-
+    def calculate_score(self):
+        #process the quiz_data to only right answers
+        self.Right_Anser=  [[L for L,anser in question[1].items() if anser[1] ]for question in self.quiz_data  ]
+        #check if the answer is correct
+        couter=0
+        user_right_anser=[]
+        for UserAnser,RightAnser in zip(self.userAnswers,self.Right_Anser):
+            if UserAnser == RightAnser:
+                user_right_anser.append(True)
+                couter+=1
+            else:user_right_anser.append(False)
+        score= int(couter/len(user_right_anser)*100)
+        return score,user_right_anser
+    
+    def back_mainwindow(self):
+        self.MainWindow = QtWidgets.QMainWindow()
+        self.ui = Ui_MainWindow()
+        self.ui.setupUi(self.MainWindow)
+        self.MainWindow.show()
+        print("log:try go back to main window")
 # if __name__ == "__main__":
 #     import sys
 #     app = QtWidgets.QApplication(sys.argv)

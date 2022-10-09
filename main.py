@@ -272,7 +272,7 @@ class Ui_MainWindow(object):
         random_questions_number = sample(self.data["questions"].keys(),k=num_questions)
         #user_questions==[questions ,answers ,images ]
         user_questions= [[self.data["questions"][i],self.data["answers"][i] ,self.data["images"][i], self.data["multiple_choice"][i] ] for i in random_questions_number ]
-      
+        
         self.ui = Ui_QuestionWindow()
         self.ui.setupUi(self.MainWindow, user_questions, show_ans, is_timer, num_questions)
         self.MainWindow.show()
@@ -280,6 +280,7 @@ class Ui_MainWindow(object):
 
 
 if __name__ == "__main__":
+    
     import sys
     app = QtWidgets.QApplication(sys.argv)
     MainWindow = QtWidgets.QMainWindow()

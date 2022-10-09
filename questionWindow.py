@@ -142,6 +142,9 @@ class Ui_QuestionWindow(object):
 
         # self.retranslateUi(QuestionWindow)
         QtCore.QMetaObject.connectSlotsByName(QuestionWindow)
+        ##temp save windows?
+        self.QuestionWindow=QuestionWindow
+        
         #button
         self.pushButton_next.clicked.connect(self.next_question)
         self.pushButton_previous.clicked.connect(self.previous_question)
@@ -173,25 +176,27 @@ class Ui_QuestionWindow(object):
         self.curent_ques_number+=1
         #for test
         print(f"log: {self.curent_ques_number}")
-        self.update_question()
-        if self.curent_ques_number<self.num_questions-1:
-            #change previous button label
-            if self.pushButton_previous.text()=="No Previous": self.pushButton_previous.setText("previous question")
-            
-            
-            #!todo change label to new question in position self.curent_ques_number
-            #enbale previous_Button
-            self.pushButton_previous.setEnabled(True)
-            pass
-        elif self.curent_ques_number==self.num_questions-1:
-            #!todo change nextquestion label to end test
-            self.pushButton_next.setText("End Test")
-            pass
-        else:
-            #!todo end test
-             #for test
+        #end test
+        if self.curent_ques_number==self.num_questions:
+            self.timer.stop()
+            self.call_result_window()
             print("log: end test")
-            pass
+        else:
+            self.update_question()
+            if self.curent_ques_number<self.num_questions-1:
+                #change previous button label
+                if self.pushButton_previous.text()=="No Previous": self.pushButton_previous.setText("previous question")
+                
+                
+                #!todo change label to new question in position self.curent_ques_number
+                #enbale previous_Button
+                self.pushButton_previous.setEnabled(True)
+                pass
+            elif self.curent_ques_number==self.num_questions-1:
+                #!todo change nextquestion label to end test
+                self.pushButton_next.setText("End Test")
+                pass
+     
     
     def previous_question(self):
         #for test
@@ -245,15 +250,17 @@ class Ui_QuestionWindow(object):
     def submit_answer(self):
         pos = 0
         multiple_choice = self.quiz_data[self.curent_ques_number][-1]
-        if multiple_choice:
-            self.UserAnswer[self.curent_ques_number] = []
+        # if multiple_choice:
+        #     self.UserAnswer[self.curent_ques_number] = []
+        self.UserAnswer[self.curent_ques_number] = []
         for i in self.quiz_data[self.curent_ques_number][1].keys():
             if multiple_choice:
                 if self.gridLayout_2.itemAtPosition(pos,0).widget().isChecked():
                     self.UserAnswer[self.curent_ques_number].append(i)
             else:
                 if self.gridLayout_2.itemAtPosition(pos,0).widget().isChecked():
-                    self.UserAnswer[self.curent_ques_number] = i
+                    #self.UserAnswer[self.curent_ques_number] = i
+                    self.UserAnswer[self.curent_ques_number].append(i)
             pos += 1
         
     def show_image(self):
@@ -264,15 +271,18 @@ class Ui_QuestionWindow(object):
         self.imageUi.setupUi(self.imageWindow, path)
         self.imageWindow.show()
     
-    def calculate_score(self):
-        pass
+    
     
     def show_results(self):
         # correct color: #2c702b, incorrect result: #750404
         self.resultWindow = QtWidgets.QMainWindow()
         self.resultUi = Ui_Results()
         
+    def call_result_window(self):
         
+        self.ui = Ui_Results()
+        self.ui.setupUi(self.QuestionWindow,self.quiz_data,self.UserAnswer)
+        #self.QuestionWindow.show()
             
             
     
