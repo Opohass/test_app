@@ -508,15 +508,9 @@ class Ui_QuestionWindow(object):
             label.setText(i + ". " + self.quiz_data[self.curent_ques_number][1][i][0])
             label.setWordWrap(True)
             self.gridLayout_2.addWidget(label, pos, 1, 1, 1)
-            if multiple_choice:
-                if self.UserAnswer[self.curent_ques_number]:
-                    if i in self.UserAnswer[self.curent_ques_number]:
-                        button.toggle()
-            else:
-                if self.UserAnswer[self.curent_ques_number] == i:
+            if self.UserAnswer[self.curent_ques_number]:
+                if i in self.UserAnswer[self.curent_ques_number]:
                     button.toggle()
-            if self.quiz_data[self.curent_ques_number][-2]:
-                self.show_image()
             pos += 1
         
     def submit_answer(self):
