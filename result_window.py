@@ -11,9 +11,7 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 import sys
-if 'main' not in sys.modules:from main import Ui_MainWindow
-else:
-    print("doest import")
+
 
 
 class Ui_Results(object):
@@ -128,7 +126,7 @@ class Ui_Results(object):
         return score,user_right_anser
     
     def back_mainwindow(self):
-        
+        from main import Ui_MainWindow
         #self.MainWindow = QtWidgets.QMainWindow()
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self.MainWindow)

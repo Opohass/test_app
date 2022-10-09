@@ -10,10 +10,8 @@
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 import sys
-if 'questionWindow' not in sys.modules:
-    from questionWindow import Ui_QuestionWindow
-else:
-    print("doest import")
+
+from questionWindow import Ui_QuestionWindow
 
 import json
 import os

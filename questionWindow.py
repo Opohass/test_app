@@ -16,9 +16,7 @@ from image_window import Ui_Image
 
 
 import sys
-if 'result_window' not in sys.modules:from result_window import Ui_Results
-else:
-    print("doest import")
+from result_window import Ui_Results
 
 
 class Ui_QuestionWindow(object):
