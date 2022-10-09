@@ -10,7 +10,10 @@
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 
-from main import Ui_MainWindow
+import sys
+if 'main' not in sys.modules:from main import Ui_MainWindow
+else:
+    print("doest import")
 
 
 class Ui_Results(object):
@@ -73,7 +76,8 @@ class Ui_Results(object):
 
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
-
+        #windows
+        self.MainWindow=MainWindow
         #set _list
         self.set_list()
         #button
@@ -124,11 +128,13 @@ class Ui_Results(object):
         return score,user_right_anser
     
     def back_mainwindow(self):
-        self.MainWindow = QtWidgets.QMainWindow()
+        
+        #self.MainWindow = QtWidgets.QMainWindow()
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self.MainWindow)
         self.MainWindow.show()
         print("log:try go back to main window")
+        
 # if __name__ == "__main__":
 #     import sys
 #     app = QtWidgets.QApplication(sys.argv)

@@ -9,12 +9,16 @@
 
 
 import datetime
-from operator import imod
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtCore import QTimer,QDateTime
 import os
 from image_window import Ui_Image
-from result_window import Ui_Results
+
+
+import sys
+if 'result_window' not in sys.modules:from result_window import Ui_Results
+else:
+    print("doest import")
 
 
 class Ui_QuestionWindow(object):
@@ -215,6 +219,11 @@ class Ui_QuestionWindow(object):
             self.pushButton_previous.setText("Previous Question")
             
     def update_question(self):
+        #try to close photo window
+        try:
+            self.imageWindow.close()
+        except:
+            pass
         self.clear_layout()
         self.label_question.setText(self.quiz_data[self.curent_ques_number][0])
         pos = 0

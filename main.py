@@ -9,7 +9,12 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-from questionWindow import Ui_QuestionWindow
+import sys
+if 'questionWindow' not in sys.modules:
+    from questionWindow import Ui_QuestionWindow
+else:
+    print("doest import")
+
 import json
 import os
 from random import sample
@@ -276,12 +281,11 @@ class Ui_MainWindow(object):
         self.ui = Ui_QuestionWindow()
         self.ui.setupUi(self.MainWindow, user_questions, show_ans, is_timer, num_questions)
         self.MainWindow.show()
+        print("log:finsh open questions window")
             
 
 
 if __name__ == "__main__":
-    
-    import sys
     app = QtWidgets.QApplication(sys.argv)
     MainWindow = QtWidgets.QMainWindow()
     ui = Ui_MainWindow()
