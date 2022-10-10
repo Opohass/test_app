@@ -264,8 +264,8 @@ class Ui_addQuizeWindow(object):
         msg.exec_()
         if msg.standardButton(msg.clickedButton()) == QtWidgets.QMessageBox.Yes:
             from main import Ui_MainWindow
-            ui = Ui_MainWindow()
-            ui.setupUi(self.MainWindow)
+            self.ui = Ui_MainWindow()
+            self.ui.setupUi(self.MainWindow)
             self.MainWindow.show()
 
 
