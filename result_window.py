@@ -16,13 +16,13 @@ import sys
 
 class Ui_Results(object):
     #def setupUi(self, MainWindow, score, quiz_data, userAnswers, correct_answers):
-    def setupUi(self,MainWindow,quiz_data,userAnswers):
-        MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(800, 600)
+    def setupUi(self,Ui_Results_windows,MainWindow,quiz_data,userAnswers):
+        Ui_Results_windows.setObjectName("MainWindow")
+        Ui_Results_windows.resize(800, 600)
         font = QtGui.QFont()
         font.setPointSize(20)
-        MainWindow.setFont(font)
-        MainWindow.setStyleSheet("")
+        Ui_Results_windows.setFont(font)
+        Ui_Results_windows.setStyleSheet("")
         # Our Code
         
         self.quiz_data = quiz_data
@@ -31,7 +31,7 @@ class Ui_Results(object):
         # self.score = score
         # self.correct_answers = correct_answers
         # end
-        self.centralwidget = QtWidgets.QWidget(MainWindow)
+        self.centralwidget = QtWidgets.QWidget(Ui_Results_windows)
         self.centralwidget.setObjectName("centralwidget")
         self.score_announce_label = QtWidgets.QLabel(self.centralwidget)
         self.score_announce_label.setGeometry(QtCore.QRect(190, 20, 201, 61))
@@ -63,19 +63,20 @@ class Ui_Results(object):
         self.pushButton.setFont(font)
         self.pushButton.setStyleSheet("background-color: #027aa6; color: black;")
         self.pushButton.setObjectName("pushButton")
-        MainWindow.setCentralWidget(self.centralwidget)
-        self.menubar = QtWidgets.QMenuBar(MainWindow)
+        Ui_Results_windows.setCentralWidget(self.centralwidget)
+        self.menubar = QtWidgets.QMenuBar(Ui_Results_windows)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 800, 37))
         self.menubar.setObjectName("menubar")
-        MainWindow.setMenuBar(self.menubar)
-        self.statusbar = QtWidgets.QStatusBar(MainWindow)
+        Ui_Results_windows.setMenuBar(self.menubar)
+        self.statusbar = QtWidgets.QStatusBar(Ui_Results_windows)
         self.statusbar.setObjectName("statusbar")
-        MainWindow.setStatusBar(self.statusbar)
+        Ui_Results_windows.setStatusBar(self.statusbar)
 
-        self.retranslateUi(MainWindow)
-        QtCore.QMetaObject.connectSlotsByName(MainWindow)
+        self.retranslateUi(Ui_Results_windows)
+        QtCore.QMetaObject.connectSlotsByName(Ui_Results_windows)
         #windows
         self.MainWindow=MainWindow
+        self.Ui_Results_windows=Ui_Results_windows
         #set _list
         self.set_list()
         #button
@@ -127,11 +128,11 @@ class Ui_Results(object):
     
     def back_mainwindow(self):
         from main import Ui_MainWindow
-        #self.MainWindow = QtWidgets.QMainWindow()
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self.MainWindow)
         self.MainWindow.show()
         print("log:try go back to main window")
+        self.Ui_Results_windows.close()
         
 # if __name__ == "__main__":
 #     import sys
