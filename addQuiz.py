@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'addQuize.ui'
+# Form implementation generated from reading ui file 'addQuiz.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.7
 #
@@ -11,21 +11,18 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 import json
 
-class Ui_addQuizeWindow(object):
-    def __init__(self,isEdit=False) -> None:
-        if not isEdit:
-            self.questions={"questions":{},"answers":{},"images":{},"multiple_choice":{}}
-        else:
-            pass #TODO: add loading from json
+class Ui_addQuizWindow(object):
+    def __init__(self,isEdit=False,quizName=""): #FIXME: make sure from main that a quizName was passed when on edit
         self.isEdit=isEdit
-
-    def setupUi(self, addQuizeWindow):
-        addQuizeWindow.setObjectName("addQuizeWindow")
-        addQuizeWindow.resize(640, 605)
-        addQuizeWindow.setMinimumSize(QtCore.QSize(640, 605))
-        addQuizeWindow.setMaximumSize(QtCore.QSize(640, 605))
-        self.MainWindow=addQuizeWindow
-        self.centralwidget = QtWidgets.QWidget(addQuizeWindow)
+        self.quizName=quizName
+        
+    def setupUi(self, addQuizWindow):
+        addQuizWindow.setObjectName("addQuizWindow")
+        addQuizWindow.resize(640, 605)
+        addQuizWindow.setMinimumSize(QtCore.QSize(640, 605))
+        addQuizWindow.setMaximumSize(QtCore.QSize(640, 605))
+        self.MainWindow=addQuizWindow
+        self.centralwidget = QtWidgets.QWidget(addQuizWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.verticalLayoutWidget = QtWidgets.QWidget(self.centralwidget)
         self.verticalLayoutWidget.setGeometry(QtCore.QRect(10, 10, 621, 571))
@@ -35,22 +32,22 @@ class Ui_addQuizeWindow(object):
         self.verticalLayout.setObjectName("verticalLayout")
         self.horizontalLayout_2 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_2.setObjectName("horizontalLayout_2")
-        self.label_quizeName = QtWidgets.QLabel(self.verticalLayoutWidget)
-        self.label_quizeName.setEnabled(True)
-        self.label_quizeName.setMaximumSize(QtCore.QSize(16777215, 30))
+        self.label_quizName = QtWidgets.QLabel(self.verticalLayoutWidget)
+        self.label_quizName.setEnabled(True)
+        self.label_quizName.setMaximumSize(QtCore.QSize(16777215, 30))
         font = QtGui.QFont()
         font.setFamily("Arial")
         font.setPointSize(15)
-        self.label_quizeName.setFont(font)
-        self.label_quizeName.setObjectName("label_quizeName")
-        self.horizontalLayout_2.addWidget(self.label_quizeName)
-        self.lineEdit_quizeName = QtWidgets.QLineEdit(self.verticalLayoutWidget)
+        self.label_quizName.setFont(font)
+        self.label_quizName.setObjectName("label_quizName")
+        self.horizontalLayout_2.addWidget(self.label_quizName)
+        self.lineEdit_quizName = QtWidgets.QLineEdit(self.verticalLayoutWidget)
         font = QtGui.QFont()
         font.setFamily("Arial")
         font.setPointSize(14)
-        self.lineEdit_quizeName.setFont(font)
-        self.lineEdit_quizeName.setObjectName("lineEdit_quizeName")
-        self.horizontalLayout_2.addWidget(self.lineEdit_quizeName)
+        self.lineEdit_quizName.setFont(font)
+        self.lineEdit_quizName.setObjectName("lineEdit_quizName")
+        self.horizontalLayout_2.addWidget(self.lineEdit_quizName)
         self.verticalLayout.addLayout(self.horizontalLayout_2)
         self.pushButton_addQuestion = QtWidgets.QPushButton(self.verticalLayoutWidget)
         self.pushButton_addQuestion.setObjectName("pushButton_addQuestion")
@@ -72,35 +69,6 @@ class Ui_addQuizeWindow(object):
         self.frame.setObjectName("frame")
         self.verticalLayout_4 = QtWidgets.QVBoxLayout(self.frame)
         self.verticalLayout_4.setObjectName("verticalLayout_4")
-        self.horizontalLayout = QtWidgets.QHBoxLayout()
-        self.horizontalLayout.setObjectName("horizontalLayout")
-        self.verticalLayout_5 = QtWidgets.QVBoxLayout()
-        self.verticalLayout_5.setObjectName("verticalLayout_5")
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Maximum, QtWidgets.QSizePolicy.Maximum)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        font = QtGui.QFont()
-        font.setFamily("Arial")
-        font.setPointSize(12)
-        font.setKerning(False)
-        icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("./resorces/icons/edit.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Maximum, QtWidgets.QSizePolicy.Maximum)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        font = QtGui.QFont()
-        font.setFamily("Arial")
-        font.setPointSize(12)
-        font.setKerning(False)
-        icon1 = QtGui.QIcon()
-        icon1.addPixmap(QtGui.QPixmap("./resorces/icons/trash.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.horizontalLayout.addLayout(self.verticalLayout_5)
-        font = QtGui.QFont()
-        font.setFamily("Arial")
-        font.setPointSize(14)
-        font = QtGui.QFont()
-        font.setFamily("Arial")
-        font.setPointSize(14)
         self.verticalLayout_3.addWidget(self.frame)
         self.scrollArea.setWidget(self.scrollAreaWidgetContents)
         self.verticalLayout_2.addWidget(self.scrollArea)
@@ -122,12 +90,24 @@ class Ui_addQuizeWindow(object):
         self.pushButton_save.setObjectName("pushButton_save")
         self.horizontalLayout_3.addWidget(self.pushButton_save)
         self.verticalLayout.addLayout(self.horizontalLayout_3)
-        addQuizeWindow.setCentralWidget(self.centralwidget)
-        self.statusbar = QtWidgets.QStatusBar(addQuizeWindow)
+        addQuizWindow.setCentralWidget(self.centralwidget)
+        self.statusbar = QtWidgets.QStatusBar(addQuizWindow)
         self.statusbar.setObjectName("statusbar")
-        addQuizeWindow.setStatusBar(self.statusbar)
+        addQuizWindow.setStatusBar(self.statusbar)
 
+        if not self.isEdit:
+            self.questions={"questions":{},"answers":{},"images":{},"multiple_choice":{}}
+        else:
+            self.lineEdit_quizName.setEnabled(False)
+            self.lineEdit_quizName.setText(self.quizName) #FIXME: show quiz name only
+            self.loadQuestions(self.quizName)
+            self.loadQuestionToUI()
         #region DEMO
+        # self.horizontalLayout = QtWidgets.QHBoxLayout()
+        # self.horizontalLayout.setObjectName("horizontalLayout")
+        # self.verticalLayout_5 = QtWidgets.QVBoxLayout()
+        # self.verticalLayout_5.setObjectName("verticalLayout_5")
+        # self.horizontalLayout.addLayout(self.verticalLayout_5)
         # self.verticalLayout_DEMO = QtWidgets.QVBoxLayout()
         # self.verticalLayout_DEMO.setObjectName("verticalLayout_DEMO")
         # self.pushButton_edit_DEMO = QtWidgets.QPushButton(self.frame)
@@ -206,31 +186,133 @@ class Ui_addQuizeWindow(object):
         # self.verticalLayout_4.addWidget(self.line)
         #endregion
 
-        self.retranslateUi(addQuizeWindow)
-        QtCore.QMetaObject.connectSlotsByName(addQuizeWindow)
+        self.retranslateUi(addQuizWindow)
+        QtCore.QMetaObject.connectSlotsByName(addQuizWindow)
 
         #button events
         self.pushButton_cancel.clicked.connect(self.closeWindow)
-        self.pushButton_save.clicked.connect(self.saveQuize)
+        self.pushButton_save.clicked.connect(self.saveQuiz)
 
-    def retranslateUi(self, addQuizeWindow):
+    def retranslateUi(self, addQuizWindow):
         _translate = QtCore.QCoreApplication.translate
-        addQuizeWindow.setWindowTitle(_translate("addQuizeWindow", "MainWindow"))
-        self.label_quizeName.setText(_translate("addQuizeWindow", "quize name:"))
-        self.pushButton_addQuestion.setText(_translate("addQuizeWindow", "add question"))
+        addQuizWindow.setWindowTitle(_translate("addQuizWindow", "MainWindow"))
+        self.label_quizName.setText(_translate("addQuizWindow", "quiz name:"))
+        self.pushButton_addQuestion.setText(_translate("addQuizWindow", "add question"))
         #region DEMO TEXT
-        # self.label_question_DEMO.setText(_translate("addQuizeWindow", "QUESTION"))
-        # self.label_DEMO.setText(_translate("addQuizeWindow", "A)"))
-        # self.label_AD_DEMO.setText(_translate("addQuizeWindow", "answer data"))
-        # self.checkBox_DEMO.setText(_translate("addQuizeWindow", "answer"))
-        # self.label_DEMO_2.setText(_translate("addQuizeWindow", "B)"))
-        # self.label_AD_DEMO_2.setText(_translate("addQuizeWindow", "answer data"))
-        # self.checkBox_DEMO_2.setText(_translate("addQuizeWindow", "answer"))
+        # self.label_question_DEMO.setText(_translate("addQuizWindow", "QUESTION"))
+        # self.label_DEMO.setText(_translate("addQuizWindow", "A)"))
+        # self.label_AD_DEMO.setText(_translate("addQuizWindow", "answer data"))
+        # self.checkBox_DEMO.setText(_translate("addQuizWindow", "answer"))
+        # self.label_DEMO_2.setText(_translate("addQuizWindow", "B)"))
+        # self.label_AD_DEMO_2.setText(_translate("addQuizWindow", "answer data"))
+        # self.checkBox_DEMO_2.setText(_translate("addQuizWindow", "answer"))
         #endregion
-        self.pushButton_cancel.setText(_translate("addQuizeWindow", "cancel"))
-        self.pushButton_save.setText(_translate("addQuizeWindow", "save"))
+        self.pushButton_cancel.setText(_translate("addQuizWindow", "cancel"))
+        self.pushButton_save.setText(_translate("addQuizWindow", "save"))
 
     def loadQuestionToUI(self):
+        self.btn=[]
+        icon_edit = QtGui.QIcon()
+        icon_edit.addPixmap(QtGui.QPixmap("./resorces/icons/edit.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon_remove = QtGui.QIcon()
+        icon_remove.addPixmap(QtGui.QPixmap("./resorces/icons/trash.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+
+        font = QtGui.QFont()
+        font.setFamily("Arial")
+        font.setPointSize(12)
+        font.setKerning(False)
+
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Maximum, QtWidgets.QSizePolicy.Maximum)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+
+        for i,(question,answer) in enumerate(zip(self.questions["questions"].values(),self.questions["answers"].values())):
+            verticalLayout_questionContainer = QtWidgets.QVBoxLayout() #question and answers container
+            horizontalLayout_questionNbuttons = QtWidgets.QHBoxLayout() #question label+HL for edit/remove buttons
+            #creating question label
+            label_question = QtWidgets.QLabel()
+            label_question.setMinimumSize(QtCore.QSize(500, 90))
+            label_question.setMaximumSize(QtCore.QSize(500, 16777215))
+            label_question.setObjectName("label_question")
+            label_question.setText(question)
+            label_question.setWordWrap(True)
+            horizontalLayout_questionNbuttons.addWidget(label_question)
+
+            verticalLayout_editRemoveBtns = QtWidgets.QVBoxLayout() #HL for edit and remove buttons
+            #edit button
+            # pushButton_edit = QtWidgets.QPushButton()
+            # pushButton_edit.setObjectName("editBtn_"+str(i))
+            # pushButton_edit.setMinimumSize(QtCore.QSize(35, 35))
+            # pushButton_edit.setMaximumSize(QtCore.QSize(35, 35))
+            # pushButton_edit.setIcon(icon_edit)
+            # pushButton_edit.clicked.connect(lambda:print(pushButton_edit))#TODO: set event to the button
+            # verticalLayout_editRemoveBtns.addWidget(pushButton_edit)
+            self.btn.append(QtWidgets.QPushButton())
+            self.btn[i].setObjectName("editBtn_"+str(i))
+            self.btn[i].setMinimumSize(QtCore.QSize(35, 35))
+            self.btn[i].setMaximumSize(QtCore.QSize(35, 35))
+            self.btn[i].setIcon(icon_edit)
+            self.btn[i].clicked.connect(lambda:print(self.btn[i]))
+            verticalLayout_editRemoveBtns.addWidget(self.btn[i])
+            #remove button
+            pushButton_remove = QtWidgets.QPushButton()
+            pushButton_remove.setObjectName("removeBtn_"+str(i))
+            pushButton_remove.setMinimumSize(QtCore.QSize(35, 35))
+            pushButton_remove.setMaximumSize(QtCore.QSize(35, 35))
+            pushButton_remove.setIcon(icon_remove)
+            verticalLayout_editRemoveBtns.addWidget(pushButton_remove)
+            horizontalLayout_questionNbuttons.addLayout(verticalLayout_editRemoveBtns) #inserting the HL edit/remove to question container
+
+            verticalLayout_questionContainer.addLayout(horizontalLayout_questionNbuttons)
+            self.verticalLayout_4.addLayout(verticalLayout_questionContainer)
+            
+            # verticalLayout_buttons = QtWidgets.QVBoxLayout()
+            # verticalLayout_buttons.setObjectName("verticalLayout_buttons")
+            # self.horizontalLayout.addLayout(verticalLayout_buttons)
+            # verticalLayout_ = QtWidgets.QVBoxLayout()
+            # #add edit button
+            # pushButton_edit = QtWidgets.QPushButton(self.frame)
+            # sizePolicy.setHeightForWidth(pushButton_edit.sizePolicy().hasHeightForWidth())
+            # pushButton_edit.setSizePolicy(sizePolicy)
+            # pushButton_edit.setMinimumSize(QtCore.QSize(35, 35))
+            # pushButton_edit.setMaximumSize(QtCore.QSize(35, 35))
+            # pushButton_edit.setBaseSize(QtCore.QSize(35, 35))
+            # pushButton_edit.setFont(font)
+            # pushButton_edit.setText("")
+            # pushButton_edit.setIcon(icon_edit)
+            # pushButton_edit.setDefault(False)
+            # pushButton_edit.setObjectName("pushButton_edit")
+            # verticalLayout_buttons.addWidget(pushButton_edit)
+            # #add remove button
+            # pushButton_remove = QtWidgets.QPushButton(self.frame)
+            # sizePolicy.setHeightForWidth(pushButton_remove.sizePolicy().hasHeightForWidth())
+            # pushButton_remove.setSizePolicy(sizePolicy)
+            # pushButton_remove.setMinimumSize(QtCore.QSize(35, 35))
+            # pushButton_remove.setMaximumSize(QtCore.QSize(35, 35))
+            # pushButton_remove.setBaseSize(QtCore.QSize(35, 35))
+            # pushButton_remove.setFont(font)
+            # pushButton_remove.setText("")
+            # pushButton_remove.setIcon(icon_remove)
+            # pushButton_remove.setDefault(False)
+            # pushButton_remove.setObjectName("pushButton_remove")
+            # verticalLayout_buttons.addWidget(pushButton_remove)
+            # #add question label
+            # label_question = QtWidgets.QLabel(self.frame)
+            # label_question.setMinimumSize(QtCore.QSize(500, 90))
+            # label_question.setMaximumSize(QtCore.QSize(500, 16777215))
+            # label_question.setObjectName("label_question")
+            # self.horizontalLayout.addWidget(label_question)
+            # verticalLayout_.addLayout(self.horizontalLayout)
+
+            # line = QtWidgets.QFrame(self.frame)
+            # line.setFrameShape(QtWidgets.QFrame.HLine)
+            # line.setFrameShadow(QtWidgets.QFrame.Sunken)
+            # line.setObjectName("line")
+            # self.verticalLayout_4.addWidget(line)
+
+            # print(question)
+            # print(answer)
+
         #1)check if self.questios is empty
         #2)VL>HLx2>>X1>LB_question>VL>PB_edit,PB_remove>>X2>CB_answer,LB_a-f,LB_answer>LINE
         #  ^
@@ -238,17 +320,17 @@ class Ui_addQuizeWindow(object):
         #is holded
         #need to set object name to edit button and remove button (edit_X,remove_X) then split and get the number for action
         #TODO: *** ON REMOVE: loop over the json and decrement the number of the latter questions ***
-        pass
         
-    def loadQuestions(self):
+        
+    def loadQuestions(self,quizName):
         print("log i - opening questions")
-        #1)open the json of given quize #TODO: add to init quize name from main
-        #2)load to question list the questions and answers #TODO: create a function to build based on DEMO the ui
+        with open(quizName) as j: 
+                self.questions=json.load(j)
     
-    def saveQuize(self):
+    def saveQuiz(self):
         print("log i - clicked on save")
         if not len(self.questions)>0:
-            print("log e - user is mega dumb and is tring to save a quize without adding questions")
+            print("log e - user is mega dumb and is tring to save a quiz without adding questions")
             msg = QtWidgets.QMessageBox()
             msg.setWindowTitle("ERROR T_T")
             msg.setText("must have at least 1 question at your test")
@@ -272,8 +354,9 @@ class Ui_addQuizeWindow(object):
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
-    addQuizeWindow = QtWidgets.QMainWindow()
-    ui = Ui_addQuizeWindow()
-    ui.setupUi(addQuizeWindow)
-    addQuizeWindow.show()
+    # addQuizWindow = QtWidgets.QMainWindow()
+    addQuizWindow = QtWidgets.QMainWindow()
+    ui = Ui_addQuizWindow(True,"./quiz_data/ml_questions.json")
+    ui.setupUi(addQuizWindow)
+    addQuizWindow.show()
     sys.exit(app.exec_())

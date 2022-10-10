@@ -35,9 +35,9 @@
       <height>571</height>
      </rect>
     </property>
-    <layout class="QVBoxLayout" name="verticalLayout">
+    <layout class="QVBoxLayout" name="verticalLayout_base">
      <item>
-      <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <layout class="QHBoxLayout" name="horizontalLayout_quizData">
        <item>
         <widget class="QLabel" name="label_quizeName">
          <property name="enabled">
@@ -80,7 +80,7 @@
       </widget>
      </item>
      <item>
-      <layout class="QVBoxLayout" name="verticalLayout_2">
+      <layout class="QVBoxLayout" name="verticalLayout_scroll">
        <item>
         <widget class="QScrollArea" name="scrollArea">
          <property name="minimumSize">
@@ -114,9 +114,9 @@
               <item>
                <layout class="QVBoxLayout" name="verticalLayout_DEMO">
                 <item>
-                 <layout class="QHBoxLayout" name="horizontalLayout">
+                 <layout class="QHBoxLayout" name="horizontalLayout_btns_lbQuiz">
                   <item>
-                   <layout class="QVBoxLayout" name="verticalLayout_5">
+                   <layout class="QVBoxLayout" name="verticalLayout_btns">
                     <item>
                      <widget class="QPushButton" name="pushButton_edit_DEMO">
                       <property name="sizePolicy">
@@ -371,7 +371,7 @@
       </layout>
      </item>
      <item>
-      <layout class="QHBoxLayout" name="horizontalLayout_3">
+      <layout class="QHBoxLayout" name="horizontalLayout_cancelSave">
        <item>
         <widget class="QPushButton" name="pushButton_cancel">
          <property name="font">
