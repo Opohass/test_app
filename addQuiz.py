@@ -10,7 +10,7 @@
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 import functools
-import json
+import json,os
 
 class Ui_addQuizWindow(object):
     def __init__(self,isEdit=False,quizName=""): #FIXME: make sure from main that a quizName was passed when on edit
@@ -116,15 +116,6 @@ class Ui_addQuizWindow(object):
         addQuizWindow.setWindowTitle(_translate("addQuizWindow", "MainWindow"))
         self.label_quizName.setText(_translate("addQuizWindow", "quiz name:"))
         self.pushButton_addQuestion.setText(_translate("addQuizWindow", "add question"))
-        #region DEMO TEXT
-        # self.label_question_DEMO.setText(_translate("addQuizWindow", "QUESTION"))
-        # self.label_DEMO.setText(_translate("addQuizWindow", "A)"))
-        # self.label_AD_DEMO.setText(_translate("addQuizWindow", "answer data"))
-        # self.checkBox_DEMO.setText(_translate("addQuizWindow", "answer"))
-        # self.label_DEMO_2.setText(_translate("addQuizWindow", "B)"))
-        # self.label_AD_DEMO_2.setText(_translate("addQuizWindow", "answer data"))
-        # self.checkBox_DEMO_2.setText(_translate("addQuizWindow", "answer"))
-        #endregion
         self.pushButton_cancel.setText(_translate("addQuizWindow", "cancel"))
         self.pushButton_save.setText(_translate("addQuizWindow", "save"))
 
@@ -143,7 +134,7 @@ class Ui_addQuizWindow(object):
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
 
-        for i,(question,answer) in enumerate(zip(self.questions["questions"].values(),self.questions["answers"].values())):
+        for i,(question,answer) in enumerate(zip(self.questions["questions"].values(),self.questions["answers"].values()),start=1):
             verticalLayout_questionContainer = QtWidgets.QVBoxLayout() #question and answers container
             horizontalLayout_questionNbuttons = QtWidgets.QHBoxLayout() #question label+HL for edit/remove buttons
             #creating question label
@@ -158,7 +149,6 @@ class Ui_addQuizWindow(object):
             verticalLayout_editRemoveBtns = QtWidgets.QVBoxLayout() #HL for edit and remove buttons
             #edit button
             pushButton_edit = QtWidgets.QPushButton()
-            pushButton_edit.setObjectName("editBtn_"+str(i))
             pushButton_edit.setMinimumSize(QtCore.QSize(35, 35))
             pushButton_edit.setMaximumSize(QtCore.QSize(35, 35))
             pushButton_edit.setIcon(icon_edit) 
@@ -166,11 +156,10 @@ class Ui_addQuizWindow(object):
             verticalLayout_editRemoveBtns.addWidget(pushButton_edit)
             #remove button
             pushButton_remove = QtWidgets.QPushButton()
-            pushButton_remove.setObjectName("removeBtn_"+str(i))
             pushButton_remove.setMinimumSize(QtCore.QSize(35, 35))
             pushButton_remove.setMaximumSize(QtCore.QSize(35, 35))
             pushButton_remove.setIcon(icon_remove)
-            pushButton_remove.clicked.connect(functools.partial(print,pushButton_remove))#TODO: set event to the button
+            pushButton_remove.clicked.connect(functools.partial(self.removeQuestion,str(i)))
             verticalLayout_editRemoveBtns.addWidget(pushButton_remove)
             horizontalLayout_questionNbuttons.addLayout(verticalLayout_editRemoveBtns) #inserting the HL edit/remove to question container
             verticalLayout_questionContainer.addLayout(horizontalLayout_questionNbuttons)
@@ -207,13 +196,40 @@ class Ui_addQuizWindow(object):
             line.setFrameShadow(QtWidgets.QFrame.Sunken)
             self.verticalLayout_4.addWidget(line)
 
-        #1)check if self.questios is empty
-        #2)VL>HLx2>>X1>LB_question>VL>PB_edit,PB_remove>>X2>CB_answer,LB_a-f,LB_answer>LINE
-        #  ^
-        #where qustion
-        #is holded
-        #need to set object name to edit button and remove button (edit_X,remove_X) then split and get the number for action
-        #TODO: *** ON REMOVE: loop over the json and decrement the number of the latter questions ***
+    def clear_layout(self,layout):
+        if layout is not None:
+            while layout.count():
+                child = layout.takeAt(0)
+                if child.widget() is not None:
+                    child.widget().deleteLater()
+                elif child.layout() is not None:
+                    self.clear_layout(child.layout())
+
+    def removeQuestion(self,key):
+        print(f"log A - removing questin with the key:{key}")
+        del self.questions["questions"][key]
+        for i in range(int(key),len(self.questions["questions"])+1):
+            self.questions["questions"][str(i)]=self.questions["questions"][str(i+1)]
+            del self.questions["questions"][str(i+1)]
+            self.questions["answers"][str(i)]=self.questions["answers"][str(i+1)]
+            del self.questions["answers"][str(i+1)]
+            self.questions["multiple_choice"][str(i)]=self.questions["multiple_choice"][str(i+1)]
+            del self.questions["multiple_choice"][str(i+1)]
+            #if question has image delete it
+            if str(i) in self.questions["images"] and self.questions["images"][str(i)]:
+                try:
+                    os.remove("./quiz_data/images/"+self.questions["images"][str(i)])
+                except:
+                    print(f"log E - image of question {i} does not exist while it is mentioned")
+            elif str(i+1) in self.questions["images"] and self.questions["images"][str(i+1)]:
+                os.rename("./quiz_data/images/"+self.questions["images"][str(i+1)],
+                            "./quiz_data/images/"+self.questions["images"][str(i+1)].split("/")[0]+f"/q{i}.png")
+            self.questions["images"][str(i)]=self.questions["images"][str(i+1)]
+            del self.questions["images"][str(i+1)]
+            
+        
+        self.clear_layout(self.verticalLayout_4)
+        self.loadQuestionToUI()
         
         
     def loadQuestions(self,quizName):
@@ -230,6 +246,7 @@ class Ui_addQuizWindow(object):
             msg.setText("must have at least 1 question at your test")
             msg.exec_()
         #TODO: actually save a json
+        #TODO: check if has at least 1 question
     
     def closeWindow(self):
         print("log i - clicked on close")
