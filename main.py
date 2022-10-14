@@ -243,7 +243,12 @@ class Ui_MainWindow(object):
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     
-    
+        #button
+        self.pushButton_editQuize.clicked.connect(self.open_edit_window)
+        #quiz name dict
+        self.quiz_name_dict={
+            "ML Quiz":"./quiz_data/ml_questions.json"
+                }
     
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
@@ -281,6 +286,10 @@ class Ui_MainWindow(object):
         self.ui.setupUi(self.MainWindow, user_questions, show_ans, is_timer, num_questions)
         self.MainWindow.show()
         print("log:finsh open questions window")
+    def open_edit_window(self):
+        self.ui = Ui_addQuizWindow(True,self.quiz_name_dict[self.comboBox_quizeChoice.currentText()])
+        self.ui.setupUi(self.MainWindow)
+        self.MainWindow.show()
             
 
 
