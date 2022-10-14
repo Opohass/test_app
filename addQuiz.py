@@ -207,26 +207,40 @@ class Ui_addQuizWindow(object):
 
     def removeQuestion(self,key):
         print(f"log A - removing questin with the key:{key}")
-        del self.questions["questions"][key]
-        for i in range(int(key),len(self.questions["questions"])+1):
-            self.questions["questions"][str(i)]=self.questions["questions"][str(i+1)]
-            del self.questions["questions"][str(i+1)]
-            self.questions["answers"][str(i)]=self.questions["answers"][str(i+1)]
-            del self.questions["answers"][str(i+1)]
-            self.questions["multiple_choice"][str(i)]=self.questions["multiple_choice"][str(i+1)]
-            del self.questions["multiple_choice"][str(i+1)]
-            #if question has image delete it
-            if str(i) in self.questions["images"] and self.questions["images"][str(i)]:
+        #remove the image data form the delete question
+        if self.questions["images"][str(key)]:
                 try:
-                    os.remove("./quiz_data/images/"+self.questions["images"][str(i)])
+                    os.remove("./quiz_data/images/"+self.questions["images"][str(key)])
                 except:
-                    print(f"log E - image of question {i} does not exist while it is mentioned")
-            elif str(i+1) in self.questions["images"] and self.questions["images"][str(i+1)]:
-                os.rename("./quiz_data/images/"+self.questions["images"][str(i+1)],
-                            "./quiz_data/images/"+self.questions["images"][str(i+1)].split("/")[0]+f"/q{i}.png")
-            self.questions["images"][str(i)]=self.questions["images"][str(i+1)]
-            del self.questions["images"][str(i+1)]
+                    print(f"log E - image of question {key} does not exist while it is mentioned")
+
+        #reorgnize the questin
+        for i in range(int(key),len(self.questions["questions"])):
             
+            self.questions["questions"][str(i)]=self.questions["questions"][str(i+1)]
+            #del self.questions["questions"][str(i+1)]
+            self.questions["answers"][str(i)]=self.questions["answers"][str(i+1)]
+            #del self.questions["answers"][str(i+1)]
+            self.questions["multiple_choice"][str(i)]=self.questions["multiple_choice"][str(i+1)]
+            #del self.questions["multiple_choice"][str(i+1)]
+            self.questions["images"][str(i)]=self.questions["images"][str(i+1)]
+            #if question has image delete it
+            # if str(i) in self.questions["images"] and self.questions["images"][str(i)]:
+            #     try:
+            #         os.remove("./quiz_data/images/"+self.questions["images"][str(i)])
+            #     except:
+            #         print(f"log E - image of question {i} does not exist while it is mentioned")
+            # elif str(i+1) in self.questions["images"] and self.questions["images"][str(i+1)]:
+            #     os.rename("./quiz_data/images/"+self.questions["images"][str(i+1)],
+            #                 "./quiz_data/images/"+self.questions["images"][str(i+1)].split("/")[0]+f"/q{i}.png")
+            # self.questions["images"][str(i)]=self.questions["images"][str(i+1)]
+            # del self.questions["images"][str(i+1)]
+        #remove the last question
+        temp=str(len(self.questions["questions"]))
+        del self.questions["questions"][temp]
+        del self.questions["answers"][temp]
+        del self.questions["multiple_choice"][temp]
+        del self.questions["images"][temp]   
         
         self.clear_layout(self.verticalLayout_4)
         self.loadQuestionToUI()
@@ -245,8 +259,9 @@ class Ui_addQuizWindow(object):
             msg.setWindowTitle("ERROR T_T")
             msg.setText("must have at least 1 question at your test")
             msg.exec_()
-        #TODO: actually save a json
-        #TODO: check if has at least 1 question
+        else:
+            with open('data.json', 'w') as f:
+                json.dump(self.questions, f,indent=4)
     
     def closeWindow(self):
         print("log i - clicked on close")
@@ -257,8 +272,8 @@ class Ui_addQuizWindow(object):
         msg.exec_()
         if msg.standardButton(msg.clickedButton()) == QtWidgets.QMessageBox.Yes:
             from main import Ui_MainWindow
-            ui = Ui_MainWindow()
-            ui.setupUi(self.MainWindow)
+            self.ui = Ui_MainWindow()
+            self.ui.setupUi(self.MainWindow)
             self.MainWindow.show()
 
 
