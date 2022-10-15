@@ -11,6 +11,7 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 import functools
 import json
+from PyQt5.QtCore import pyqtSlot
 
 class Ui_addQuizWindow(object):
     def __init__(self,isEdit=False,quizName=""): #FIXME: make sure from main that a quizName was passed when on edit
@@ -243,7 +244,20 @@ class Ui_addQuizWindow(object):
             ui = Ui_MainWindow()
             ui.setupUi(self.MainWindow)
             self.MainWindow.show()
-
+    
+    @pyqtSlot(dict)
+    def change_question(self, new_question):
+        import urllib
+        quiz_name = self.quizName.split("/")[-1][:-5]
+        self.questions["questions"][new_question["pos"]] = new_question["question"]
+        self.questions["answers"][new_question["pos"]] = new_question["answer"]
+        self.questions["questions"][new_question["pos"]] = new_question["question"]
+        if new_question["image"]:
+            self.questions["images"][new_question["pos"]] = quiz_name + "/" + new_question["pos"] + "." + new_question["image"].split(".")[-1]
+        else:
+            self.questions["images"][new_question["pos"]] = False
+        self.questions["multiple_choice"][new_question["pos"]] = new_question["multiple_choice"]
+        
 
 if __name__ == "__main__":
     import sys
