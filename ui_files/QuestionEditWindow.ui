@@ -1,14 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>MainWindow</class>
- <widget class="QMainWindow" name="MainWindow">
+ <class>addQestion_window</class>
+ <widget class="QMainWindow" name="addQestion_window">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>823</width>
-    <height>538</height>
+    <width>805</width>
+    <height>570</height>
    </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>805</width>
+    <height>570</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>805</width>
+    <height>570</height>
+   </size>
+  </property>
+  <property name="baseSize">
+   <size>
+    <width>0</width>
+    <height>0</height>
+   </size>
   </property>
   <property name="font">
    <font>
@@ -27,13 +45,13 @@
      <rect>
       <x>19</x>
       <y>10</y>
-      <width>781</width>
-      <height>451</height>
+      <width>771</width>
+      <height>531</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="questionEdit_Vert">
      <item>
-      <layout class="QHBoxLayout" name="questionEdit_title" stretch="0,0,0">
+      <layout class="QHBoxLayout" name="horizontalLayout_question" stretch="0,0,0">
        <property name="spacing">
         <number>-1</number>
        </property>
@@ -41,15 +59,21 @@
         <enum>QLayout::SetFixedSize</enum>
        </property>
        <item>
-        <widget class="QLabel" name="titleLabel">
+        <widget class="QLabel" name="label_question">
          <property name="maximumSize">
           <size>
            <width>300</width>
            <height>50</height>
           </size>
          </property>
+         <property name="font">
+          <font>
+           <family>Arial</family>
+           <pointsize>20</pointsize>
+          </font>
+         </property>
          <property name="text">
-          <string>TextLabel</string>
+          <string>question:</string>
          </property>
         </widget>
        </item>
@@ -70,64 +94,195 @@
         </spacer>
        </item>
        <item>
-        <widget class="QLineEdit" name="questionTitleLineEdit">
-         <property name="placeholderText">
-          <string>example</string>
+        <widget class="QTextEdit" name="textEdit_question">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>90</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>75</height>
+          </size>
          </property>
         </widget>
        </item>
       </layout>
      </item>
      <item>
-      <layout class="QHBoxLayout" name="answerXHorizontalLayout">
+      <layout class="QHBoxLayout" name="horizontalLayout_image">
        <item>
-        <widget class="QCheckBox" name="answerXCheckBox">
+        <widget class="QLabel" name="label_imageName">
+         <property name="minimumSize">
+          <size>
+           <width>500</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Arial</family>
+           <pointsize>16</pointsize>
+          </font>
+         </property>
          <property name="text">
-          <string>A.</string>
+          <string>image:</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="answerXLineEdit">
-         <property name="placeholderText">
-          <string>example</string>
+        <widget class="QPushButton" name="pushButton_upload">
+         <property name="font">
+          <font>
+           <family>Arial</family>
+           <pointsize>16</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>upload</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_show">
+         <property name="font">
+          <font>
+           <family>Arial</family>
+           <pointsize>16</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>show image</string>
          </property>
         </widget>
        </item>
       </layout>
      </item>
-    </layout>
-   </widget>
-   <widget class="QWidget" name="horizontalLayoutWidget_2">
-    <property name="geometry">
-     <rect>
-      <x>19</x>
-      <y>460</y>
-      <width>781</width>
-      <height>83</height>
-     </rect>
-    </property>
-    <layout class="QHBoxLayout" name="buttonHorizontalLayout">
      <item>
-      <widget class="QPushButton" name="addAnswerButton">
-       <property name="text">
-        <string>PushButton</string>
+      <widget class="QScrollArea" name="scrollArea">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>310</height>
+        </size>
        </property>
+       <property name="widgetResizable">
+        <bool>true</bool>
+       </property>
+       <widget class="QWidget" name="scrollAreaWidgetContents">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>767</width>
+          <height>308</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_scrollview">
+         <item>
+          <widget class="QFrame" name="frame">
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_fream">
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_answer_DEMO">
+              <item>
+               <widget class="QCheckBox" name="checkBox_DEMO">
+                <property name="font">
+                 <font>
+                  <family>Arial</family>
+                  <pointsize>14</pointsize>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>A)</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QTextEdit" name="textEdit_answer_DEMO">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>75</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>75</height>
+                 </size>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="pushButton_delete_DEMO">
+                <property name="text">
+                 <string/>
+                </property>
+                <property name="icon">
+                 <iconset>
+                  <normaloff>../resorces/icons/trash.png</normaloff>../resorces/icons/trash.png</iconset>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </widget>
+         </item>
+        </layout>
+       </widget>
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="saveButton">
-       <property name="text">
-        <string>PushButton</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="cancelButton">
-       <property name="text">
-        <string>PushButton</string>
-       </property>
-      </widget>
+      <layout class="QHBoxLayout" name="horizontalLayout_controlBTN">
+       <item>
+        <widget class="QPushButton" name="pushButton_answer">
+         <property name="font">
+          <font>
+           <family>Arial</family>
+           <pointsize>14</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>add answer</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_cancel">
+         <property name="font">
+          <font>
+           <family>Arial</family>
+           <pointsize>14</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>cancel</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_save">
+         <property name="font">
+          <font>
+           <family>Arial</family>
+           <pointsize>14</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>save question</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
      </item>
     </layout>
    </widget>
