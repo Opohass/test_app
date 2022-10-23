@@ -30,7 +30,11 @@
         "28": "You are training a Resnet model on AI Platform using TPUs to visually categorize types of defects in automobile engines. You capture the training profile using the Cloud TPU profiler plugin and observe that it is highly input-bound. You want to reduce the bottleneck and speed up your model training process. Which modifications should you make to the tf.data dataset? (Choose two.)",
         "29": "Q TEST1",
         "30": "Q TEST2",
-        "31": "Q TEST3"
+        "31": "Q TEST3",
+        "32": "porat is...",
+        "33": "porat is...",
+        "34": "porat is...",
+        "35": "test1pora"
     },
     "answers": {
         "1": {
@@ -594,6 +598,62 @@
                 "TEST3",
                 false
             ]
+        },
+        "32": {
+            "A": [
+                "king\t",
+                false
+            ],
+            "B": [
+                "best",
+                true
+            ],
+            "C": [
+                "null",
+                false
+            ]
+        },
+        "33": {
+            "A": [
+                "king",
+                false
+            ],
+            "B": [
+                "best",
+                true
+            ],
+            "C": [
+                "null",
+                false
+            ]
+        },
+        "34": {
+            "A": [
+                "king",
+                true
+            ],
+            "B": [
+                "best",
+                true
+            ],
+            "C": [
+                "null",
+                false
+            ]
+        },
+        "35": {
+            "A": [
+                "false\t",
+                false
+            ],
+            "B": [
+                "True",
+                true
+            ],
+            "C": [
+                "false",
+                false
+            ]
         }
     },
     "images": {
@@ -627,7 +687,11 @@
         "28": false,
         "29": false,
         "30": "ml_questions/q30.png",
-        "31": false
+        "31": false,
+        "32": false,
+        "33": false,
+        "34": false,
+        "35": "quiz_data_devlop/images/ml_questions/35.png"
     },
     "multiple_choice": {
         "1": false,
@@ -660,6 +724,10 @@
         "28": true,
         "29": false,
         "30": true,
-        "31": false
+        "31": false,
+        "32": false,
+        "33": false,
+        "34": true,
+        "35": false
     }
 }

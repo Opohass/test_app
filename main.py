@@ -26,7 +26,7 @@ class Ui_MainWindow(object):
         MainWindow.setMinimumSize(QtCore.QSize(545, 400))
         MainWindow.setMaximumSize(QtCore.QSize(545, 400))
         self.quizzes = {
-            "ML Quiz":"/quiz_data/ml_questions.json"
+            "ML Quiz":"/quiz_data_devlop/ml_questions.json"
         }
         font = QtGui.QFont()
         font.setFamily("Arial")
@@ -247,7 +247,7 @@ class Ui_MainWindow(object):
         self.pushButton_editQuize.clicked.connect(self.open_edit_window)
         #quiz name dict
         self.quiz_name_dict={
-            "ML Quiz":"./quiz_data/ml_questions.json"
+            "ML Quiz":"./quiz_data_devlop/ml_questions.json"
                 }
     
     def retranslateUi(self, MainWindow):
