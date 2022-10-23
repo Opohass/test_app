@@ -201,7 +201,9 @@ class Ui_addQestion_window(object):
                 txtedit.setText(nxtLay.itemAt(1).widget().toPlainText())
         else:
             toChange=[self.verticalLayout_fream.findChild(QtWidgets.QHBoxLayout, "horizontalLayout_answer"+chr(keyAscii))]
-        self.clear_layout(toChange[-1])    
+        self.clear_layout(toChange[-1]) 
+        self.answerNum["answers"].popitem() 
+        
         # for k in self.answerNum["answers"]:
         #     # self.answerNum["answers"][k]=
         #     layout=self.verticalLayout_fream.findChild(QtWidgets.QHBoxLayout, "horizontalLayout_answer"+k)
