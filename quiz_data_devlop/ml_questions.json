@@ -34,7 +34,10 @@
         "32": "porat is...",
         "33": "porat is...",
         "34": "porat is...",
-        "35": "test1pora"
+        "35": "test1pora",
+        "36": "porat test system conect",
+        "37": "porat test3 check",
+        "38": "csfas"
     },
     "answers": {
         "1": {
@@ -654,6 +657,48 @@
                 "false",
                 false
             ]
+        },
+        "36": {
+            "A": [
+                "spfaskpf",
+                false
+            ],
+            "B": [
+                "fsafa",
+                false
+            ],
+            "C": [
+                "True",
+                true
+            ]
+        },
+        "37": {
+            "A": [
+                "sfas",
+                false
+            ],
+            "B": [
+                "True",
+                true
+            ],
+            "C": [
+                "fasf",
+                false
+            ]
+        },
+        "38": {
+            "A": [
+                "sfasf",
+                false
+            ],
+            "B": [
+                "fsa",
+                false
+            ],
+            "C": [
+                "sa",
+                true
+            ]
         }
     },
     "images": {
@@ -691,7 +736,10 @@
         "32": false,
         "33": false,
         "34": false,
-        "35": "quiz_data_devlop/images/ml_questions/35.png"
+        "35": "quiz_data_devlop/images/ml_questions/35.png",
+        "36": false,
+        "37": false,
+        "38": false
     },
     "multiple_choice": {
         "1": false,
@@ -728,6 +776,9 @@
         "32": false,
         "33": false,
         "34": true,
-        "35": false
+        "35": false,
+        "36": false,
+        "37": false,
+        "38": false
     }
 }

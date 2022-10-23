@@ -112,6 +112,7 @@ class Ui_addQuizWindow(object):
         #button events
         self.pushButton_cancel.clicked.connect(self.closeWindow)
         self.pushButton_save.clicked.connect(self.saveQuiz)
+        self.pushButton_addQuestion.clicked.connect(self.open_addQuestion_window)
 
     def retranslateUi(self, addQuizWindow):
         _translate = QtCore.QCoreApplication.translate
@@ -302,7 +303,11 @@ class Ui_addQuizWindow(object):
             self.questions["images"][new_question["pos"]] = False
         self.questions["multiple_choice"][new_question["pos"]] = new_question["multiple_choice"]
         
-
+    def open_addQuestion_window(self):
+        from QuestionEditWindow import Ui_addQestion_window
+        self.ui = Ui_addQestion_window()
+        self.ui.setupUi(self.MainWindow,"ml_questions")
+        self.MainWindow.show()
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)

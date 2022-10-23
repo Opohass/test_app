@@ -12,17 +12,17 @@ AASCII=65 #A number in ascii table
 class Ui_addQestion_window(object):
     def setupUi(self, addQestion_window,quiz_name):
         self.answerNum={"question":"","answers":{},"image":False}# will hold the question and it's answers
-
-        addQestion_window.setObjectName("addQestion_window")
-        addQestion_window.resize(805, 570)
-        addQestion_window.setMinimumSize(QtCore.QSize(805, 570))
-        addQestion_window.setMaximumSize(QtCore.QSize(805, 570))
-        addQestion_window.setBaseSize(QtCore.QSize(0, 0))
+        self.addQestion_window=addQestion_window
+        self.addQestion_window.setObjectName("addQestion_window")
+        self.addQestion_window.resize(805, 570)
+        self.addQestion_window.setMinimumSize(QtCore.QSize(805, 570))
+        self.addQestion_window.setMaximumSize(QtCore.QSize(805, 570))
+        self.addQestion_window.setBaseSize(QtCore.QSize(0, 0))
         font = QtGui.QFont()
         font.setPointSize(20)
-        addQestion_window.setFont(font)
-        addQestion_window.setStyleSheet("")
-        self.centralwidget = QtWidgets.QWidget(addQestion_window)
+        self.addQestion_window.setFont(font)
+        self.addQestion_window.setStyleSheet("")
+        self.centralwidget = QtWidgets.QWidget(self.addQestion_window)
         self.centralwidget.setObjectName("centralwidget")
         self.verticalLayoutWidget = QtWidgets.QWidget(self.centralwidget)
         self.verticalLayoutWidget.setGeometry(QtCore.QRect(19, 10, 771, 531))
@@ -116,10 +116,10 @@ class Ui_addQestion_window(object):
         self.pushButton_save.setObjectName("pushButton_save")
         self.horizontalLayout_controlBTN.addWidget(self.pushButton_save)
         self.questionEdit_Vert.addLayout(self.horizontalLayout_controlBTN)
-        addQestion_window.setCentralWidget(self.centralwidget)
-        self.statusbar = QtWidgets.QStatusBar(addQestion_window)
+        self.addQestion_window.setCentralWidget(self.centralwidget)
+        self.statusbar = QtWidgets.QStatusBar(self.addQestion_window)
         self.statusbar.setObjectName("statusbar")
-        addQestion_window.setStatusBar(self.statusbar)
+        self.addQestion_window.setStatusBar(self.statusbar)
 
         #region clicks
         self.pushButton_answer.clicked.connect(self.addAnswer)
@@ -127,6 +127,7 @@ class Ui_addQestion_window(object):
         self.pushButton_save.clicked.connect(self.save)
         self.pushButton_upload.clicked.connect(self.upload)
         self.pushButton_show.clicked.connect(self.show_image)
+        self.pushButton_cancel.clicked.connect(self.closeWindow)
         #endregion
         
         #region DEMO
@@ -155,8 +156,8 @@ class Ui_addQestion_window(object):
         # self.verticalLayout_fream.addLayout(self.horizontalLayout_answer)
         #endregion
 
-        self.retranslateUi(addQestion_window)
-        QtCore.QMetaObject.connectSlotsByName(addQestion_window)
+        self.retranslateUi(self.addQestion_window)
+        QtCore.QMetaObject.connectSlotsByName(self.addQestion_window)
         
         #variables
         self.photo_path=False
@@ -173,16 +174,16 @@ class Ui_addQestion_window(object):
         self.pushButton_cancel.setText(_translate("addQestion_window", "cancel"))
         self.pushButton_save.setText(_translate("addQestion_window", "save question"))
     
-    def uploadImage(self):
-        #returns the image name
-        #saves the image in self.image_uWu or something idk
-        #updates self.label_imageName to image name
-        pass
+    # def uploadImage(self):
+    #     #returns the image name
+    #     #saves the image in self.image_uWu or something idk
+    #     #updates self.label_imageName to image name
+    #     pass
     
-    def showImage(self):
-        #open the image_window.py with the image as a side window
-        #if no image file show window 'lol you dumb' or somthing idk
-        pass
+    # def showImage(self):
+    #     #open the image_window.py with the image as a side window
+    #     #if no image file show window 'lol you dumb' or somthing idk
+    #     pass
 
     def clear_layout(self,layout):
         if layout is not None:
@@ -260,7 +261,7 @@ class Ui_addQestion_window(object):
         
         self.answerNum["answers"][str(key)]=""
     def save(self):
-        eror_mesage=""
+        eror_mesage=False
         #check if  the question is in format
 
         #if more then 2 questions
@@ -283,31 +284,25 @@ class Ui_addQestion_window(object):
                 elif tempcheck:check_count+=1
                     
             if check_count:
-                self.save_to_json(ansers,check_count)
+                if self.save_to_json(ansers,check_count):
+                    from addQuiz import Ui_addQuizWindow
+                    self.ui = Ui_addQuizWindow(True,"quiz_data_devlop/"+self.quiz_name+".json")
+                    self.ui.setupUi(self.addQestion_window)
+                    self.addQestion_window.show()
+                    
                 #the answer need to save and go back to ????
             else:eror_mesage="you need to check at least one answer"
             
         #show mesage with correct eror
-        msg = QtWidgets.QMessageBox()
-        msg.setWindowTitle("eror")
-        msg.setText(eror_mesage)
-        msg.exec_()
+        if eror_mesage:
+            msg = QtWidgets.QMessageBox()
+            msg.setWindowTitle("eror")
+            msg.setText(eror_mesage)
+            msg.exec_()
         
         
         
-        # if answer is mark
-        
-            #chel if there are photo
-        
-        
-        try:
-            # with open(self.quiz_name) as j: 
-            #     temp_question=json.load(j)
-            
-            pass
-            
-        except:pass
-        pass
+    
     
     
     #porat say : back will cancel the edit and save will save the question and go back   
@@ -334,6 +329,7 @@ class Ui_addQestion_window(object):
                 temp_question["multiple_choice"][question_number]=  check_count>1
             with open("quiz_data_devlop/"+self.quiz_name+".json", 'w') as f:
                     json.dump(temp_question, f,indent=4)
+            return True
         except:
             msg = QtWidgets.QMessageBox()
             msg.setWindowTitle("eror")
@@ -367,7 +363,24 @@ class Ui_addQestion_window(object):
             msg.setWindowTitle("eror")
             msg.setText("upload photo first")
             msg.exec_()
-            
+    def closeWindow(self):
+        print("log i - clicked on close")
+        msg = QtWidgets.QMessageBox()
+        msg.setStandardButtons(QtWidgets.QMessageBox.Yes | QtWidgets.QMessageBox.Cancel)
+        msg.setWindowTitle("exit")
+        msg.setText("are you sure you want to exit?")
+        msg.exec_()
+        if msg.standardButton(msg.clickedButton()) == QtWidgets.QMessageBox.Yes:
+            # from main import Ui_MainWindow
+            # self.ui = Ui_MainWindow()
+            # self.ui.setupUi(self.addQestion_window)
+            # self.addQestion_window.show()  
+            from addQuiz import Ui_addQuizWindow
+            self.ui = Ui_addQuizWindow(True,"quiz_data_devlop/"+self.quiz_name+".json")
+            self.ui.setupUi(self.addQestion_window)
+            self.addQestion_window.show()
+   
+                 
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
