@@ -25,9 +25,9 @@ class Ui_MainWindow(object):
         MainWindow.resize(545, 400)
         MainWindow.setMinimumSize(QtCore.QSize(545, 400))
         MainWindow.setMaximumSize(QtCore.QSize(545, 400))
-        self.quizzes = {
-            "ML Quiz":"/quiz_data_devlop/ml_questions.json"
-        }
+         #quiz name dict
+        with open("quiz_data_devlop/quiz_name.json") as j: 
+               self.quiz_name_dict=json.load(j)
         font = QtGui.QFont()
         font.setFamily("Arial")
         MainWindow.setFont(font)
@@ -80,7 +80,9 @@ class Ui_MainWindow(object):
         self.label_info.setObjectName("label_info")
         self.verticalLayout.addWidget(self.label_info)
         self.comboBox_quizeChoice = QtWidgets.QComboBox(self.verticalLayoutWidget)
-        self.comboBox_quizeChoice.addItem("ML Quiz")
+        #add comboBox_quizeChoice
+        for quiz_name in self.quiz_name_dict.keys():
+            self.comboBox_quizeChoice.addItem(quiz_name)
         font = QtGui.QFont()
         font.setFamily("Arial")
         font.setPointSize(14)
@@ -245,10 +247,8 @@ class Ui_MainWindow(object):
     
         #button
         self.pushButton_editQuize.clicked.connect(self.open_edit_window)
-        #quiz name dict
-        self.quiz_name_dict={
-            "ML Quiz":"./quiz_data_devlop/ml_questions.json"
-                }
+        self.pushButton_addQuize.clicked.connect(self.add_new_quiz)
+       
     
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
@@ -268,7 +268,7 @@ class Ui_MainWindow(object):
     def set_maximum(self):
         chosen_quiz = self.comboBox_quizeChoice.currentText()
         print(f"Your Chosen Dish Is: {chosen_quiz}")
-        path = os.getcwd() + self.quizzes[chosen_quiz]
+        path = os.getcwd()+"/" + self.quiz_name_dict[chosen_quiz]
         with open(path, 'r') as f:
             self.data = json.load(f)
         self.spinBox_questiionNum.setMaximum(len(list(self.data["questions"].keys())))
@@ -291,9 +291,37 @@ class Ui_MainWindow(object):
         self.ui.setupUi(self.MainWindow)
         self.MainWindow.show()
             
-
+    def add_new_quiz(self):
+        text, ok = QtWidgets.QInputDialog.getText(self.MainWindow, 'input dialog', 'enter new quiz name')
+        if ok:
+            if text in self.quiz_name_dict.keys():
+                text=text+"copy"
+            self.quiz_name_dict[text]="quiz_data_devlop/"+text+".json"
+            
+            #make json file
+            with open("quiz_data_devlop/"+text+".json", 'w') as f:
+                base_format={
+                            "questions": {},
+                            "answers": {},
+                             "images": {},
+                             "multiple_choice": {}
+                }
+                json.dump(base_format, f,indent=4)
+            #make image directory
+            path= os.getcwd()+"/quiz_data_devlop/images/"+text
+            os.mkdir(path)
+                    
+            #open edit window        
+            self.ui = Ui_addQuizWindow(True,self.quiz_name_dict[text])
+            self.ui.setupUi(self.MainWindow)
+            self.MainWindow.show()
+            #update quiz name json
+            with open("quiz_data_devlop/quiz_name.json", 'w') as f:
+                    json.dump(self.quiz_name_dict, f,indent=4)
+            
 
 if __name__ == "__main__":
+    
     app = QtWidgets.QApplication(sys.argv)
     MainWindow = QtWidgets.QMainWindow()
     ui = Ui_MainWindow()

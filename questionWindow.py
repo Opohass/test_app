@@ -55,14 +55,6 @@ class Ui_QuestionWindow(object):
         self.horizontalLayout_7.addWidget(self.label_question)
         self.verticalLayout = QtWidgets.QVBoxLayout()
         self.verticalLayout.setObjectName("verticalLayout")
-        self.label_timer = QtWidgets.QLabel(self.verticalLayoutWidget)
-        font = QtGui.QFont()
-        font.setFamily("Arial")
-        font.setPointSize(16)
-        self.label_timer.setFont(font)
-        self.label_timer.setAlignment(QtCore.Qt.AlignCenter)
-        self.label_timer.setObjectName("label_timer")
-        self.verticalLayout.addWidget(self.label_timer)
         self.label_2 = QtWidgets.QLabel(self.verticalLayoutWidget)
         self.label_2.setObjectName("label_2")
         self.verticalLayout.addWidget(self.label_2)
@@ -160,12 +152,22 @@ class Ui_QuestionWindow(object):
         # Set Button Text
         self.pushButton_next.setText("Next Question")
         self.pushButton_previous.setText("No Previous")
-        #timer'
-        self.label_2.setText("00:00:00")
-        self.timer=QTimer()
-        self.timer.timeout.connect(self.showTime)
-        self.timer.start(1000)
-        self.startTime=QDateTime.currentDateTime()
+        #timer' 
+        if self.is_timer :
+            self.label_timer = QtWidgets.QLabel(self.verticalLayoutWidget)
+            font = QtGui.QFont()
+            font.setFamily("Arial")
+            font.setPointSize(16)
+            self.label_timer.setFont(font)
+            self.label_timer.setAlignment(QtCore.Qt.AlignCenter)
+            self.label_timer.setObjectName("label_timer")
+            self.verticalLayout.addWidget(self.label_timer)
+            
+            self.label_2.setText("00:00:00")
+            self.timer=QTimer()
+            self.timer.timeout.connect(self.showTime)
+            self.timer.start(1000)
+            self.startTime=QDateTime.currentDateTime()
     def showTime(self):
         time= (self.num_questions*120)+(QDateTime.currentDateTime().secsTo(self.startTime))
         #check if time end

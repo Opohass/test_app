@@ -306,7 +306,8 @@ class Ui_addQuizWindow(object):
     def open_addQuestion_window(self):
         from QuestionEditWindow import Ui_addQestion_window
         self.ui = Ui_addQestion_window()
-        self.ui.setupUi(self.MainWindow,"ml_questions")
+        quiz_name=self.quizName.split("/")[-1][:-5]
+        self.ui.setupUi(self.MainWindow,quiz_name)
         self.MainWindow.show()
 if __name__ == "__main__":
     import sys
