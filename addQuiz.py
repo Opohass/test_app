@@ -314,7 +314,7 @@ if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)
     # addQuizWindow = QtWidgets.QMainWindow()
     addQuizWindow = QtWidgets.QMainWindow()
-    ui = Ui_addQuizWindow(True,"./quiz_data/ml_questions.json")
+    ui = Ui_addQuizWindow(True,"./quiz_data_devlop/quiz_json/ml_questions.json")
     ui.setupUi(addQuizWindow)
     addQuizWindow.show()
     sys.exit(app.exec_())

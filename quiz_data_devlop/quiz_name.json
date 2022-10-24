@@ -1,4 +1,6 @@
 {
-    "ML Quiz": "quiz_data_devlop/ml_questions.json",
-    "test1": "quiz_data_devlop/test1.json"
+    "ML Quiz": "quiz_data_devlop/quiz_json/ml_questions.json",
+    "test1": "quiz_data_devlop/quiz_json/test1.json",
+    "test2": "quiz_data_devlop/quiz_json/test2.json",
+    "test3": "quiz_data_devlop/quiz_json/test3.json"
 }

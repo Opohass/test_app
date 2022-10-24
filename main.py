@@ -253,7 +253,7 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
-        self.label_error.setText(_translate("MainWindow", "ERROR INFO"))
+        self.label_error.setText(_translate("MainWindow", "beta 1.0"))
         self.pushButton_addQuize.setText(_translate("MainWindow", "add new quize"))
         self.pushButton_editQuize.setText(_translate("MainWindow", "edit chosen quize"))
         self.label_info.setText(_translate("MainWindow", "choose a quize to word on:"))
@@ -277,15 +277,21 @@ class Ui_MainWindow(object):
         show_ans = self.radioButton_show.isChecked()
         is_timer = self.radioButton_timer.isChecked()
         num_questions = self.spinBox_questiionNum.value()
-        #sample questions
-        random_questions_number = sample(self.data["questions"].keys(),k=num_questions)
-        #user_questions==[questions ,answers ,images ]
-        user_questions= [[self.data["questions"][i],self.data["answers"][i] ,self.data["images"][i], self.data["multiple_choice"][i] ] for i in random_questions_number ]
-        
-        self.ui = Ui_QuestionWindow()
-        self.ui.setupUi(self.MainWindow, user_questions, show_ans, is_timer, num_questions)
-        self.MainWindow.show()
-        print("log:finsh open questions window")
+        if num_questions>0:
+            #sample questions
+            random_questions_number = sample(self.data["questions"].keys(),k=num_questions)
+            #user_questions==[questions ,answers ,images ]
+            user_questions= [[self.data["questions"][i],self.data["answers"][i] ,self.data["images"][i], self.data["multiple_choice"][i] ] for i in random_questions_number ]
+            
+            self.ui = Ui_QuestionWindow()
+            self.ui.setupUi(self.MainWindow, user_questions, show_ans, is_timer, num_questions)
+            self.MainWindow.show()
+            print("log:finsh open questions window")
+        else:
+            msg = QtWidgets.QMessageBox()
+            msg.setWindowTitle("ERROR T_T")
+            msg.setText("there no questions in this test\n please add some questions")
+            msg.exec_()
     def open_edit_window(self):
         self.ui = Ui_addQuizWindow(True,self.quiz_name_dict[self.comboBox_quizeChoice.currentText()])
         self.ui.setupUi(self.MainWindow)
@@ -296,10 +302,10 @@ class Ui_MainWindow(object):
         if ok:
             if text in self.quiz_name_dict.keys():
                 text=text+"copy"
-            self.quiz_name_dict[text]="quiz_data_devlop/"+text+".json"
+            self.quiz_name_dict[text]="quiz_data_devlop/quiz_json/"+text+".json"
             
             #make json file
-            with open("quiz_data_devlop/"+text+".json", 'w') as f:
+            with open("quiz_data_devlop/quiz_json/"+text+".json", 'w') as f:
                 base_format={
                             "questions": {},
                             "answers": {},

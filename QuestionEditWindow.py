@@ -286,7 +286,7 @@ class Ui_addQestion_window(object):
             if check_count:
                 if self.save_to_json(ansers,check_count):
                     from addQuiz import Ui_addQuizWindow
-                    self.ui = Ui_addQuizWindow(True,"quiz_data_devlop/"+self.quiz_name+".json")
+                    self.ui = Ui_addQuizWindow(True,"quiz_data_devlop/quiz_json/"+self.quiz_name+".json")
                     self.ui.setupUi(self.addQestion_window)
                     self.addQestion_window.show()
                     
@@ -316,7 +316,7 @@ class Ui_addQestion_window(object):
     
     def save_to_json(self,ansers,check_count):
         try:
-            with open("quiz_data_devlop/"+self.quiz_name+".json") as j: 
+            with open("quiz_data_devlop/quiz_json/"+self.quiz_name+".json") as j: 
                 temp_question=json.load(j)
                 question_number=len(temp_question["questions"])+1
                 #add the question
@@ -327,7 +327,7 @@ class Ui_addQestion_window(object):
                 temp_question["images"][question_number]=self.photo_path
                 #multiple_choice condton
                 temp_question["multiple_choice"][question_number]=  check_count>1
-            with open("quiz_data_devlop/"+self.quiz_name+".json", 'w') as f:
+            with open("quiz_data_devlop/quiz_json/"+self.quiz_name+".json", 'w') as f:
                     json.dump(temp_question, f,indent=4)
             return True
         except:
@@ -376,7 +376,7 @@ class Ui_addQestion_window(object):
             # self.ui.setupUi(self.addQestion_window)
             # self.addQestion_window.show()  
             from addQuiz import Ui_addQuizWindow
-            self.ui = Ui_addQuizWindow(True,"quiz_data_devlop/"+self.quiz_name+".json")
+            self.ui = Ui_addQuizWindow(True,"quiz_data_devlop/quiz_json/"+self.quiz_name+".json")
             self.ui.setupUi(self.addQestion_window)
             self.addQestion_window.show()
    
