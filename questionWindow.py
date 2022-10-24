@@ -10,6 +10,7 @@
 
 from cgitb import enable
 import datetime
+from email.mime import message
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtCore import QTimer,QDateTime
 import os
@@ -188,6 +189,16 @@ class Ui_QuestionWindow(object):
             self.pushButton_next.setEnabled(False)
             print("log: end test")
         else:
+            #show right answer  after click next
+            if self.show_answers:
+                message="the right Answer is:"
+                for answer,val in self.quiz_data[self.curent_ques_number][1].items():
+                    if val[1]:
+                        message+= " "+answer
+                msg = QtWidgets.QMessageBox()
+                msg.setWindowTitle("answers")
+                msg.setText(message)
+                msg.exec_()  
             self.curent_ques_number+=1
             self.button_control()
             self.update_question()
