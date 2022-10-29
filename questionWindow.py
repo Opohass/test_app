@@ -184,7 +184,7 @@ class Ui_QuestionWindow(object):
         
         if self.curent_ques_number==self.num_questions-1 and self.test_On:
             self.test_On=False
-            self.timer.stop()
+            if self.is_timer :self.timer.stop()
             self.call_result_window() 
             self.pushButton_next.setEnabled(False)
             print("log: end test")

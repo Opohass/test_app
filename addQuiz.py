@@ -267,9 +267,15 @@ class Ui_addQuizWindow(object):
                 with open(self.quizName, 'w') as f:
                     json.dump(self.questions, f,indent=4)
                 msg = QtWidgets.QMessageBox()
-                msg.setWindowTitle("success")
-                msg.setText("save successfully")
+                msg.setStandardButtons(QtWidgets.QMessageBox.Yes | QtWidgets.QMessageBox.Cancel)
+                msg.setWindowTitle("exit")
+                msg.setText("file save,are you finish to edit?")
                 msg.exec_()
+                if msg.standardButton(msg.clickedButton()) == QtWidgets.QMessageBox.Yes:
+                    from main import Ui_MainWindow
+                    self.ui = Ui_MainWindow()
+                    self.ui.setupUi(self.MainWindow)
+                    self.MainWindow.show()
             except: 
                 msg = QtWidgets.QMessageBox()
                 msg.setWindowTitle("ERROR T_T")

@@ -377,6 +377,6 @@ if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)
     addQestion_window = QtWidgets.QMainWindow()
     ui = Ui_addQestion_window()
-    ui.setupUi(addQestion_window,"1","ml_questions")
+    ui.setupUi(addQestion_window,"ml_questions")
     addQestion_window.show()
     sys.exit(app.exec_())
