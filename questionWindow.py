@@ -236,7 +236,7 @@ class Ui_QuestionWindow(object):
         self.clear_layout()
         self.label_question.setText(self.quiz_data[self.curent_ques_number][0])
         pos = 0
-        for i in self.quiz_data[self.curent_ques_number][1].keys():
+        for i in  self.quiz_data[self.curent_ques_number][1].keys():
             multiple_choice = self.quiz_data[self.curent_ques_number][-1]
             if multiple_choice:
                 button = QtWidgets.QCheckBox(self.verticalLayoutWidget)

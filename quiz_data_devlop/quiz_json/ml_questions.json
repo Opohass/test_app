@@ -27,25 +27,23 @@
         "25": "You work for a social media company. You need to detect whether posted images contain cars. Each training example is a member of exactly one class. You have trained an object detection neural network and deployed the model version to AI Platform Prediction for evaluation. Before deployment, you created an evaluation job and attached it to the AI Platform Prediction model version. You notice that the precision is lower than your business requirements allow. How should you adjust the model's final layer softmax threshold to increase precision?",
         "26": "You are responsible for building a unified analytics environment across a variety of on-premises data marts. Your company is experiencing data quality and security challenges when integrating data across the servers, caused by the use of a wide range of disconnected tools and temporary solutions. You need a fully managed, cloud-native data integration service that will lower the total cost of work and reduce repetitive work. Some members on your team prefer a codeless interface for building Extract, Transform, Load (ETL) process. Which service should you use?",
         "27": "You are an ML engineer at a regulated insurance company. You are asked to develop an insurance approval model that accepts or rejects insurance applications from potential customers. What factors should you consider before building the model?",
-        "28": "You are training a Resnet model on AI Platform using TPUs to visually categorize types of defects in automobile engines. You capture the training profile using the Cloud TPU profiler plugin and observe that it is highly input-bound. You want to reduce the bottleneck and speed up your model training process. Which modifications should you make to the tf.data dataset? (Choose two.)",
-        "29": "Q TEST1",
-        "30": "Q TEST2",
-        "31": "Q TEST3",
-        "32": "porat is...",
-        "33": "porat is...",
-        "34": "porat is...",
-        "35": "test1pora",
-        "36": "porat test system conect",
-        "37": "porat test3 check",
-        "38": "csfas"
+        "28": "You are training a Resnet model on AI Platform using TPUs to visually categorize types of defects in automobile engines. You capture the training profile using the Cloud TPU profiler plugin and observe that it is highly input-bound. You want to reduce the bottleneck and speed up your model training process. Which modifications should you make to the tf.data dataset? (Choose two.)"
     },
     "answers": {
         "1": {
             "A": [
-                "1 = BigQuery, 2 = AutoML, 3 = Cloud Functions",
+                "1 = Dataflow, 2 = AI Platform, 3 = BigQuery",
                 true
             ],
             "B": [
+                "1 = DataProc, 2 = AutoML, 3 = Cloud Bigtable",
+                false
+            ],
+            "C": [
+                "1 = BigQuery, 2 = AutoML, 3 = Cloud Functions",
+                false
+            ],
+            "D": [
                 "1 = BigQuery, 2 = AI Platform, 3 = Cloud Storage",
                 false
             ]
@@ -53,7 +51,7 @@
         "2": {
             "A": [
                 "1. Build a tree-based regression model that predicts how many passengers will be picked up at each shuttle station. 2. Dispatch an appropriately sized shuttle and provide the map with the required stops based on the prediction.",
-                true
+                false
             ],
             "B": [
                 "1. Build a tree-based classification model that predicts whether the shuttle should pick up passengers at each shuttle station. 2. Dispatch an available shuttle and provide the map with the required stops based on the prediction.",
@@ -61,7 +59,7 @@
             ],
             "C": [
                 "1. Define the optimal route as the shortest route that passes by all shuttle stations with confirmed attendance at the given time under capacity constraints. 2. Dispatch an appropriately sized shuttle and indicate the required stops on the map.",
-                false
+                true
             ],
             "D": [
                 "1. Build a reinforcement learning model with tree-based classification models that predict the presence of passengers at shuttle stops as agents and a reward function around a distance-based metric. 2. Dispatch an appropriately sized shuttle and provide the map with the required stops based on the simulated outcome.",
@@ -539,158 +537,6 @@
                 "Decrease the batch size argument in your transformation.",
                 true
             ]
-        },
-        "29": {
-            "A": [
-                "TEST1",
-                true
-            ],
-            "B": [
-                "TEST1",
-                false
-            ],
-            "C": [
-                "TEST1",
-                false
-            ],
-            "D": [
-                "TEST1",
-                false
-            ]
-        },
-        "30": {
-            "A": [
-                "TEST2",
-                true
-            ],
-            "B": [
-                "TEST2",
-                false
-            ],
-            "C": [
-                "TEST2",
-                true
-            ],
-            "D": [
-                "TEST2",
-                false
-            ]
-        },
-        "31": {
-            "A": [
-                "TEST3",
-                true
-            ],
-            "B": [
-                "TEST3",
-                false
-            ],
-            "C": [
-                "TEST3",
-                false
-            ],
-            "D": [
-                "TEST3",
-                false
-            ]
-        },
-        "32": {
-            "A": [
-                "king\t",
-                false
-            ],
-            "B": [
-                "best",
-                true
-            ],
-            "C": [
-                "null",
-                false
-            ]
-        },
-        "33": {
-            "A": [
-                "king",
-                false
-            ],
-            "B": [
-                "best",
-                true
-            ],
-            "C": [
-                "null",
-                false
-            ]
-        },
-        "34": {
-            "A": [
-                "king",
-                true
-            ],
-            "B": [
-                "best",
-                true
-            ],
-            "C": [
-                "null",
-                false
-            ]
-        },
-        "35": {
-            "A": [
-                "false\t",
-                false
-            ],
-            "B": [
-                "True",
-                true
-            ],
-            "C": [
-                "false",
-                false
-            ]
-        },
-        "36": {
-            "A": [
-                "spfaskpf",
-                false
-            ],
-            "B": [
-                "fsafa",
-                false
-            ],
-            "C": [
-                "True",
-                true
-            ]
-        },
-        "37": {
-            "A": [
-                "sfas",
-                false
-            ],
-            "B": [
-                "True",
-                true
-            ],
-            "C": [
-                "fasf",
-                false
-            ]
-        },
-        "38": {
-            "A": [
-                "sfasf",
-                false
-            ],
-            "B": [
-                "fsa",
-                false
-            ],
-            "C": [
-                "sa",
-                true
-            ]
         }
     },
     "images": {
@@ -721,17 +567,7 @@
         "25": false,
         "26": false,
         "27": false,
-        "28": false,
-        "29": false,
-        "30": "ml_questions/q30.png",
-        "31": false,
-        "32": false,
-        "33": false,
-        "34": false,
-        "35": "quiz_data_devlop/images/ml_questions/35.png",
-        "36": false,
-        "37": false,
-        "38": false
+        "28": false
     },
     "multiple_choice": {
         "1": false,
@@ -761,16 +597,6 @@
         "25": false,
         "26": false,
         "27": false,
-        "28": true,
-        "29": false,
-        "30": true,
-        "31": false,
-        "32": false,
-        "33": false,
-        "34": true,
-        "35": false,
-        "36": false,
-        "37": false,
-        "38": false
+        "28": true
     }
 }
