@@ -1,6 +1,14 @@
 {
     "questions": {
-        "1": "Your team needs to make sure that a Compute Engine instance does not have access to the internet or to any Google APIs or services. Which two settings must remain disabled to meet these requirements? (Choose two.)"
+        "1": "Your team needs to make sure that a Compute Engine instance does not have access to the internet or to any Google APIs or services. Which two settings must remain disabled to meet these requirements? (Choose two.)",
+        "2": "Which two implied firewall rules are defined on a VPC network? (Choose two.)",
+        "3": "A customer needs an alternative to storing their plain text secrets in their source-code management (SCM) system. How should the customer achieve this using Google Cloud Platform?",
+        "4": "Your team wants to centrally manage GCP IAM permissions from their on-premises Active Directory Service. Your team wants to manage permissions by AD group membership. What should your team do to meet these requirements?",
+        "5": "When creating a secure container image, which two items should you incorporate into the build if possible? (Choose two.)",
+        "6": "A customer needs to launch a 3-tier internal web application on Google Cloud Platform (GCP). The customer's internal compliance requirements dictate that end- user access may only be allowed if the traffic seems to originate from a specific known good CIDR. The customer accepts the risk that their application will only have SYN flood DDoS protection. They want to use GCP's native SYN flood protection. Which product should be used to meet these requirements?",
+        "7": "A company is running workloads in a dedicated server room. They must only be accessed from within the private company network. You need to connect to these workloads from Compute Engine instances within a Google Cloud Platform project. Which two approaches can you take to meet the requirements? (Choose two.)",
+        "8": "A customer implements Cloud Identity-Aware Proxy for their ERP system hosted on Compute Engine. Their security team wants to add a security layer so that the ERP systems only accept traffic from Cloud Identity-Aware Proxy. What should the customer do to meet these requirements?",
+        "9": "A company has been running their application on Compute Engine. A bug in the application allowed a malicious user to repeatedly execute a script that results in the Compute Engine instance crashing. Although the bug has been fixed, you want to get notified in case this hack re-occurs. What should you do?"
     },
     "answers": {
         "1": {
@@ -9,7 +17,7 @@
                 true
             ],
             "B": [
-                "IP Forwarding\n\n",
+                "IP Forwarding",
                 false
             ],
             "C": [
@@ -24,12 +32,184 @@
                 "IAM Network User Role",
                 false
             ]
+        },
+        "2": {
+            "A": [
+                " A rule that allows all outbound connections",
+                true
+            ],
+            "B": [
+                "A rule that denies all inbound connections",
+                true
+            ],
+            "C": [
+                "A rule that blocks all inbound port 25 connections",
+                false
+            ],
+            "D": [
+                " A rule that blocks all outbound connections",
+                false
+            ],
+            "E": [
+                "A rule that allows all inbound port 80 connections",
+                false
+            ]
+        },
+        "3": {
+            "A": [
+                "Use Cloud Source Repositories, and store secrets in Cloud SQL.",
+                false
+            ],
+            "B": [
+                "Encrypt the secrets with a Customer-Managed Encryption Key (CMEK), and store them in Cloud Storage.",
+                true
+            ],
+            "C": [
+                "Run the Cloud Data Loss Prevention API to scan the secrets, and store them in Cloud SQL.",
+                false
+            ],
+            "D": [
+                "Deploy the SCM to a Compute Engine VM with local SSDs, and enable preemptible VMs.",
+                false
+            ]
+        },
+        "4": {
+            "A": [
+                "Set up Cloud Directory Sync to sync groups, and set IAM permissions on the groups.",
+                true
+            ],
+            "B": [
+                "Set up SAML 2.0 Single Sign-On (SSO), and assign IAM permissions to the groups.",
+                false
+            ],
+            "C": [
+                " Use the Cloud Identity and Access Management API to create groups and IAM permissions from Active Directory.",
+                false
+            ],
+            "D": [
+                "Use the Admin SDK to create groups and assign IAM permissions from Active Directory.",
+                false
+            ]
+        },
+        "5": {
+            "A": [
+                "Ensure that the app does not run as PID 1.",
+                false
+            ],
+            "B": [
+                "Package a single app as a container.",
+                true
+            ],
+            "C": [
+                "Remove any unnecessary tools not needed by the app.",
+                true
+            ],
+            "D": [
+                "Use public container images as a base image for the app.",
+                false
+            ],
+            "E": [
+                "Use many container image layers to hide sensitive information.",
+                false
+            ]
+        },
+        "6": {
+            "A": [
+                "Cloud Armor",
+                true
+            ],
+            "B": [
+                "VPC Firewall Rules",
+                false
+            ],
+            "C": [
+                "Cloud Identity and Access Management",
+                false
+            ],
+            "D": [
+                "Cloud CDN",
+                false
+            ]
+        },
+        "7": {
+            "A": [
+                "Configure the project with Cloud VPN.",
+                true
+            ],
+            "B": [
+                "Configure the project with Shared VPC.",
+                false
+            ],
+            "C": [
+                "Configure the project with Cloud Interconnect.",
+                true
+            ],
+            "D": [
+                "Configure the project with VPC peering.",
+                false
+            ],
+            "E": [
+                "Configure all Compute Engine instances with Private Access.",
+                false
+            ]
+        },
+        "8": {
+            "A": [
+                "Make sure that the ERP system can validate the JWT assertion in the HTTP requests.",
+                true
+            ],
+            "B": [
+                "Make sure that the ERP system can validate the identity headers in the HTTP requests.",
+                false
+            ],
+            "C": [
+                "Make sure that the ERP system can validate the x-forwarded-for headers in the HTTP requests.",
+                false
+            ],
+            "D": [
+                "Make sure that the ERP system can validate the user's unique identifier headers in the HTTP requests.",
+                false
+            ]
+        },
+        "9": {
+            "A": [
+                "Create an Alerting Policy in Stackdriver using a Process Health condition, checking that the number of executions of the script remains below the desired threshold. Enable notifications.",
+                true
+            ],
+            "B": [
+                "Create an Alerting Policy in Stackdriver using the CPU usage metric. Set the threshold to 80% to be notified when the CPU usage goes above this 80%.",
+                false
+            ],
+            "C": [
+                " Log every execution of the script to Stackdriver Logging. Create a User-defined metric in Stackdriver Logging on the logs, and create a Stackdriver Dashboard displaying the metric.",
+                false
+            ],
+            "D": [
+                "Log every execution of the script to Stackdriver Logging. Configure BigQuery as a log sink, and create a BigQuery scheduled query to count the number of executions in a specific timeframe.",
+                false
+            ]
         }
     },
     "images": {
-        "1": false
+        "1": false,
+        "2": false,
+        "3": false,
+        "4": false,
+        "5": false,
+        "6": false,
+        "7": false,
+        "8": false,
+        "9": false
     },
     "multiple_choice": {
-        "1": true
+        "1": true,
+        "2": true,
+        "3": false,
+        "4": false,
+        "5": true,
+        "6": false,
+        "7": true,
+        "8": false,
+        "9": false
     }
 }

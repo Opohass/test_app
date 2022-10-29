@@ -1,0 +1,21 @@
+Your team needs to obtain a unified log view of all development cloud projects in your SIEM. The development projects are under the NONPROD organization folder with the test and pre-production projects. The development projects share the ABC-BILLING billing account with the rest of the organization.
+Which logging export strategy should you use to meet the requirements?
+A. 1. Export logs to a Cloud Pub/Sub topic with folders/NONPROD parent and includeChildren property set to True in a dedicated SIEM project. 2. Subscribe SIEM to the topic.
+B. 1. Create a Cloud Storage sink with billingAccounts/ABC-BILLING parent and includeChildren property set to False in a dedicated SIEM project. 2. Process Cloud Storage objects in SIEM.
+C. 1. Export logs in each dev project to a Cloud Pub/Sub topic in a dedicated SIEM project. 2. Subscribe SIEM to the topic.
+D. 1. Create a Cloud Storage sink with a publicly shared Cloud Storage bucket in each project. 2. Process Cloud Storage objects in SIEM.
+-porat-
+A customer needs to prevent attackers from hijacking their domain/IP and redirecting users to a malicious site through a man-in-the-middle attack.
+Which solution should this customer use?
+A. VPC Flow Logs
+B. Cloud Armor
+C. DNS Security Extensions
+D. Cloud Identity-Aware Proxy
+-porat-
+A customer deploys an application to App Engine and needs to check for Open Web Application Security Project (OWASP) vulnerabilities.
+Which service should be used to accomplish this?
+A. Cloud Armor
+B. Google Cloud Audit Logs
+C. Web Security Scanner
+D. Anomaly Detection
+-porat-
