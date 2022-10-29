@@ -155,7 +155,7 @@ class Ui_addQuizWindow(object):
             pushButton_edit.setMinimumSize(QtCore.QSize(35, 35))
             pushButton_edit.setMaximumSize(QtCore.QSize(35, 35))
             pushButton_edit.setIcon(icon_edit) 
-            pushButton_edit.clicked.connect(functools.partial(print,pushButton_edit))#TODO: set event to the button
+            pushButton_edit.clicked.connect(functools.partial(self.editbuttons,str(i)))#TODO: set event to the button
             verticalLayout_editRemoveBtns.addWidget(pushButton_edit)
             #remove button
             pushButton_remove = QtWidgets.QPushButton()
@@ -309,6 +309,28 @@ class Ui_addQuizWindow(object):
         quiz_name=self.quizName.split("/")[-1][:-5]
         self.ui.setupUi(self.MainWindow,quiz_name)
         self.MainWindow.show()
+        
+        
+    def editbuttons(self,key):
+        print(f"log A - edit questin with the key:{key}")
+        data=[
+            self.questions["questions"][str(key)],
+            self.questions["answers"][str(key)],
+            self.questions["multiple_choice"][str(key)],
+            self.questions["images"][str(key)],
+            key
+            ]
+        from QuestionEditWindow import Ui_addQestion_window
+        self.ui = Ui_addQestion_window()
+        quiz_name = self.quizName.split("/")[-1][:-5]
+        self.ui.setupUi(self.MainWindow,quiz_name)
+        self.ui.setup_data(data,key)
+        self.MainWindow.show()
+        
+        
+
+        
+        
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)

@@ -1,0 +1,35 @@
+{
+    "questions": {
+        "1": "Your team needs to make sure that a Compute Engine instance does not have access to the internet or to any Google APIs or services. Which two settings must remain disabled to meet these requirements? (Choose two.)"
+    },
+    "answers": {
+        "1": {
+            "A": [
+                "Public IP",
+                true
+            ],
+            "B": [
+                "IP Forwarding\n\n",
+                false
+            ],
+            "C": [
+                "Private Google Access",
+                true
+            ],
+            "D": [
+                "Static routes",
+                false
+            ],
+            "E": [
+                "IAM Network User Role",
+                false
+            ]
+        }
+    },
+    "images": {
+        "1": false
+    },
+    "multiple_choice": {
+        "1": true
+    }
+}

@@ -42,18 +42,10 @@
     "answers": {
         "1": {
             "A": [
-                "1 = Dataflow, 2 = AI Platform, 3 = BigQuery",
-                false
-            ],
-            "B": [
-                "1 = DataProc, 2 = AutoML, 3 = Cloud Bigtable",
-                false
-            ],
-            "C": [
                 "1 = BigQuery, 2 = AutoML, 3 = Cloud Functions",
                 true
             ],
-            "D": [
+            "B": [
                 "1 = BigQuery, 2 = AI Platform, 3 = Cloud Storage",
                 false
             ]
@@ -702,7 +694,7 @@
         }
     },
     "images": {
-        "1": false,
+        "1": "quiz_data_devlop/images/ml_questions/1.png",
         "2": false,
         "3": false,
         "4": false,

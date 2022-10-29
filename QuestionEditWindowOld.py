@@ -123,12 +123,39 @@ class Ui_addQestion_window(object):
 
         #region clicks
         self.pushButton_answer.clicked.connect(self.addAnswer)
+        #self.pushButton_cancel.clicked.connect(self.back)
         self.pushButton_save.clicked.connect(self.save)
         self.pushButton_upload.clicked.connect(self.upload)
         self.pushButton_show.clicked.connect(self.show_image)
         self.pushButton_cancel.clicked.connect(self.closeWindow)
         
-       
+        #endregion
+        
+        #region DEMO
+        # self.horizontalLayout_answer = QtWidgets.QHBoxLayout()
+        # self.horizontalLayout_answer.setObjectName("horizontalLayout_answer")
+        # self.checkBox_isAnswer = QtWidgets.QCheckBox(self.frame)
+        # font = QtGui.QFont()
+        # font.setFamily("Arial")
+        # font.setPointSize(14)
+        # self.checkBox_isAnswer.setFont(font)
+        # self.checkBox_isAnswer.setObjectName("checkBox_isAnswer")
+        # self.checkBox_isAnswer.setText("A)") #NOT NEEDED
+        # self.horizontalLayout_answer.addWidget(self.checkBox_isAnswer)
+        # self.textEdit_answer = QtWidgets.QTextEdit(self.frame)
+        # self.textEdit_answer.setMinimumSize(QtCore.QSize(0, 75))
+        # self.textEdit_answer.setMaximumSize(QtCore.QSize(16777215, 75))
+        # self.textEdit_answer.setObjectName("textEdit_answer")
+        # self.horizontalLayout_answer.addWidget(self.textEdit_answer)
+        # self.pushButton_delete = QtWidgets.QPushButton(self.frame)
+        # self.pushButton_delete.setText("")
+        # icon = QtGui.QIcon()
+        # icon.addPixmap(QtGui.QPixmap("./resorces/icons/trash.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        # self.pushButton_delete.setIcon(icon)
+        # self.pushButton_delete.setObjectName("pushButton_delete")
+        # self.horizontalLayout_answer.addWidget(self.pushButton_delete)
+        # self.verticalLayout_fream.addLayout(self.horizontalLayout_answer)
+        #endregion
 
         self.retranslateUi(self.addQestion_window)
         QtCore.QMetaObject.connectSlotsByName(self.addQestion_window)
@@ -136,7 +163,6 @@ class Ui_addQestion_window(object):
         #variables
         self.photo_path=False
         self.quiz_name=quiz_name
-        self.question_number=0
 
     def retranslateUi(self, addQestion_window):
         _translate = QtCore.QCoreApplication.translate
@@ -149,15 +175,24 @@ class Ui_addQestion_window(object):
         self.pushButton_cancel.setText(_translate("addQestion_window", "cancel"))
         self.pushButton_save.setText(_translate("addQestion_window", "save question"))
     
+    # def uploadImage(self):
+    #     #returns the image name
+    #     #saves the image in self.image_uWu or something idk
+    #     #updates self.label_imageName to image name
+    #     pass
+    
+    # def showImage(self):
+    #     #open the image_window.py with the image as a side window
+    #     #if no image file show window 'lol you dumb' or somthing idk
+    #     pass
 
     def clear_layout(self,layout):
         if layout is not None:
             while layout.count():
                 child = layout.takeAt(0)
                 if child.widget() is not None:
-                    layout.removeWidget(child.widget())
-                    # child.widget().deleteLater()
-                    # child.widget().setParent(None)
+                    child.widget().deleteLater()
+                    child.widget().setParent(None)
                     
                 elif child.layout() is not None:
                     self.clear_layout(child.layout())
@@ -184,6 +219,16 @@ class Ui_addQestion_window(object):
         self.clear_layout(toChange[-1]) 
         
         self.answerNum["answers"].popitem() 
+        
+        # for k in self.answerNum["answers"]:
+        #     # self.answerNum["answers"][k]=
+        #     layout=self.verticalLayout_fream.findChild(QtWidgets.QHBoxLayout, "horizontalLayout_answer"+k)
+        #     l=layout.itemAt(1).widget()
+        #     print(k,layout,l.toPlainText())
+        # layout=self.verticalLayout_fream.findChild(QtWidgets.QHBoxLayout, "horizontalLayout_answer"+key)
+        # self.clear_layout(layout)
+        # print(65-ord(key)) #use to loop over the keys
+    
     def addAnswer(self,key=False):
         #TODO: add the remove action for the button
         if not key:
@@ -215,49 +260,6 @@ class Ui_addQestion_window(object):
         self.verticalLayout_fream.addLayout(horizontalLayout_answer)
         
         self.answerNum["answers"][str(key)]=""
-    def setup_data(self,data,question_number):
-        self.textEdit_question.setPlainText(data[0])
-        for ans in data[1].values():
-            self.setqusions(ans)
-        self.question_number=question_number
-        self.photo_path=data[3]
-            
-         
-    def setqusions(self,answer,key=False): #change 3 add answer prem
-        #TODO: add the remove action for the button
-        if not key:
-            key=chr(AASCII+len(self.answerNum["answers"]))
-        #creating UI elements
-        horizontalLayout_answer = QtWidgets.QHBoxLayout()
-        horizontalLayout_answer.setObjectName("horizontalLayout_answer"+str(key))
-        checkBox_isAnswer = QtWidgets.QCheckBox(self.frame)
-        font = QtGui.QFont()
-        font.setFamily("Arial")
-        font.setPointSize(14)
-        checkBox_isAnswer.setFont(font)
-        checkBox_isAnswer.setObjectName("checkBox_isAnswer"+str(key))
-        checkBox_isAnswer.setText("{})".format(str(key))) #TODO: won't use since ordering it while creating is a headeach
-        #set checkbox #change 1
-        checkBox_isAnswer.setCheckState(answer[1])
-        
-        horizontalLayout_answer.addWidget(checkBox_isAnswer)
-        textEdit_answer = QtWidgets.QTextEdit(self.frame)
-        textEdit_answer.setMinimumSize(QtCore.QSize(0, 75))
-        textEdit_answer.setMaximumSize(QtCore.QSize(16777215, 75))
-        textEdit_answer.setObjectName("textEdit_answer"+str(key))
-        horizontalLayout_answer.addWidget(textEdit_answer)
-        pushButton_delete_answer = QtWidgets.QPushButton(self.frame)
-        #set the answer text #change 2
-        textEdit_answer.setText(answer[0])
-        icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("./resorces/icons/trash.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        pushButton_delete_answer.setIcon(icon)
-        pushButton_delete_answer.setObjectName("pushButton_delete_answer"+str(key))
-        pushButton_delete_answer.clicked.connect(functools.partial(self.rmAnswer,str(key)))
-        horizontalLayout_answer.addWidget(pushButton_delete_answer)
-        self.verticalLayout_fream.addLayout(horizontalLayout_answer)
-        
-        self.answerNum["answers"][str(key)]=answer[0]
     def save(self):
         eror_mesage=False
         #check if  the question is in format
@@ -271,18 +273,15 @@ class Ui_addQestion_window(object):
             ansers={}
             check_count=0
             for widgets in self.verticalLayout_fream.children():
-                try:
-                    tempcheck=widgets.itemAt(0).widget().isChecked()
-                    #save one answer
-                    ansers[widgets.itemAt(0).widget().text()[:-1]]  =[widgets.itemAt(1).widget().toPlainText(),tempcheck]
-                    #check for text in answer
-                    if ansers[widgets.itemAt(0).widget().text()[:-1]]=="":
-                        eror_mesage="there must be text in ansers"
-                        break
-            
-                    elif tempcheck:check_count+=1
-                except:
-                    print("log: eror in save_to_json",ansers)
+                tempcheck=widgets.itemAt(0).widget().isChecked()
+                #save one answer
+                ansers[widgets.itemAt(0).widget().text()[:-1]]  =[widgets.itemAt(1).widget().toPlainText(),tempcheck]
+                #check for text in answer
+                if ansers[widgets.itemAt(0).widget().text()[:-1]]=="":
+                    eror_mesage="there must be text in ansers"
+                    break
+         
+                elif tempcheck:check_count+=1
                     
             if check_count:
                 if self.save_to_json(ansers,check_count):
@@ -302,12 +301,24 @@ class Ui_addQestion_window(object):
             msg.exec_()
         
         
+        
     
-    def save_to_json(self,ansers,check_count): 
+    
+    
+    #porat say : back will cancel the edit and save will save the question and go back   
+    def back(self,status=False):
+        #if status True then return the data to addQuiz
+        #if status True -> 
+        #                  1)make sure there are at least 2 answers 
+        #                  2) make sure at least 1 is marked ->
+        #                     2.1)if more then 1 answer then return it as multiAnswer
+        pass
+    
+    def save_to_json(self,ansers,check_count):
         try:
             with open("quiz_data_devlop/quiz_json/"+self.quiz_name+".json") as j: 
                 temp_question=json.load(j)
-                question_number= self.question_number if self.question_number else len(temp_question["questions"])+1 #change 4
+                question_number=len(temp_question["questions"])+1
                 #add the question
                 temp_question["questions"][question_number]=self.textEdit_question.toPlainText()
                 #add the answers
@@ -333,15 +344,13 @@ class Ui_addQestion_window(object):
         try:
             with open("quiz_data_devlop/quiz_json/"+self.quiz_name+".json") as j: 
                 temp_question=json.load(j)
-                question_number=self.question_number if self.question_number else len(temp_question["questions"])+1 #change 4
-            temp="quiz_data_devlop/images/"+self.quiz_name+"/"+str(question_number)+"."+path.split(".")[-1]
+                question_number=len(temp_question["questions"])+1
+            self.photo_path="quiz_data_devlop/images/"+self.quiz_name+"/"+str(question_number)+"."+path.split(".")[-1]
             #check if we can open the photo
-            QtGui.QPixmap(temp)
+            QtGui.QPixmap(self.photo_path)
             #copy photo 
-            shutil.copy2(path,temp)
-            self.photo_path=temp
-        except Exception as e:
-            print("log: eror upload photo ", e)
+            shutil.copy2(path,self.photo_path)
+        except:self.photo_path=""
     def show_image(self):
         from image_window import Ui_Image
         if self.photo_path:
@@ -377,6 +386,6 @@ if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)
     addQestion_window = QtWidgets.QMainWindow()
     ui = Ui_addQestion_window()
-    ui.setupUi(addQestion_window,"1","ml_questions")
+    ui.setupUi(addQestion_window,"ml_questions")
     addQestion_window.show()
     sys.exit(app.exec_())
