@@ -233,6 +233,8 @@ class Ui_QuestionWindow(object):
         #try to close photo window
         try: self.imageWindow.close()
         except:pass
+        if self.quiz_data[self.curent_ques_number][-2]:
+                self.show_image()
         self.clear_layout()
         self.label_question.setText(self.quiz_data[self.curent_ques_number][0])
         pos = 0
@@ -264,8 +266,6 @@ class Ui_QuestionWindow(object):
             # else:
             #     if self.UserAnswer[self.curent_ques_number] == i:
             #         button.toggle()
-            # if self.quiz_data[self.curent_ques_number][-2]:
-            #     self.show_image()
             pos += 1
         
     def submit_answer(self):
@@ -285,7 +285,8 @@ class Ui_QuestionWindow(object):
             pos += 1
         
     def show_image(self):
-        path = os.getcwd() + "/quiz_data/images/" + self.quiz_data[self.curent_ques_number][-2]
+      
+        path = os.getcwd() +"/" +self.quiz_data[self.curent_ques_number][-2]
         print(path)
         self.imageWindow = QtWidgets.QMainWindow()
         self.imageUi = Ui_Image()
