@@ -27,10 +27,7 @@
         "25": "You work for a social media company. You need to detect whether posted images contain cars. Each training example is a member of exactly one class. You have trained an object detection neural network and deployed the model version to AI Platform Prediction for evaluation. Before deployment, you created an evaluation job and attached it to the AI Platform Prediction model version. You notice that the precision is lower than your business requirements allow. How should you adjust the model's final layer softmax threshold to increase precision?",
         "26": "You are responsible for building a unified analytics environment across a variety of on-premises data marts. Your company is experiencing data quality and security challenges when integrating data across the servers, caused by the use of a wide range of disconnected tools and temporary solutions. You need a fully managed, cloud-native data integration service that will lower the total cost of work and reduce repetitive work. Some members on your team prefer a codeless interface for building Extract, Transform, Load (ETL) process. Which service should you use?",
         "27": "You are an ML engineer at a regulated insurance company. You are asked to develop an insurance approval model that accepts or rejects insurance applications from potential customers. What factors should you consider before building the model?",
-        "28": "You are training a Resnet model on AI Platform using TPUs to visually categorize types of defects in automobile engines. You capture the training profile using the Cloud TPU profiler plugin and observe that it is highly input-bound. You want to reduce the bottleneck and speed up your model training process. Which modifications should you make to the tf.data dataset? (Choose two.)",
-        "29": "Q TEST1",
-        "30": "Q TEST2",
-        "31": "Q TEST3"
+        "28": "You are training a Resnet model on AI Platform using TPUs to visually categorize types of defects in automobile engines. You capture the training profile using the Cloud TPU profiler plugin and observe that it is highly input-bound. You want to reduce the bottleneck and speed up your model training process. Which modifications should you make to the tf.data dataset? (Choose two.)"
     },
     "answers": {
         "1": {
@@ -540,60 +537,6 @@
                 "Decrease the batch size argument in your transformation.",
                 true
             ]
-        },
-        "29": {
-            "A": [
-                "TEST1",
-                true
-            ],
-            "B": [
-                "TEST1",
-                false
-            ],
-            "C": [
-                "TEST1",
-                false
-            ],
-            "D": [
-                "TEST1",
-                false
-            ]
-        },
-        "30": {
-            "A": [
-                "TEST2",
-                true
-            ],
-            "B": [
-                "TEST2",
-                false
-            ],
-            "C": [
-                "TEST2",
-                true
-            ],
-            "D": [
-                "TEST2",
-                false
-            ]
-        },
-        "31": {
-            "A": [
-                "TEST3",
-                true
-            ],
-            "B": [
-                "TEST3",
-                false
-            ],
-            "C": [
-                "TEST3",
-                false
-            ],
-            "D": [
-                "TEST3",
-                false
-            ]
         }
     },
     "images": {
@@ -624,12 +567,9 @@
         "25": false,
         "26": false,
         "27": false,
-        "28": false,
-        "29": false,
-        "30": "quiz_data_devlop/images/ml_questions/q30.png",
-        "31": false
+        "28": false
     },
-    "multiple_choice":{
+    "multiple_choice": {
         "1": false,
         "2": false,
         "3": false,
@@ -657,9 +597,6 @@
         "25": false,
         "26": false,
         "27": false,
-        "28": true,
-        "29": false,
-        "30": true,
-        "31": false
+        "28": true
     }
 }
