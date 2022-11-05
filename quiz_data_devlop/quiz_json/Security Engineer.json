@@ -1177,11 +1177,11 @@
             ],
             "B": [
                 "Verify that auto upgrade is enabled; if so, Google will upgrade the nodes in a GKE cluster.",
-                false
+                true
             ],
             "C": [
                 "Update the application code or apply a patch, build a new image, and redeploy it.",
-                true
+                false
             ],
             "D": [
                 "Configure containers to automatically upgrade when the base image is available in Container Registry.",

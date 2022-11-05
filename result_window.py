@@ -99,11 +99,11 @@ class Ui_Results(object):
             item = QtWidgets.QListWidgetItem()
             inp_str = ''
             if self.correct_answers[i]:
-                inp_str = "Correct Answer\n"+ "You Answered: " + ", ".join(self.userAnswers[i]) + "\n"
+                inp_str = "Question "+str(i+1) +" Correct Answer\n"+ "You Answered: " + ", ".join(self.userAnswers[i]) + "\n"
                 item.setText(inp_str)
                 item.setBackground(QtGui.QColor('#2c702b'))
             else:
-                inp_str = "Incorrect Answer\n"+ "You Answered: " + ", ".join(self.userAnswers[i]) + "\n"+" the Correct Answers is "+", ".join(self.Right_Anser[i])
+                inp_str = "Question "+str(i+1) +" Incorrect Answer\n"+ "You Answered: " + ", ".join(self.userAnswers[i]) + "\n"+" the Correct Answers is "+", ".join(self.Right_Anser[i])
                 item.setText(inp_str)
                 item.setBackground(QtGui.QColor('#750404'))
             # if self.quiz_data[i][-1]:
