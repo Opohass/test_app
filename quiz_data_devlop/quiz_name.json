@@ -1,4 +1,5 @@
 {
     "ML Quiz": "quiz_data_devlop/quiz_json/ml_questions.json",
-    "Security Engineer": "quiz_data_devlop/quiz_json/Security Engineer.json"
+    "Security Engineer": "quiz_data_devlop/quiz_json/Security Engineer.json",
+    "Data Engineer": "quiz_data_devlop/quiz_json/Data Engineer.json"
 }
