@@ -32,6 +32,7 @@ class Ui_QuestionWindow(object):
         QuestionWindow.resize(941, 565)
         QuestionWindow.setMinimumSize(QtCore.QSize(941, 565))
         QuestionWindow.setMaximumSize(QtCore.QSize(905, 525))
+       
         font = QtGui.QFont()
         font.setFamily("Arial")
         QuestionWindow.setFont(font)
