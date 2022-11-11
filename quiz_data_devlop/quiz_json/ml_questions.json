@@ -33,7 +33,7 @@
         "1": {
             "A": [
                 "1 = Dataflow, 2 = AI Platform, 3 = BigQuery",
-                false
+                true
             ],
             "B": [
                 "1 = DataProc, 2 = AutoML, 3 = Cloud Bigtable",
@@ -41,7 +41,7 @@
             ],
             "C": [
                 "1 = BigQuery, 2 = AutoML, 3 = Cloud Functions",
-                true
+                false
             ],
             "D": [
                 "1 = BigQuery, 2 = AI Platform, 3 = Cloud Storage",
@@ -51,7 +51,7 @@
         "2": {
             "A": [
                 "1. Build a tree-based regression model that predicts how many passengers will be picked up at each shuttle station. 2. Dispatch an appropriately sized shuttle and provide the map with the required stops based on the prediction.",
-                true
+                false
             ],
             "B": [
                 "1. Build a tree-based classification model that predicts whether the shuttle should pick up passengers at each shuttle station. 2. Dispatch an available shuttle and provide the map with the required stops based on the prediction.",
@@ -59,7 +59,7 @@
             ],
             "C": [
                 "1. Define the optimal route as the shortest route that passes by all shuttle stations with confirmed attendance at the given time under capacity constraints. 2. Dispatch an appropriately sized shuttle and indicate the required stops on the map.",
-                false
+                true
             ],
             "D": [
                 "1. Build a reinforcement learning model with tree-based classification models that predict the presence of passengers at shuttle stops as agents and a reward function around a distance-based metric. 2. Dispatch an appropriately sized shuttle and provide the map with the required stops based on the simulated outcome.",
@@ -73,11 +73,11 @@
             ],
             "B": [
                 "Use a convolutional neural network with max pooling and softmax activation.",
-                true
+                false
             ],
             "C": [
                 "Downsample the data with upweighting to create a sample with 10% positive examples.",
-                false
+                true
             ],
             "D": [
                 "Remove negative examples until the numbers of positive and negative examples are equal.",
@@ -91,7 +91,7 @@
             ],
             "B": [
                 "Convert your PySpark into SparkSQL queries to transform the data, and then run your pipeline on Dataproc to write the data into BigQuery.",
-                true
+                false
             ],
             "C": [
                 "Ingest your data into Cloud SQL, convert your PySpark commands into SQL queries to transform the data, and then use federated queries from BigQuery for machine learning.",
@@ -99,13 +99,13 @@
             ],
             "D": [
                 "Ingest your data into BigQuery using BigQuery Load, convert your PySpark commands into BigQuery SQL queries to transform the data, and then write the transformations to a new table.",
-                false
+                true
             ]
         },
         "5": {
             "A": [
                 "Use the AI Platform custom containers feature to receive training jobs using any framework.",
-                false
+                true
             ],
             "B": [
                 "Configure Kubeflow to run on Google Kubernetes Engine and receive training jobs through TF Job.",
@@ -117,7 +117,7 @@
             ],
             "D": [
                 "Set up Slurm workload manager to receive jobs that can be scheduled to run on your cloud infrastructure.",
-                true
+                false
             ]
         },
         "6": {
@@ -127,11 +127,11 @@
             ],
             "B": [
                 "Extend your test dataset with images of the newer products when they are introduced to retraining.",
-                false
+                true
             ],
             "C": [
                 "Replace your test dataset with images of the newer products when they are introduced to retraining.",
-                true
+                false
             ],
             "D": [
                 "Update your test dataset with images of the newer products when your evaluation metrics drop below a pre-decided threshold.",
@@ -141,11 +141,11 @@
         "7": {
             "A": [
                 "Configure AutoML Tables to perform the classification task.",
-                false
+                true
             ],
             "B": [
                 "Run a BigQuery ML task to perform logistic regression for the classification.",
-                true
+                false
             ],
             "C": [
                 "Use AI Platform Notebooks to run the classification model with pandas library.",
@@ -181,11 +181,11 @@
             ],
             "B": [
                 "Use the gcloud command-line tool to submit training jobs on AI Platform when you update your code.",
-                true
+                false
             ],
             "C": [
                 "Use Cloud Build linked with Cloud Source Repositories to trigger retraining when new code is pushed to the repository.",
-                false
+                true
             ],
             "D": [
                 "Create an automated workflow in Cloud Composer that runs daily and looks for changes in code in Cloud Storage using a sensor.",
@@ -235,11 +235,11 @@
             ],
             "B": [
                 "1 = AI Platform, 2 = AI Platform, 3 = AutoML Natural Language",
-                true
+                false
             ],
             "C": [
                 "1 = AI Platform, 2 = AI Platform, 3 = Cloud Natural Language API",
-                false
+                true
             ],
             "D": [
                 "1 = Cloud Natural Language API, 2 = AI Platform, 3 = Cloud Vision API",
@@ -257,11 +257,11 @@
             ],
             "C": [
                 "Run a hyperparameter tuning job on AI Platform to optimize for the L2 regularization and dropout parameters.",
-                false
+                true
             ],
             "D": [
                 "Run a hyperparameter tuning job on AI Platform to optimize for the learning rate, and increase the number of neurons by a factor of 2.",
-                true
+                false
             ]
         },
         "14": {
@@ -271,7 +271,7 @@
             ],
             "B": [
                 "Lack of model retraining",
-                false
+                true
             ],
             "C": [
                 "Too few layers in the model for capturing information",
@@ -279,7 +279,7 @@
             ],
             "D": [
                 "Incorrect data split ratio during model training, evaluation, validation, and test",
-                true
+                false
             ]
         },
         "15": {
@@ -289,7 +289,7 @@
             ],
             "B": [
                 "Convert the images to tf.Tensor objects, and then run Dataset.from_tensor_slices().",
-                true
+                false
             ],
             "C": [
                 "Convert the images to tf.Tensor objects, and then run tf.data.Dataset.from_tensors().",
@@ -297,7 +297,7 @@
             ],
             "D": [
                 "Convert the images into TFRecords, store the images in Cloud Storage, and then use the tf.data API to read the images for training.",
-                false
+                true
             ]
         },
         "16": {
@@ -307,11 +307,11 @@
             ],
             "B": [
                 "Reinforcement Learning",
-                true
+                false
             ],
             "C": [
                 "Recurrent Neural Networks (RNN)",
-                false
+                true
             ],
             "D": [
                 "Convolutional Neural Networks (CNN)",
@@ -321,7 +321,7 @@
         "17": {
             "A": [
                 "Stream all files to Google Cloud, and then write the data to BigQuery. Periodically conduct a bulk scan of the table using the DLP API.",
-                true
+                false
             ],
             "B": [
                 "Stream all files to Google Cloud, and write batches of the data to BigQuery. While the data is being written to BigQuery, conduct a bulk scan of the data using the DLP API.",
@@ -333,7 +333,7 @@
             ],
             "D": [
                 "Create three buckets of data: Quarantine, Sensitive, and Non-sensitive. Write all data to the Quarantine bucket. Periodically conduct a bulk scan of that bucket using the DLP API, and move the data to either the Sensitive or Non-Sensitive bucket.",
-                false
+                true
             ]
         },
         "18": {
@@ -379,11 +379,11 @@
             ],
             "B": [
                 "Modify the 'scale-tier' parameter.",
-                false
+                true
             ],
             "C": [
                 "Modify the 'batch size' parameter.",
-                true
+                false
             ],
             "D": [
                 "Modify the 'learning rate' parameter.",
@@ -397,7 +397,7 @@
             ],
             "B": [
                 "Compare the loss performance for each model on the validation data.",
-                true
+                false
             ],
             "C": [
                 "Compare the receiver operating characteristic (ROC) curve for each model using the What-If Tool.",
@@ -405,7 +405,7 @@
             ],
             "D": [
                 "Compare the mean average precision across the models using the Continuous Evaluation feature.",
-                false
+                true
             ]
         },
         "22": {
@@ -419,21 +419,21 @@
             ],
             "C": [
                 "data = json.dumps({`signature_name`: `serving_default`, `instances` [['a', 'b', 'c'], ['d', 'e', 'f']]})",
-                true
+                false
             ],
             "D": [
                 "data = json.dumps({`signature_name`: `serving_default`, `instances` [['a', 'b'], ['c', 'd'], ['e', 'f']]})",
-                false
+                true
             ]
         },
         "23": {
             "A": [
                 "1= Dataflow, 2= BigQuery",
-                false
+                true
             ],
             "B": [
                 "1 = Pub/Sub, 2= Datastore",
-                true
+                false
             ],
             "C": [
                 "1 = Dataflow, 2 = Cloud SQL",
@@ -469,7 +469,7 @@
             ],
             "B": [
                 "Decrease the recall.",
-                false
+                true
             ],
             "C": [
                 "Increase the number of false positives.",
@@ -477,7 +477,7 @@
             ],
             "D": [
                 "Decrease the number of false negatives.",
-                true
+                false
             ]
         },
         "26": {
@@ -501,11 +501,11 @@
         "27": {
             "A": [
                 "Redaction, reproducibility, and explainability",
-                true
+                false
             ],
             "B": [
                 "Traceability, reproducibility, and explainability",
-                false
+                true
             ],
             "C": [
                 "Federated learning, reproducibility, and explainability",
@@ -531,11 +531,11 @@
             ],
             "D": [
                 "Set the prefetch option equal to the training batch size.",
-                false
+                true
             ],
             "E": [
                 "Decrease the batch size argument in your transformation.",
-                true
+                false
             ]
         }
     },
