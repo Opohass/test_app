@@ -87,7 +87,27 @@
         "85": "You are the Security Admin in your company. You want to synchronize all security groups that have an email address from your LDAP directory in Cloud IAM. What should you do?",
         "86": "You are part of a security team investigating a compromised service account key. You need to audit which new resources were created by the service account. What should you do?",
         "87": "You have an application where the frontend is deployed on a managed instance group in subnet A and the data layer is stored on a mysql Compute Engine virtual machine (VM) in subnet B on the same VPC. Subnet A and Subnet B hold several other Compute Engine VMs. You only want to allow the application frontend to access the data in the application's mysql instance on port 3306. What should you do?",
-        "88": "Your company operates an application instance group that is currently deployed behind a Google Cloud load balancer in us-central-1 and is configured to use the Standard Tier network. The infrastructure team wants to expand to a second Google Cloud region, us-east-2. You need to set up a single external IP address to distribute new requests to the instance groups in both regions. What should you do?"
+        "88": "Your company operates an application instance group that is currently deployed behind a Google Cloud load balancer in us-central-1 and is configured to use the Standard Tier network. The infrastructure team wants to expand to a second Google Cloud region, us-east-2. You need to set up a single external IP address to distribute new requests to the instance groups in both regions. What should you do?",
+        "89": "Developers in an organization are prototyping a few applications on Google Cloud and are starting to store sensitive information on Google Cloud. The developers are using their personal/consumer Gmail accounts to set up and manage their projects within Google Cloud. A security engineer identifies this practice as a concern to the leadership team because of the lack of centralized project management and access to the data being stored in these accounts. Which solution should be used to resolve this concern?",
+        "90": "\nA customer wants to use Cloud Identity as their primary IdP. The customer wants to use other non-Google Cloud SaaS products for CRM, messaging, and customer ticketing management. The customer also wants to improve employee experience with Single Sign-On (SSO) capabilities to securely access Google Cloud and non-Google Cloud applications. Only authorized individuals should be able to access these third-party applications. What action should the customer take to meet these requirements?",
+        "91": "A Cloud Development team needs to use service accounts extensively in their local development. You need to provide the team with the keys for these service accounts. You want to follow Google-recommended practices. What should you do?",
+        "92": " \nA customer needs to rely on their existing user directory with the requirements of native authentication when developing solutions in Google Cloud. They want to leverage their existing tooling and functionality to gather insight on user activity from a familiar interface. Which action should you take to meet the customer's requirements?",
+        "93": "\nA customer wants to grant access to their application running on Compute Engine to write only to a specific Cloud Storage bucket. How should you grant access?",
+        "94": "Your team creates an ingress firewall rule to allow SSH access from their corporate IP range to a specific bastion host on Compute Engine. Your team wants to make sure that this firewall rule cannot be used by unauthorized engineers who may otherwise have access to manage VMs in the development environment. What should your team do to meet this requirement?",
+        "95": "You want to protect the default VPC network from all inbound and outbound internet traffic. What action should you take?",
+        "96": "\nAn organization recently began using App Engine to build and host its new web application for its customers. The organization wants to use its existing IAM setup to allow its developer employees to have elevated access to the application remotely. This would allow them to push updates and fixes to the application via an HTTPS connection. Non-developer employees should only get access to the production version without development permissions. Which Google Cloud solution should be used to meet these requirements?",
+        "97": " \nYou have defined subnets in a VPC within Google Cloud. You need multiple projects to create Compute Engine instances with IP addresses from these subnets. What should you do?",
+        "98": "\nAn application log\u2019s data, including customer identifiers such as email addresses, needs to be redacted. However, these logs also include the email addresses of internal developers from company.com, and these should NOT be redacted. Which solution should you use to meet these requirements?",
+        "99": "Which encryption algorithm is used with Default Encryption in Cloud Storage?",
+        "100": "Your company is storing files on Cloud Storage. To comply with local regulations, you want to ensure that uploaded files cannot be deleted within the first 5 years. It should not be possible to lower the retention period after it has been set. What should you do?",
+        "101": "Your company is deploying their applications on Google Kubernetes Engine. You want to follow Google-recommended practices. What should you do to ensure that the container images used for new deployments contain the latest security patches?",
+        "102": "\nYour customer is moving their corporate applications to Google Cloud. The security team wants detailed visibility of all resources in the organization. You use Resource Manager to set yourself up as the org admin. What Cloud Identity and Access Management (Cloud IAM) roles should you give to the security team?",
+        "103": "\n \nYour company wants to collect and analyze CVE information for packages in container images, and wants to prevent images with known security issues from running in your Google Kubernetes Engine environment. Which two security features does Google recommend including in a container build pipeline? (choose two)",
+        "104": "\nYou need to perform a vulnerability scan for an App Engine app using Web Security Scanner. Upon completion of the scan, the report is not producing the expected number of webpage results. The pages in the app with mouseover menus are missing from the report. Which action should you take to make sure the scan completes and captures the menu?",
+        "105": "\nAn organization is working on their GDPR compliance strategy. It wants to ensure that controls are in place to ensure that personally identifiable information (PII) is stored in Cloud Storage buckets without third-party exposure.  Which Google Cloud solution should the organization use to verify that PII is stored in the correct place without exposing PII internally?",
+        "106": " \nA cloud customer has an on-premises key management system and wants to generate, protect, rotate, and audit encryption keys with it. How can the customer use Cloud Storage with their own encryption keys?",
+        "107": " \nYou are responsible for implementing a payment processing environment that will use Google Kubernetes Engine and need to apply proper security controls. What should you do?",
+        "108": " \nA retail company is moving its e-commerce site, including its point-of-sale application, to Google Cloud. Which compliance standard must the company meet?"
     },
     "answers": {
         "1": {
@@ -1721,6 +1741,366 @@
                 "Create a Cloud VPN connection between the two regions, and enable Google Private Access.",
                 false
             ]
+        },
+        "89": {
+            "A": [
+                "Enforce the setup of Security Keys as the 2-Step Verification method for those Gmail accounts.",
+                false
+            ],
+            "B": [
+                "Set up Cloud Identity and require the developers to use those accounts for Google Cloud work.",
+                true
+            ],
+            "C": [
+                "Require the developers to log/store their Gmail passwords with the security team.",
+                false
+            ],
+            "D": [
+                "Enable logging on all Google Cloud projects to track all developer activities.",
+                false
+            ]
+        },
+        "90": {
+            "A": [
+                "Remove the employee from Cloud Identity, set the correct license for the individuals, and resync them to Cloud Identity for the changes to take effect.",
+                false
+            ],
+            "B": [
+                "Configure third-party applications to federate authentication and authorization to the Google Cloud IdP.",
+                true
+            ],
+            "C": [
+                "Remove the individuals from the third-party applications, add the license to Cloud Identity, and resync the individuals back to the third-party applications.",
+                false
+            ],
+            "D": [
+                "Copy user personas from Cloud Identity to all third-party applications for the domain.",
+                false
+            ]
+        },
+        "91": {
+            "A": [
+                "Implement a daily key rotation process that generates a new key and commits it to the source code repository every day.",
+                false
+            ],
+            "B": [
+                "Implement a daily key rotation process, and provide developers with a Cloud Storage bucket from which they can download the new key every day.",
+                true
+            ],
+            "C": [
+                "Create a Google Group with all developers. Assign the group the IAM role of Service Account User, and have developers generate and download their own keys.",
+                false
+            ],
+            "D": [
+                "Create a Google Group with all developers. Assign the group the IAM role of Service Account Admin, and have developers generate and download their own keys.",
+                false
+            ]
+        },
+        "92": {
+            "A": [
+                "Provision users into Cloud Identity using Just-in-Time SAML 2.0 user provisioning with the customer User Directory as source.",
+                false
+            ],
+            "B": [
+                "Configure Cloud Identity as a SAML 2.0 Service Provider, using the customer's User Directory as the Identity Provider.",
+                true
+            ],
+            "C": [
+                "Configure and enforce 2-Step Verification in Cloud Identity for all Super Admins.",
+                false
+            ],
+            "D": [
+                "Configure a third-party IdP (Octa or Ping Federate) to manage authentication.",
+                false
+            ]
+        },
+        "93": {
+            "A": [
+                "Create a service account for the application, and grant the Storage Object Creator role at the project level.",
+                false
+            ],
+            "B": [
+                "Create a service account for the application, and grant the Storage Object Creator role at the bucket level.",
+                true
+            ],
+            "C": [
+                "Create a user account, authenticate with the application, and grant the Storage Object Admin role at the project level.",
+                false
+            ],
+            "D": [
+                "",
+                false
+            ]
+        },
+        "94": {
+            "A": [
+                "Create the firewall rule with a target of a network tag. Centrally manage access to the tag.",
+                false
+            ],
+            "B": [
+                "Create the firewall rule with a target of a service account. Centrally manage access to the service account.",
+                true
+            ],
+            "C": [
+                "Create the firewall rule in a Shared VPC with a target of a network tag.",
+                false
+            ],
+            "D": [
+                "Create the firewall rule in a Shared VPC with a target of a specific subnet.",
+                false
+            ]
+        },
+        "95": {
+            "A": [
+                "Create a Deny All inbound internet firewall rule.",
+                false
+            ],
+            "B": [
+                "Create a Deny All outbound internet firewall rule.",
+                true
+            ],
+            "C": [
+                "Create a new subnet in the VPC network with private Google access enabled.",
+                false
+            ],
+            "D": [
+                "Create instances without external IP addresses only.",
+                false
+            ]
+        },
+        "96": {
+            "A": [
+                "Synchronize the organization's Active Directory using Cloud Identity for employee access via Cloud VPN.",
+                false
+            ],
+            "B": [
+                "Disable access for non-developer employees by removing their Google Group from the application access control list (ACL).",
+                false
+            ],
+            "C": [
+                "Set up Cloud Identity-Aware Proxy (Cloud IAP) to manage authentication and different authorization levels for employee access.",
+                true
+            ],
+            "D": [
+                "Set up Virtual Private Cloud (VPC) firewall rules to manage authentication and different authorization levels for employee access.",
+                false
+            ]
+        },
+        "97": {
+            "A": [
+                "Configure Cloud VPN between the projects.",
+                false
+            ],
+            "B": [
+                "Set up VPC peering between all related projects.",
+                false
+            ],
+            "C": [
+                "Change the VPC subnets to enable private Google access.",
+                false
+            ],
+            "D": [
+                "Use Shared VPC to share the subnets with the other projects.",
+                true
+            ]
+        },
+        "98": {
+            "A": [
+                "Create a regular custom dictionary detector that lists a subset of the developers' email addresses.",
+                false
+            ],
+            "B": [
+                "Create a regular expression (regex) custom infoType detector to match on @company.com.",
+                true
+            ],
+            "C": [
+                "Create a regular custom dictionary detector to match all email addresses listed in Cloud Identity.",
+                false
+            ],
+            "D": [
+                "Create a custom infoType called COMPANY_EMAIL to match @company.com.",
+                false
+            ]
+        },
+        "99": {
+            "A": [
+                "AES-256",
+                true
+            ],
+            "B": [
+                "SHA512",
+                false
+            ],
+            "C": [
+                "MD5",
+                false
+            ],
+            "D": [
+                "3DES",
+                false
+            ]
+        },
+        "100": {
+            "A": [
+                "Apply a retention period of 5 years to the bucket, and lock the bucket.",
+                true
+            ],
+            "B": [
+                "Enable Temporary hold and apply a retention period of 5 years to the bucket.",
+                false
+            ],
+            "C": [
+                "Use Cloud IAM to ensure that nobody has an IAM role that has the permissions to delete files from Cloud Storage.",
+                false
+            ],
+            "D": [
+                "Create an object lifecycle rule using the Age condition and the Delete action. Set the Age condition to 5 years.",
+                false
+            ]
+        },
+        "101": {
+            "A": [
+                "Use Google-managed base images for all containers.",
+                true
+            ],
+            "B": [
+                "Use Container Analysis to detect vulnerabilities in images.",
+                false
+            ],
+            "C": [
+                "Use an update script as part of every container image startup.",
+                false
+            ],
+            "D": [
+                "Use exclusively private images in Container Registry.",
+                false
+            ]
+        },
+        "102": {
+            "A": [
+                "Org viewer, Project owner",
+                false
+            ],
+            "B": [
+                "Org viewer, Project viewer",
+                true
+            ],
+            "C": [
+                "Org admin, Project browser",
+                false
+            ],
+            "D": [
+                "Project owner, Network admin",
+                false
+            ]
+        },
+        "103": {
+            "A": [
+                "Deployment policies",
+                true
+            ],
+            "B": [
+                "Password policies",
+                false
+            ],
+            "C": [
+                "Vulnerability scanning",
+                true
+            ],
+            "D": [
+                "Network isolation",
+                false
+            ]
+        },
+        "104": {
+            "A": [
+                "Verify the Excluded URLs.",
+                false
+            ],
+            "B": [
+                "Modify the scan schedule to return new results.",
+                false
+            ],
+            "C": [
+                "Change the scan to include additional Starting URLs.",
+                true
+            ],
+            "D": [
+                "Adjust the Google account on which the scan is running.",
+                false
+            ]
+        },
+        "105": {
+            "A": [
+                "Cloud Storage Bucket Lock",
+                false
+            ],
+            "B": [
+                "Cloud Data Loss Prevention API",
+                true
+            ],
+            "C": [
+                "VPC Service Controls",
+                false
+            ],
+            "D": [
+                "Web Security Scanner",
+                false
+            ]
+        },
+        "106": {
+            "A": [
+                "Declare usage of default encryption at rest in the audit report on compliance",
+                false
+            ],
+            "B": [
+                "Upload encryption keys to the same Cloud Storage bucket",
+                false
+            ],
+            "C": [
+                "Use Customer Managed Encryption Keys (CMEK)",
+                false
+            ],
+            "D": [
+                "Use Customer-Supplied Encryption Keys (CSEK)",
+                true
+            ]
+        },
+        "107": {
+            "A": [
+                "Implement and enforce two-factor authentication.",
+                false
+            ],
+            "B": [
+                "Activate a firewall to prevent all egress traffic.",
+                false
+            ],
+            "C": [
+                "Establish minimum password length requirements for all systems.",
+                false
+            ],
+            "D": [
+                "Require file integrity monitoring and antivirus scans of pods and nodes.",
+                true
+            ]
+        },
+        "108": {
+            "A": [
+                "FedRAMP High",
+                false
+            ],
+            "B": [
+                "HIPAA",
+                false
+            ],
+            "C": [
+                "SOX",
+                false
+            ],
+            "D": [
+                "PCI DSS",
+                true
+            ]
         }
     },
     "images": {
@@ -1811,7 +2191,27 @@
         "85": false,
         "86": false,
         "87": false,
-        "88": false
+        "88": false,
+        "89": false,
+        "90": false,
+        "91": false,
+        "92": false,
+        "93": false,
+        "94": false,
+        "95": false,
+        "96": false,
+        "97": false,
+        "98": false,
+        "99": false,
+        "100": false,
+        "101": false,
+        "102": false,
+        "103": false,
+        "104": false,
+        "105": false,
+        "106": false,
+        "107": false,
+        "108": false
     },
     "multiple_choice": {
         "1": true,
@@ -1901,6 +2301,26 @@
         "85": false,
         "86": false,
         "87": false,
-        "88": false
+        "88": false,
+        "89": false,
+        "90": false,
+        "91": false,
+        "92": false,
+        "93": false,
+        "94": false,
+        "95": false,
+        "96": false,
+        "97": false,
+        "98": false,
+        "99": false,
+        "100": false,
+        "101": false,
+        "102": false,
+        "103": true,
+        "104": false,
+        "105": false,
+        "106": false,
+        "107": false,
+        "108": false
     }
 }
