@@ -27,7 +27,42 @@
         "25": "You work for a social media company. You need to detect whether posted images contain cars. Each training example is a member of exactly one class. You have trained an object detection neural network and deployed the model version to AI Platform Prediction for evaluation. Before deployment, you created an evaluation job and attached it to the AI Platform Prediction model version. You notice that the precision is lower than your business requirements allow. How should you adjust the model's final layer softmax threshold to increase precision?",
         "26": "You are responsible for building a unified analytics environment across a variety of on-premises data marts. Your company is experiencing data quality and security challenges when integrating data across the servers, caused by the use of a wide range of disconnected tools and temporary solutions. You need a fully managed, cloud-native data integration service that will lower the total cost of work and reduce repetitive work. Some members on your team prefer a codeless interface for building Extract, Transform, Load (ETL) process. Which service should you use?",
         "27": "You are an ML engineer at a regulated insurance company. You are asked to develop an insurance approval model that accepts or rejects insurance applications from potential customers. What factors should you consider before building the model?",
-        "28": "You are training a Resnet model on AI Platform using TPUs to visually categorize types of defects in automobile engines. You capture the training profile using the Cloud TPU profiler plugin and observe that it is highly input-bound. You want to reduce the bottleneck and speed up your model training process. Which modifications should you make to the tf.data dataset? (Choose two.)"
+        "28": "You are training a Resnet model on AI Platform using TPUs to visually categorize types of defects in automobile engines. You capture the training profile using the Cloud TPU profiler plugin and observe that it is highly input-bound. You want to reduce the bottleneck and speed up your model training process. Which modifications should you make to the tf.data dataset? (Choose two.)",
+        "29": "You need to build an object detection model for a small startup company to identify if and where the company\u2019s logo appears in an image. You were given a large repository of images, some with logos and some without.\nThese images are not yet labelled. You need to label these pictures, and then train and deploy the model. What should you do?",
+        "30": "You work for a gaming company that develops and manages a popular massively multiplayer online (MMO) game.\nThe game\u2019s environment is open-ended, and a large number of positions and moves can be taken by a player. Your team has developed an ML model with TensorFlow that predicts the next move of each player.\nEdge deployment is not possible, but low-latency serving is required. How should you configure the deployment?",
+        "31": "You work for a textile manufacturer and have been asked to build a model to detect and classify fabric defects.\nYou trained a machine learning model with high recall based on high resolution images taken at the end of the production line. You want quality control inspectors to gain trust in your model.\nWhich technique should you use to understand the rationale of your classifier?",
+        "32": "You work for a large financial institution that is planning to use Dialogflow to create a chatbot for the company\u2019s mobile app.\nYou have reviewed old chat logs and tagged each conversation for intent based on each customer\u2019s stated intention for contacting customer service.\nAbout 70% of customer inquiries are simple requests that are solved within 10 intents. The remaining 30% of inquiries require much longer and more complicated requests.\nWhich intents should you automate first?",
+        "33": "You work for a manufacturing company that owns a high-value machine which has several machine settings and multiple sensors.\nA history of the machine\u2019s hourly sensor readings and known failure event data are stored in BigQuery. You need to predict if the machine will fail within the next 3 days in order to schedule maintenance before the machine fails.\nWhich data preparation and model training steps should you take?",
+        "34": "You work on a team where the process for deploying a model into production starts with data scientists training different versions of models in a Kubeflow pipeline.\nThe workflow then stores the new model artifact into the corresponding Cloud Storage bucket. You need to build the next steps of the pipeline after the submitted model is ready to be tested and deployed in production on AI Platform.\nHow should you configure the architecture before deploying the model to production?",
+        "35": "You are an ML engineer at a media company. You want to use machine learning to analyze video content, identify objects, and alert users if there is inappropriate content.\nWhich Google Cloud products should you use to build this project?",
+        "36": "Your team is using a TensorFlow Inception-v3 CNN model pretrained on ImageNet for an image classification prediction challenge on 10,000 images. You will use AI Platform to perform the model training.\nWhat TensorFlow distribution strategy and AI Platform training job configuration should you use to train the model and optimize for wall-clock time?",
+        "37": "You work for a large retailer. You want to use ML to forecast future sales leveraging 10 years of historical sales data.\nThe historical data is stored in Cloud Storage in Avro format. You want to rapidly experiment with all the available data.\nHow should you build and train your model for the sales forecast?",
+        "38": "You need to write a generic test to verify whether Dense Neural Network (DNN) models automatically released by your team have a sufficient number of parameters to learn the task for which they were built.\nWhat should you do?",
+        "39": "Your team works on a smart city project with wireless sensor networks and a set of gateways for transmitting sensor data. You have to cope with many design choices. You want, for each of the problems under study, to find the simplest solution.\nFor example, it is necessary to decide on the placement of nodes so that the result is the most economical and inclusive. An algorithm without data tagging must be used.\nWhich of the following choices do you think is the most suitable?",
+        "40": "Your client has an e-commerce site for commercial spare parts for cars with competitive prices. It started with the small car sector but is continually adding products. Since 80% of them operate in a B2B market, he wants to ensure that his customers are encouraged to use the new products that he gradually offers on the site quickly and profitably.\nWhich GCP service can be valuable in this regard and in what way?",
+        "41": "You are working on an NLP model. So, you are dealing with words and sentences, not numbers. Your problem is to categorize these words and make sense of them. Your manager told you that you have to use embeddings.\nWhich of the following techniques are not related to embeddings?",
+        "42": "You are a junior Data Scientist and are working on a deep neural network model with Tensorflow to optimize the level of customer satisfaction for after-sales services with the goal of creating greater client loyalty.\nYou are struggling with your model (learning rates, hidden layers and nodes selection) for optimizing processing and to let it converge in the fastest way.\nWhich is your problem, in ML language?",
+        "43": "You work in a major banking institution. The Management has decided to rapidly launch a bank loan service, as the Government has created a series of \u201cfirst home\u201d facilities for the younger population.\nThe goal is to carry out the automatic management of the required documents (certificates, origin documents, legal information) so that the practice can be built and verified automatically using the data and documents provided by customers and can be managed in a short time and with the minimum contribution of the scarce specialized personnel.\nWhich of these GCP services can you use?",
+        "44": "You work for a large retail company. You are preparing a marketing model. The model will have to make predictions based on the historical and analytical data of the e-commerce site (analytics-360). In particular, customer loyalty and remarketing possibilities should be studied. You work on historical tabular data. You want to quickly create an optimal model, both from the point of view of the algorithm used and the tuning and life cycle of the model.\nWhat are the two best services you can use?",
+        "45": "Your company operates an innovative auction site for furniture from all times. You have to create a series of ML models that allow you, starting from the photos, to establish the period, style and type of the piece of furniture depicted.\nFurthermore, the model must be able to determine whether the furniture is interesting and require it to be subject to a more detailed estimate. You want Google Cloud to help you reach this ambitious goal faster.\nWhich of the following services do you think is the most suitable?",
+        "46": "You are using an AI Platform, and you are working with a series of demanding training jobs. So, you want to use TPUs instead of CPUs. You are not using Docker images or custom containers.\nWhat is the simplest configuration to indicate if you do not have particular needs to customize in the YAML configuration file?",
+        "47": "You work for an industrial company that wants to improve its quality system. It has developed its own deep neural network model with Tensorflow to identify the semi-finished products to be discarded with images taken from the production lines in the various production phases.\nYou need to monitor the performance of your models and let them go faster.\nWhich is the best solution that you can adopt?",
+        "48": "Your team needs to create a model for managing security in restricted areas of a campus.\nEverything that happens in these areas is filmed and, instead of having a physical surveillance service, the videos must be managed by a model capable of intercepting unauthorized people and vehicles, especially at particular times.\nWhat are the GCP services that allow you to achieve all this with minimal effort?",
+        "49": "With your team you have to decide the strategy for implementing an online forecasting model in production.\nThis template needs to work with both a web interface as well as DialogFlow and Google Assistant and a lot of requests are expected.\nYou are concerned that the final system is not efficient and scalable enough, and you are looking for the simplest and most managed GCP solution.\nWhich of these can be the solution?",
+        "50": "You work for a digital publishing website with an excellent technical and cultural level, where you have both famous authors and unknown experts who express ideas and insights.\nYou, therefore, have an extremely demanding audience with strong interests that can be of various types.\nUsers have a small set of articles that they can read for free every month. Then they need to sign up for a paid subscription.\nYou have been asked to prepare an ML training model that processes user readings and article preferences. You need to predict trends and topics that users will prefer.\nBut when you train your DNN with Tensorflow, your input data does not fit into RAM memory.\nWhat can you do in the simplest way?",
+        "51": "You are working on a deep neural network model with Tensorflow. Your model is complex, and you work with very large datasets full of numbers.\nYou want to increase performances. But you cannot use further resources.\nYou are afraid that you are not going to deliver your project in time.\nYour mentor said to you that normalization could be a solution.\nWhich of the following choices do you think is not for data normalization?",
+        "52": "You need to develop and train a model capable of analyzing snapshots taken from a moving vehicle and detecting if obstacles arise. Your work environment is an AI Platform (currently Vertex AI).\nWhich technique or algorithm do you think is best to use?",
+        "53": "You are starting to operate as a Data Scientist and are working on a deep neural network model with Tensorflow to optimize customer satisfaction for after-sales services to create greater client loyalty.\nYou are doing Feature Engineering, and your focus is to minimize bias and increase accuracy. Your coordinator has told you that by doing so you risk having problems. He explained to you that, in addition to the bias, you must consider another factor to be optimized. Which one?",
+        "54": "You have a Linear Regression model for the optimal management of supplies to a sales network based on a large number of different driving factors. You want to simplify the model to make it more efficient and faster. Your first goal is to synthesize the features without losing the information content that comes from them.\nWhich of these is the best technique?",
+        "55": "You work for a digital publishing website with an excellent technical and cultural level, where you have both famous authors and unknown experts who express ideas and insights. You, therefore, have an extremely demanding audience with strong interests of various types. Users have a small set of articles that they can read for free every month; they need to sign up for a paid subscription.\nYou aim to provide your audience with pointers to articles that they will indeed find of interest to themselves.\nWhich of these models can be useful to you?",
+        "56": "You work for an important Banking group.\nThe purpose of your current project is the automatic and smart acquisition of data from documents and modules of different types.\nYou work on big datasets with a lot of private information that cannot be distributed and disclosed.\nYou are asked to replace sensitive data with specific surrogate characters.\nWhich of the following techniques do you think is best to use?",
+        "57": "Your company traditionally deals with statistical analysis on data. The services have been integrated for some years with ML models for forecasting, but analyzes and simulations of all kinds are carried out.\nSo you are using 2 types of tools but you have been told that it is possible to have more levels of integration between traditional statistical methodologies and those more related to AI / ML processes.\nWhich tool is the best one for your needs?",
+        "58": "Your customer has an online dating platform that, among other things, analyzes the degree of affinity between the various people. Obviously, it already uses ML models and uses, in particular, XGBoost, the gradient boosting decision tree algorithm, and is obtaining excellent results.\nAll its development processes follow CI / CD specifications and use Docker containers. The requirement is to classify users in various ways and update models frequently, based on new parameters entered into the platform by the users themselves.\nSo, the problem you are called to solve is how to optimize frequently re-trained operations with an optimized workflow system. Which solution among these proposals can best solve your needs?",
+        "59": "You are working with Vertex AI, the managed ML Platform in GCP.\nYou are dealing with custom training and you are looking and studying the job progresses during the training service lifecycle.\nWhich of the following states are not correct?",
+        "60": "Your team works for an international company with Google Cloud, and you develop, train and deploy several ML models with Tensorflow. You use many tools and techniques and you want to make your work leaner, faster, and more efficient.\nYou would like engineer-to-engineer assistance from both Google Cloud and Google\u2019s TensorFlow teams.\nHow is it possible? Which service?",
+        "61": "You work for an important organization and your manager tasked you with a new classification model with lots of data drawn from the company Data Lake.\nThe big problem is that you don\u2019t have the labels for all the data, but for only a subset of it and you have very little time to complete the task.\nWhich of the following services could help you?",
+        "62": "Your team is working with a great number of ML projects, especially with Tensorflow.\nYou recently prepared a DNN model for image recognition that works well and is about to be rolled out in production.\nYour manager asked you to demonstrate the inner workings of the model.\nIt is a big problem for you because you know that it is working well but you don\u2019t have the explainability of the model.\nWhich of these techniques could help you?",
+        "63": "You work as a Data Scientist in a Startup and you work with several project with Python and Tensorflow;\nYou need to increase the performance of the training sessions and you already use caching and prefetching.\nSo now you want to use GPUs, but in a single machine, for cost reduction and experimentations.\nWhich of the following is the correct strategy?"
     },
     "answers": {
         "1": {
@@ -537,6 +572,656 @@
                 "Decrease the batch size argument in your transformation.",
                 false
             ]
+        },
+        "29": {
+            "A": [
+                "Create two folders: one where the logo appears and one where it doesn\u2019t. Manually place images in each folder. Use AI Platform to build and train a real time object detection model.",
+                false
+            ],
+            "B": [
+                "Use Vision API to detect and identify logos in pictures and use it as a label. Use AI Platform to build and train a convolutional neural network.",
+                false
+            ],
+            "C": [
+                "Create two folders: one where the logo appears and one where it doesn\u2019t. Manually place images in each folder. Use AI Platform to build and train a convolutional neural network.",
+                false
+            ],
+            "D": [
+                "Use Google Cloud\u2019s Data Labelling Service to label your data. Use AutoML Object Detection to train and deploy the model.",
+                true
+            ]
+        },
+        "30": {
+            "A": [
+                "Use a Cloud TPU to optimize model training speed.",
+                false
+            ],
+            "B": [
+                "Use AI Platform Prediction with a NVIDIA GPU to make real-time predictions.",
+                true
+            ],
+            "C": [
+                "Use AI Platform Prediction with a high-CPU machine type to get a batch prediction for the players.",
+                false
+            ],
+            "D": [
+                "Use AI Platform Prediction with a high-memory machine type to get a batch prediction for the players.",
+                false
+            ]
+        },
+        "31": {
+            "A": [
+                "Use the Integrated Gradients method to efficiently compute feature attributions for each predicted image.",
+                true
+            ],
+            "B": [
+                "Use K-fold cross validation to understand how the model performs on different test datasets.",
+                false
+            ],
+            "C": [
+                "Use PCA (Principal Component Analysis) to reduce the original feature set to a smaller set of easily understood features.",
+                false
+            ],
+            "D": [
+                "Use k-means clustering to group similar images together, and calculate the Davies-Bouldin index to evaluate the separation between clusters.",
+                false
+            ]
+        },
+        "32": {
+            "A": [
+                "Automate a blend of the shortest and longest intents to be representative of all intents.",
+                false
+            ],
+            "B": [
+                "Automate the more complicated requests first because those require more of the agents\u2019 time.",
+                false
+            ],
+            "C": [
+                "Automate the 10 intents that cover 70% of the requests so that live agents can handle the more complicated requests.",
+                true
+            ],
+            "D": [
+                "Automate intents in places where common words such as \u201cpayment\u201d only appear once to avoid confusing the software.",
+                false
+            ]
+        },
+        "33": {
+            "A": [
+                "Data preparation: Daily max value feature engineering; Model training: AutoML classification with BQML",
+                false
+            ],
+            "B": [
+                "Data preparation: Daily min value feature engineering; Model training: Logistic regression with BQML and AUTO_CLASS_WEIGHTS set to True",
+                false
+            ],
+            "C": [
+                "Data preparation: Rolling average feature engineering; Model training: Logistic regression with BQML and AUTO_CLASS_WEIGHTS set to False",
+                false
+            ],
+            "D": [
+                "Data preparation: Rolling average feature engineering; Model training: Logistic regression with BQML and AUTO_CLASS_WEIGHTS set to True",
+                true
+            ]
+        },
+        "34": {
+            "A": [
+                "Deploy model in test environment -> Evaluate and test model -> Create a new AI Platform model version",
+                true
+            ],
+            "B": [
+                "Validate model -> Deploy model in test environment -> Create a new AI Platform model version",
+                false
+            ],
+            "C": [
+                "Create a new AI Platform model version -> Evaluate and test model -> Deploy model in test environment",
+                false
+            ],
+            "D": [
+                "Create a new AI Platform model version - > Deploy model in test environment -> Validate model\n",
+                false
+            ]
+        },
+        "35": {
+            "A": [
+                "Pub/Sub, Cloud Function, Cloud Vision API",
+                false
+            ],
+            "B": [
+                "Pub/Sub, Cloud IoT, Dataflow, Cloud Vision API, Cloud Logging",
+                false
+            ],
+            "C": [
+                "Pub/Sub, Cloud Function, Video Intelligence API, Cloud Logging",
+                true
+            ],
+            "D": [
+                "Pub/Sub, Cloud Function, AutoML Video Intelligence, Cloud Logging",
+                false
+            ]
+        },
+        "36": {
+            "A": [
+                "Default Strategy; Custom tier with a single master node and four v100 GPUs.",
+                false
+            ],
+            "B": [
+                "One Device Strategy; Custom tier with a single master node and four v100 GPUs.",
+                false
+            ],
+            "C": [
+                "One Device Strategy; Custom tier with a single master node and eight v100 GPUs.",
+                false
+            ],
+            "D": [
+                "MirroredStrategy; Custom tier with a single master node and four v100 GPUs.",
+                true
+            ]
+        },
+        "37": {
+            "A": [
+                "Load data into BigQuery and use the ARIMA model type on BigQuery ML.",
+                true
+            ],
+            "B": [
+                "Convert the data into CSV format and create a regression model on AutoML Tables.",
+                false
+            ],
+            "C": [
+                "Convert the data into TFRecords and create an RNN model on TensorFlow on AI Platform Notebooks.",
+                false
+            ],
+            "D": [
+                "Convert and refactor the data into CSV format and use the built-in XGBoost algorithm on AI Platform Training.",
+                false
+            ]
+        },
+        "38": {
+            "A": [
+                "Train the model for a few iterations, and check for NaN values.",
+                false
+            ],
+            "B": [
+                "Train the model with no regularization, and verify that the loss function is close to zero.",
+                true
+            ],
+            "C": [
+                "Train a simple linear model, and determine if the DNN model outperforms it.",
+                false
+            ],
+            "D": [
+                "Train the model for a few iterations, and verify that the loss is constant.",
+                false
+            ]
+        },
+        "39": {
+            "A": [
+                "K-means ",
+                false
+            ],
+            "B": [
+                "Q-learning",
+                true
+            ],
+            "C": [
+                "K-Nearest Neighbors",
+                false
+            ],
+            "D": [
+                "Support Vector Machine(SVM)",
+                false
+            ]
+        },
+        "40": {
+            "A": [
+                "Create a Tensorflow model using Matrix factorization",
+                false
+            ],
+            "B": [
+                "Use Recommendations AI ",
+                true
+            ],
+            "C": [
+                "Import the Product Catalog",
+                false
+            ],
+            "D": [
+                "Record / Import User events",
+                false
+            ]
+        },
+        "41": {
+            "A": [
+                "Count Vector",
+                false
+            ],
+            "B": [
+                "TF-IDF Vector",
+                false
+            ],
+            "C": [
+                "Co-Occurrence Matrix ",
+                false
+            ],
+            "D": [
+                "CoVariance Matrix",
+                true
+            ]
+        },
+        "42": {
+            "A": [
+                "Cross-Validation",
+                false
+            ],
+            "B": [
+                "Regularization",
+                false
+            ],
+            "C": [
+                "Hyperparameter tuning",
+                true
+            ],
+            "D": [
+                "drift detection management",
+                false
+            ]
+        },
+        "43": {
+            "A": [
+                "Dialogflow",
+                false
+            ],
+            "B": [
+                "Document AI",
+                true
+            ],
+            "C": [
+                "Cloud Natural Language API",
+                false
+            ],
+            "D": [
+                "AutoML",
+                false
+            ]
+        },
+        "44": {
+            "A": [
+                "AutoML Tables",
+                true
+            ],
+            "B": [
+                "BigQuery ML",
+                false
+            ],
+            "C": [
+                "Vertex AI",
+                true
+            ],
+            "D": [
+                "GKE",
+                false
+            ]
+        },
+        "45": {
+            "A": [
+                "AutoML Vision Edge",
+                false
+            ],
+            "B": [
+                "Vision AI",
+                false
+            ],
+            "C": [
+                "Video AI",
+                false
+            ],
+            "D": [
+                "AutoML Vision",
+                true
+            ]
+        },
+        "46": {
+            "A": [
+                "Use scale-tier to BASIC_TPU",
+                true
+            ],
+            "B": [
+                "Set Master-machine-type",
+                false
+            ],
+            "C": [
+                "Set Worker-machine-type",
+                false
+            ],
+            "D": [
+                "Set parameterServerType",
+                false
+            ]
+        },
+        "47": {
+            "A": [
+                "TFProfiler",
+                true
+            ],
+            "B": [
+                "TF function",
+                false
+            ],
+            "C": [
+                "TF Trace",
+                false
+            ],
+            "D": [
+                "TF Debugger",
+                false
+            ],
+            "E": [
+                "TF Checkpoint",
+                false
+            ]
+        },
+        "48": {
+            "A": [
+                "AI Infrastructure",
+                false
+            ],
+            "B": [
+                "Cloud Video Intelligence AI",
+                false
+            ],
+            "C": [
+                "AutoML Video Intelligence Classification",
+                true
+            ],
+            "D": [
+                "Vision AI",
+                false
+            ]
+        },
+        "49": {
+            "A": [
+                "AI Platform Prediction",
+                true
+            ],
+            "B": [
+                "GKE e TensorFlow",
+                false
+            ],
+            "C": [
+                "VMs and Autoscaling Groups with Application LB",
+                false
+            ],
+            "D": [
+                "Kubeflow",
+                false
+            ]
+        },
+        "50": {
+            "A": [
+                "Use tf.data.Dataset",
+                true
+            ],
+            "B": [
+                "Use a queue with tf.train.shuffle_batch",
+                false
+            ],
+            "C": [
+                "Use pandas.DataFrame",
+                false
+            ],
+            "D": [
+                "Use a NumPy array",
+                false
+            ]
+        },
+        "51": {
+            "A": [
+                "Scaling to a range",
+                false
+            ],
+            "B": [
+                "Feature Clipping",
+                false
+            ],
+            "C": [
+                "Z-test ",
+                true
+            ],
+            "D": [
+                "log scaling",
+                false
+            ],
+            "E": [
+                "Z-score",
+                false
+            ]
+        },
+        "52": {
+            "A": [
+                "TabNet algorithm with TensorFlow",
+                false
+            ],
+            "B": [
+                "A linear learner with Tensorflow Estimator API",
+                false
+            ],
+            "C": [
+                "XGBoost with BigQueryML ",
+                false
+            ],
+            "D": [
+                "TensorFlow Object Detection API",
+                true
+            ]
+        },
+        "53": {
+            "A": [
+                "Blending",
+                false
+            ],
+            "B": [
+                "Learning Rate",
+                false
+            ],
+            "C": [
+                "Feature Cross",
+                false
+            ],
+            "D": [
+                "Bagging",
+                false
+            ],
+            "E": [
+                "Variance",
+                true
+            ]
+        },
+        "54": {
+            "A": [
+                "Feature Crosses",
+                false
+            ],
+            "B": [
+                "Principal component analysis (PCA)",
+                true
+            ],
+            "C": [
+                "Embeddings",
+                false
+            ],
+            "D": [
+                "Functional Data Analysis",
+                false
+            ]
+        },
+        "55": {
+            "A": [
+                "Hierarchical Clustering ",
+                false
+            ],
+            "B": [
+                "Autoencoder and self-encoder",
+                false
+            ],
+            "C": [
+                "Convolutional Neural Network",
+                false
+            ],
+            "D": [
+                "Collaborative filtering using Matrix Factorization",
+                true
+            ]
+        },
+        "56": {
+            "A": [
+                "Format-preserving encryption",
+                false
+            ],
+            "B": [
+                "K-anonymity",
+                false
+            ],
+            "C": [
+                "Replacement",
+                false
+            ],
+            "D": [
+                "Masking",
+                true
+            ]
+        },
+        "57": {
+            "A": [
+                "TensorFlow Hub",
+                false
+            ],
+            "B": [
+                "TensorFlow Probability",
+                true
+            ],
+            "C": [
+                "TensorFlow Enterprise",
+                false
+            ],
+            "D": [
+                "TensorFlow Statistics",
+                false
+            ]
+        },
+        "58": {
+            "A": [
+                "Deploy the model on BigQuery ML and setup a job",
+                false
+            ],
+            "B": [
+                "Use Kubeflow Pipelines to design and execute your workflow",
+                true
+            ],
+            "C": [
+                "Use AI Platform",
+                false
+            ],
+            "D": [
+                "Orchestrate activities with Google Cloud Workflows",
+                false
+            ],
+            "E": [
+                "Develop procedures with Pub/Sub and Cloud Run",
+                false
+            ],
+            "F": [
+                "Schedule processes with Cloud Composer",
+                false
+            ]
+        },
+        "59": {
+            "A": [
+                "JOB_STATE_ACTIVE",
+                true
+            ],
+            "B": [
+                "JOB_STATE_RUNNING",
+                false
+            ],
+            "C": [
+                "JOB_STATE_QUEUED",
+                false
+            ],
+            "D": [
+                "JOB_STATE_ENDED",
+                false
+            ]
+        },
+        "60": {
+            "A": [
+                "AI Platform",
+                false
+            ],
+            "B": [
+                "Kubeflow",
+                false
+            ],
+            "C": [
+                "Tensorflow Enterprise",
+                true
+            ],
+            "D": [
+                "TFX",
+                false
+            ]
+        },
+        "61": {
+            "A": [
+                "Vertex Data Labeling",
+                true
+            ],
+            "B": [
+                "Mechanical Turk",
+                false
+            ],
+            "C": [
+                "GitLab ML",
+                false
+            ],
+            "D": [
+                "Tag Manager",
+                false
+            ]
+        },
+        "62": {
+            "A": [
+                "Integrated Gradient",
+                true
+            ],
+            "B": [
+                "LIT",
+                false
+            ],
+            "C": [
+                "WIT",
+                false
+            ],
+            "D": [
+                "PCA",
+                false
+            ]
+        },
+        "63": {
+            "A": [
+                "tf.distribute.MirroredStrategy",
+                true
+            ],
+            "B": [
+                "tf.distribute.TPUStrategy",
+                false
+            ],
+            "C": [
+                "tf.distribute.MultiWorkerMirroredStrategy",
+                false
+            ],
+            "D": [
+                "tf.distribute.OneDeviceStrategy",
+                false
+            ]
         }
     },
     "images": {
@@ -567,7 +1252,42 @@
         "25": false,
         "26": false,
         "27": false,
-        "28": false
+        "28": false,
+        "29": false,
+        "30": false,
+        "31": false,
+        "32": false,
+        "33": false,
+        "34": false,
+        "35": false,
+        "36": false,
+        "37": false,
+        "38": false,
+        "39": false,
+        "40": false,
+        "41": false,
+        "42": false,
+        "43": false,
+        "44": false,
+        "45": false,
+        "46": false,
+        "47": false,
+        "48": false,
+        "49": false,
+        "50": false,
+        "51": false,
+        "52": false,
+        "53": false,
+        "54": false,
+        "55": false,
+        "56": false,
+        "57": false,
+        "58": false,
+        "59": false,
+        "60": false,
+        "61": false,
+        "62": false,
+        "63": false
     },
     "multiple_choice": {
         "1": false,
@@ -597,6 +1317,41 @@
         "25": false,
         "26": false,
         "27": false,
-        "28": true
+        "28": true,
+        "29": false,
+        "30": false,
+        "31": false,
+        "32": false,
+        "33": false,
+        "34": false,
+        "35": false,
+        "36": false,
+        "37": false,
+        "38": false,
+        "39": false,
+        "40": false,
+        "41": false,
+        "42": false,
+        "43": false,
+        "44": true,
+        "45": false,
+        "46": false,
+        "47": false,
+        "48": false,
+        "49": false,
+        "50": false,
+        "51": false,
+        "52": false,
+        "53": false,
+        "54": false,
+        "55": false,
+        "56": false,
+        "57": false,
+        "58": false,
+        "59": false,
+        "60": false,
+        "61": false,
+        "62": false,
+        "63": false
     }
 }

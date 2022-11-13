@@ -134,7 +134,7 @@
         },
         "2": {
             "A": [
-                " A rule that allows all outbound connections",
+                "A rule that allows all outbound connections",
                 true
             ],
             "B": [
@@ -146,7 +146,7 @@
                 false
             ],
             "D": [
-                " A rule that blocks all outbound connections",
+                "A rule that blocks all outbound connections",
                 false
             ],
             "E": [
@@ -182,7 +182,7 @@
                 false
             ],
             "C": [
-                " Use the Cloud Identity and Access Management API to create groups and IAM permissions from Active Directory.",
+                "Use the Cloud Identity and Access Management API to create groups and IAM permissions from Active Directory.",
                 false
             ],
             "D": [
@@ -280,7 +280,7 @@
                 false
             ],
             "C": [
-                " Log every execution of the script to Stackdriver Logging. Create a User-defined metric in Stackdriver Logging on the logs, and create a Stackdriver Dashboard displaying the metric.",
+                "Log every execution of the script to Stackdriver Logging. Create a User-defined metric in Stackdriver Logging on the logs, and create a Stackdriver Dashboard displaying the metric.",
                 false
             ],
             "D": [
@@ -338,7 +338,7 @@
                 true
             ],
             "D": [
-                " Anomaly Detection",
+                "Anomaly Detection",
                 false
             ]
         },
@@ -356,7 +356,7 @@
                 false
             ],
             "D": [
-                " Ask customer's management to discover any other uses of Google managed services, and work with the existing Super Administrator.",
+                "Ask customer's management to discover any other uses of Google managed services, and work with the existing Super Administrator.",
                 true
             ]
         },
@@ -416,7 +416,7 @@
         },
         "17": {
             "A": [
-                " Generalization",
+                "Generalization",
                 false
             ],
             "B": [
@@ -672,7 +672,7 @@
         },
         "31": {
             "A": [
-                " BigQuery using a data pipeline job with continuous updates",
+                "BigQuery using a data pipeline job with continuous updates",
                 false
             ],
             "B": [
@@ -774,7 +774,7 @@
                 false
             ],
             "D": [
-                " Web Security Scanner",
+                "Web Security Scanner",
                 false
             ]
         },
@@ -1004,7 +1004,7 @@
         },
         "49": {
             "A": [
-                " Migrate the application into an isolated project using a Lift & Shift approach. Enable all internal TCP traffic using VPC Firewall rules. Use VPC Flow logs to determine what traffic should be allowed for the application to work properly.",
+                "Migrate the application into an isolated project using a Lift & Shift approach. Enable all internal TCP traffic using VPC Firewall rules. Use VPC Flow logs to determine what traffic should be allowed for the application to work properly.",
                 true
             ],
             "B": [
@@ -1026,7 +1026,7 @@
                 false
             ],
             "B": [
-                " HTTP(S) Load Balancing",
+                "HTTP(S) Load Balancing",
                 false
             ],
             "C": [
@@ -1268,7 +1268,7 @@
                 true
             ],
             "B": [
-                " Create a node pool with the label inscope: true and a Pod Security Policy that only allows the Pods to run on Nodes with that label.",
+                "Create a node pool with the label inscope: true and a Pod Security Policy that only allows the Pods to run on Nodes with that label.",
                 false
             ],
             "C": [
@@ -1340,7 +1340,7 @@
                 true
             ],
             "B": [
-                " Upload the logs to both the shared bucket and the bucket only accessible by the administrator. Create a job trigger using the Cloud Data Loss Prevention API. Configure the trigger to delete any files from the shared bucket that contain PII.",
+                "Upload the logs to both the shared bucket and the bucket only accessible by the administrator. Create a job trigger using the Cloud Data Loss Prevention API. Configure the trigger to delete any files from the shared bucket that contain PII.",
                 false
             ],
             "C": [
@@ -1716,7 +1716,7 @@
                 true
             ],
             "C": [
-                " Configure a network tag \"fe-tag\" to be applied to all instances in subnet A and a network tag \"data-tag\" to be applied to all instances in subnet B. Then configure an egress firewall rule that allows communication from Compute Engine VMs tagged with data-tag to destination Compute Engine VMs tagged fe- tag.",
+                "Configure a network tag \"fe-tag\" to be applied to all instances in subnet A and a network tag \"data-tag\" to be applied to all instances in subnet B. Then configure an egress firewall rule that allows communication from Compute Engine VMs tagged with data-tag to destination Compute Engine VMs tagged fe- tag.",
                 false
             ],
             "D": [

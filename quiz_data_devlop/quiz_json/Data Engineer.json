@@ -274,11 +274,11 @@
                 false
             ],
             "C": [
-                " 'bigquery-public-data.noaa_gsod.gsod'*",
+                "'bigquery-public-data.noaa_gsod.gsod'*",
                 false
             ],
             "D": [
-                " 'bigquery-public-data.noaa_gsod.gsod*`",
+                "'bigquery-public-data.noaa_gsod.gsod*`",
                 true
             ]
         },
@@ -836,7 +836,7 @@
                 false
             ],
             "D": [
-                " The maximum number of workers",
+                "The maximum number of workers",
                 true
             ]
         },

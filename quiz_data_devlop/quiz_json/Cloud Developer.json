@@ -135,9 +135,8 @@
         "133": "Your company plans to expand their analytics use cases. One of the new use cases requires your data analysts to analyze events using SQL on a near real\u2013time basis. You expect rapid growth and want to use managed services as much as possible. What should you do?",
         "134": " \nYour application that is deployed on Cloud Run receives a large amount of traffic. You are concerned that deploying changes to the application could affect all users negatively. You want to avoid full-scale load testing due to cost concerns, but you still want to deploy new features as quickly as possible. Which approach should you take?",
         "135": "Your website is deployed on Compute Engine. Your marketing team wants to test conversion rates between three different website designs. You are not able to make changes to your application code. What should you do?",
-        "136": " Your team is using Cloud Run to write every Pub/Sub message to both a Cloud Storage object and a BigQuery table. You want to minimize operational overhead. Which architecture should you implement?",
-        "137": " \nYou are capturing important audit activity in Cloud Logging. You need to read the information from Cloud Logging to perform near real-time analysis of the logs. You will have multiple processes performing different types of analysis on the logging data. What should you do?",
-        "138": "You are writing an API endpoint to process orders from a web application and save the data into a collection in Firestore in Datastore mode. During application testing, you notice that when your application encounters an HTTP 5xx server error from the Datastore API, it catches this error and returns an HTTP 200 OK response code to the client, but does not store the data within Datastore. You want the consumers of your API endpoint to know that the write request was unsuccessful. What should you do?"
+        "136": " \nYou are capturing important audit activity in Cloud Logging. You need to read the information from Cloud Logging to perform near real-time analysis of the logs. You will have multiple processes performing different types of analysis on the logging data. What should you do?",
+        "137": "You are writing an API endpoint to process orders from a web application and save the data into a collection in Firestore in Datastore mode. During application testing, you notice that when your application encounters an HTTP 5xx server error from the Datastore API, it catches this error and returns an HTTP 200 OK response code to the client, but does not store the data within Datastore. You want the consumers of your API endpoint to know that the write request was unsuccessful. What should you do?"
     },
     "answers": {
         "1": {
@@ -438,7 +437,7 @@
         },
         "17": {
             "A": [
-                " RESTful APIs",
+                "RESTful APIs",
                 true
             ],
             "B": [
@@ -972,7 +971,7 @@
                 true
             ],
             "D": [
-                " Use Google Kubernetes Engine for automated deployments.",
+                "Use Google Kubernetes Engine for automated deployments.",
                 true
             ],
             "E": [
@@ -1498,7 +1497,7 @@
                 false
             ],
             "B": [
-                "Cloud Spanner\n\n",
+                "Cloud Spanner",
                 true
             ],
             "C": [
@@ -2622,7 +2621,7 @@
         },
         "135": {
             "A": [
-                " Deploy website on Cloud Run and use traffic splitting.",
+                "Deploy website on Cloud Run and use traffic splitting.",
                 true
             ],
             "B": [
@@ -2640,24 +2639,6 @@
         },
         "136": {
             "A": [
-                "",
-                false
-            ],
-            "B": [
-                "",
-                true
-            ],
-            "C": [
-                "",
-                false
-            ],
-            "D": [
-                "",
-                false
-            ]
-        },
-        "137": {
-            "A": [
                 "Write an app to read the logs directly from the Cloud Logging API.",
                 false
             ],
@@ -2674,7 +2655,7 @@
                 false
             ]
         },
-        "138": {
+        "137": {
             "A": [
                 "Return an HTTP 204 No Content response.",
                 false
@@ -2829,9 +2810,8 @@
         "133": false,
         "134": false,
         "135": false,
-        "136": "quiz_data_devlop/images/Cloud Developer/136.png",
-        "137": false,
-        "138": false
+        "136": false,
+        "137": false
     },
     "multiple_choice": {
         "1": false,
@@ -2970,7 +2950,6 @@
         "134": false,
         "135": false,
         "136": false,
-        "137": false,
-        "138": false
+        "137": false
     }
 }
