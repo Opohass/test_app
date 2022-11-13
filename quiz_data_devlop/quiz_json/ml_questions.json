@@ -62,7 +62,12 @@
         "60": "Your team works for an international company with Google Cloud, and you develop, train and deploy several ML models with Tensorflow. You use many tools and techniques and you want to make your work leaner, faster, and more efficient.\nYou would like engineer-to-engineer assistance from both Google Cloud and Google\u2019s TensorFlow teams.\nHow is it possible? Which service?",
         "61": "You work for an important organization and your manager tasked you with a new classification model with lots of data drawn from the company Data Lake.\nThe big problem is that you don\u2019t have the labels for all the data, but for only a subset of it and you have very little time to complete the task.\nWhich of the following services could help you?",
         "62": "Your team is working with a great number of ML projects, especially with Tensorflow.\nYou recently prepared a DNN model for image recognition that works well and is about to be rolled out in production.\nYour manager asked you to demonstrate the inner workings of the model.\nIt is a big problem for you because you know that it is working well but you don\u2019t have the explainability of the model.\nWhich of these techniques could help you?",
-        "63": "You work as a Data Scientist in a Startup and you work with several project with Python and Tensorflow;\nYou need to increase the performance of the training sessions and you already use caching and prefetching.\nSo now you want to use GPUs, but in a single machine, for cost reduction and experimentations.\nWhich of the following is the correct strategy?"
+        "63": "You work as a Data Scientist in a Startup and you work with several project with Python and Tensorflow;\nYou need to increase the performance of the training sessions and you already use caching and prefetching.\nSo now you want to use GPUs, but in a single machine, for cost reduction and experimentations.\nWhich of the following is the correct strategy?",
+        "64": "Your team is designing a financial analysis model for a major Bank. \nThe requirements are: \nVarious banking applications will send transactions to the new system both in \nreal-time and in batch in standard/normalized format \nThe data will be stored in a repository \nStructured Data will be trained and retrained \nLabels are drawn from the data. \nYou need to prepare the model quickly and decide to use Auto ML for structured \nData. \nWhich GCP Services could you use (pick 3)?",
+        "65": "You work for an industrial company that wants to improve its quality system. It \nhas developed its own deep neural network model with Tensorflow to identify the \nsemi-finished products to be discarded with images taken from the production \nlines in the various production phases. \nYou need to monitor the performance of your models and let them go faster.",
+        "66": "You have a customer ranking ML model in production for an e-commerce site; the \nmodel used to work very well. \nYou use GCP managed services, specifically AI Platform and Vertex AI. \nSuddenly, there is a sensible degradation in the quality of the inferences. You \nperform various checks, but the model seems to be perfectly fine. \nFinally, you control the input data and notice that the frequency distributions \nhave changed for a specific feature. \nWhich GCP service can be helpful for you to manage features in a more organized \nway?",
+        "67": "You have a customer ranking ML model in production for an e-commerce site; the \nmodel used to work very well. You use GCP managed services, specifically AI \nPlatform and Vertex AI. Suddenly there is a sensible degradation in the quality of \nthe inferences. You perform various checks, but the model seems to be perfectly \nfine. \nWhich of the following methods could you use to avoid such problems?",
+        "68": "Your company runs a big retail website. You develop many ML models for all the \nbusiness activities. You migrated to Google Cloud when you were using Vertex AI. \nYour models are developed with PyTorch, TensorFlow and BigQueryML. \nYou also use BigTable and CloudSQL, and of course Cloud Storage. In many cases, \nthe same data is used for multiple models and projects. And your data is \ncontinuously updated, sometimes in streaming mode. \nWhich is the best way to organize the input data?"
     },
     "answers": {
         "1": {
@@ -1222,6 +1227,104 @@
                 "tf.distribute.OneDeviceStrategy",
                 false
             ]
+        },
+        "64": {
+            "A": [
+                "AutoML Tables",
+                true
+            ],
+            "B": [
+                "AI Platform ",
+                false
+            ],
+            "C": [
+                "BigQuery ML",
+                true
+            ],
+            "D": [
+                "Vertex AI",
+                true
+            ]
+        },
+        "65": {
+            "A": [
+                "TFProfiler",
+                true
+            ],
+            "B": [
+                "TF function",
+                false
+            ],
+            "C": [
+                "TF Trace",
+                false
+            ],
+            "D": [
+                "TF Debugger",
+                false
+            ],
+            "E": [
+                "TF Checkpoint",
+                false
+            ]
+        },
+        "66": {
+            "A": [
+                "Regularization against overfitting ",
+                false
+            ],
+            "B": [
+                "Feature Store",
+                true
+            ],
+            "C": [
+                "Hyperparameters tuning ",
+                false
+            ],
+            "D": [
+                "Model Monitoring",
+                false
+            ]
+        },
+        "67": {
+            "A": [
+                "Regularization against overfitting",
+                false
+            ],
+            "B": [
+                "Feature Store",
+                false
+            ],
+            "C": [
+                "Hyperparameter tuning",
+                false
+            ],
+            "D": [
+                "Model Monitoring",
+                true
+            ]
+        },
+        "68": {
+            "A": [
+                "Dataflow per Data Transformation sia in streaming che batch",
+                false
+            ],
+            "B": [
+                "CSV",
+                false
+            ],
+            "C": [
+                "BigQuery",
+                false
+            ],
+            "D": [
+                "Datasets",
+                true
+            ],
+            "E": [
+                "BigTable",
+                false
+            ]
         }
     },
     "images": {
@@ -1287,7 +1390,12 @@
         "60": false,
         "61": false,
         "62": false,
-        "63": false
+        "63": false,
+        "64": false,
+        "65": false,
+        "66": false,
+        "67": false,
+        "68": false
     },
     "multiple_choice": {
         "1": false,
@@ -1352,6 +1460,11 @@
         "60": false,
         "61": false,
         "62": false,
-        "63": false
+        "63": false,
+        "64": true,
+        "65": false,
+        "66": false,
+        "67": false,
+        "68": false
     }
 }
