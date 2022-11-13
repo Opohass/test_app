@@ -67,7 +67,36 @@
         "65": "You work for an industrial company that wants to improve its quality system. It \nhas developed its own deep neural network model with Tensorflow to identify the \nsemi-finished products to be discarded with images taken from the production \nlines in the various production phases. \nYou need to monitor the performance of your models and let them go faster.",
         "66": "You have a customer ranking ML model in production for an e-commerce site; the \nmodel used to work very well. \nYou use GCP managed services, specifically AI Platform and Vertex AI. \nSuddenly, there is a sensible degradation in the quality of the inferences. You \nperform various checks, but the model seems to be perfectly fine. \nFinally, you control the input data and notice that the frequency distributions \nhave changed for a specific feature. \nWhich GCP service can be helpful for you to manage features in a more organized \nway?",
         "67": "You have a customer ranking ML model in production for an e-commerce site; the \nmodel used to work very well. You use GCP managed services, specifically AI \nPlatform and Vertex AI. Suddenly there is a sensible degradation in the quality of \nthe inferences. You perform various checks, but the model seems to be perfectly \nfine. \nWhich of the following methods could you use to avoid such problems?",
-        "68": "Your company runs a big retail website. You develop many ML models for all the \nbusiness activities. You migrated to Google Cloud when you were using Vertex AI. \nYour models are developed with PyTorch, TensorFlow and BigQueryML. \nYou also use BigTable and CloudSQL, and of course Cloud Storage. In many cases, \nthe same data is used for multiple models and projects. And your data is \ncontinuously updated, sometimes in streaming mode. \nWhich is the best way to organize the input data?"
+        "68": "Your company runs a big retail website. You develop many ML models for all the \nbusiness activities. You migrated to Google Cloud when you were using Vertex AI. \nYour models are developed with PyTorch, TensorFlow and BigQueryML. \nYou also use BigTable and CloudSQL, and of course Cloud Storage. In many cases, \nthe same data is used for multiple models and projects. And your data is \ncontinuously updated, sometimes in streaming mode. \nWhich is the best way to organize the input data?",
+        "69": "You have a demand forecasting pipeline in production that uses Dataflow to preprocess raw data prior to model training and prediction. During preprocessing, you employ Z-score normalization on data stored in BigQuery and write it back to BigQuery. New training data is added every week. You want to make the process more efficient by minimizing computation time and manual intervention. What should you do?\n                    ",
+        "70": "You have a demand forecasting pipeline in production that uses Dataflow to preprocess raw data prior to model training and prediction. During preprocessing, you employ Z-score normalization on data stored in BigQuery and write it back to BigQuery. New training data is added every week. You want to make the process more efficient by minimizing computation time and manual intervention. What should you do?\n                    ",
+        "71": "You are developing a Kubeflow pipeline on Google Kubernetes Engine. The first step in the pipeline is to issue a query against BigQuery. You plan to use the results of that query as the input to the next step in your pipeline. You want to achieve this in the easiest way possible. What should you do?\n                    ",
+        "72": "You are building a model to predict daily temperatures. You split the data randomly and then transformed the training and test datasets. Temperature data for model training is uploaded hourly. During testing, your model performed with 97% accuracy; however, after deploying to production, the model\u2019s accuracy dropped to 66%. How can you make your production model more accurate?\n                    ",
+        "73": "You are developing models to classify customer support emails. You created models with TensorFlow Estimators using small datasets on your on-premises system, but you now need to train the models using large datasets to ensure high performance. You will port your models to Google Cloud and want to minimize code refactoring and infrastructure overhead for easier migration from on-prem to cloud. What should you do?\n                    ",
+        "74": "You have trained a text classification model in TensorFlow using AI Platform. You want to use the trained model for batch predictions on text data stored in BigQuery while minimizing computational overhead. What should you do?\n                    ",
+        "75": "You work with a data engineering team that has developed a pipeline to clean your dataset and save it in a Cloud Storage bucket. You have created an ML model and want to use the data to refresh your model as soon as new data is available. As part of your CI/CD workflow, you want to automatically run a Kubeflow Pipelines training job on Google Kubernetes Engine (GKE). How should you architect this workflow?\n                    ",
+        "76": "You have a functioning end-to-end ML pipeline that involves tuning the hyperparameters of your ML model using AI Platform, and then using the best-tuned parameters for training. Hypertuning is taking longer than expected and is delaying the downstream processes. You want to speed up the tuning job without significantly compromising its effectiveness. Which actions should you take? (Choose two.)\n                    ",
+        "77": "Your team is building an application for a global bank that will be used by millions of customers. You built a forecasting model that predicts customers\u2019 account balances 3 days in the future. Your team will use the results in a new feature that will notify users when their account balance is likely to drop below $25. How should you serve your predictions?\n                    ",
+        "78": "You work for an advertising company and want to understand the effectiveness of your company\u2019s latest advertising campaign. You have streamed 500 MB of campaign data into BigQuery. You want to query the table, and then manipulate the results of that query with a pandas dataframe in an AI Platform notebook. What should you do?\n\n",
+        "79": "You are an ML engineer at a global car manufacture. You need to build an ML model to predict car sales in different cities around the world. Which features or feature crosses should you use to train city-specific relationships between car type and number of sales?\n                    ",
+        "80": "You work for a large technology company that wants to modernize their contact center. You have been asked to develop a solution to classify incoming calls by product so that requests can be more quickly routed to the correct support team. You have already transcribed the calls using the Speech-to-Text API. You want to minimize data preprocessing and development time. How should you build the model?\n                    ",
+        "81": "You developed an ML model with AI Platform, and you want to move it to production. You serve a few thousand queries per second and are experiencing latency issues. Incoming requests are served by a load balancer that distributes them across multiple Kubeflow CPU-only pods running on Google Kubernetes Engine (GKE). Your goal is to improve the serving latency without changing the underlying infrastructure. What should you do?\n\n",
+        "82": "You are training a TensorFlow model on a structured dataset with 100 billion records stored in several CSV files. You need to improve the input/output execution performance. What should you do?\n\n",
+        "83": "You recently joined an enterprise-scale company that has thousands of datasets. You know that there are accurate descriptions for each table in BigQuery, and you are searching for the proper BigQuery table to use for a model you are building on AI Platform. How should you find the data that you need?\n\n",
+        "84": "You started working on a classification problem with time series data and achieved an area under the receiver operating characteristic curve (AUC ROC) value of 99% for training data after just a few experiments. You haven\u2019t explored using any sophisticated algorithms or spent any time on hyperparameter tuning. What should your next step be to identify and fix the problem?\n\n",
+        "85": "You work for an online travel agency that also sells advertising placements on its website to other companies. You have been asked to predict the most relevant web banner that a user should see next. Security is important to your company. The model latency requirements are 300ms@p99, the inventory is thousands of web banners, and your exploratory analysis has shown that navigation context is a good predictor. You want to Implement the simplest solution. How should you configure the prediction pipeline?\n                    ",
+        "86": "Your team is building a convolutional neural network (CNN)-based architecture from scratch. The preliminary experiments running on your on-premises CPU-only infrastructure were encouraging, but have slow convergence. You have been asked to speed up model training to reduce time-to-market. You want to experiment with virtual machines (VMs) on Google Cloud to leverage more powerful hardware. Your code does not include any manual device placement and has not been wrapped in Estimator model-level abstraction.",
+        "87": "You work on a growing team of more than 50 data scientists who all use AI Platform. You are designing a strategy to organize your jobs, models, and versions in a clean and scalable way. Which strategy should you choose?\n\n",
+        "88": "You are training a deep learning model for semantic image segmentation with reduced training time. While using a Deep Learning VM Image, you receive the following error: The resource 'projects/ deeplearning-platforn/zones/europe-west4-c/acceleratorTypes/nvidia-tesla-k80' was not found. What should you do?\n\n",
+        "89": "Your team is working on an NLP research project to predict political affiliation of authors based on articles they have written. You have a large training dataset that is structured like this:(photo)\nYou followed the standard 80%-10%-10% data distribution across the training, testing, and evaluation subsets. How should you distribute the training examples across the train-test-eval subsets while maintaining the 80-10- 10 proportion?\n                    ",
+        "90": "Your team has been tasked with creating an ML solution in Google Cloud to classify support requests for one of your platforms. You analyzed the requirements and decided to use TensorFlow to build the classifier so that you have full control of the model\u2019s code, serving, and deployment. You will use Kubeflow pipelines for the ML platform. To save time, you want to build on existing resources and use managed services instead of building a completely new model. How should you build the classifier?\n\n",
+        "91": "You recently joined a machine learning team that will soon release a new project. As a lead on the project, you are asked to determine the production readiness of the ML components. The team has already tested features and data, model development, and infrastructure. Which additional readiness check should you recommend to the team?\n                    ",
+        "92": "You work for a credit card company and have been asked to create a custom fraud detection model based on historical data using AutoML Tables. You need to prioritize detection of fraudulent transactions while minimizing false positives. Which optimization objective should you use when training the model?\n\n",
+        "93": "Your company manages a video sharing website where users can watch and upload videos. You need to create an ML model to predict which newly uploaded videos will be the most popular so that those videos can be prioritized on your company\u2019s website. Which result should you use to determine whether the model is successful?\n\n",
+        "94": "You are working on a Neural Network-based project. The dataset provided to you has columns with different ranges. While preparing the data for model training, you discover that gradient optimization is having difficulty moving weights to a good solution. What should you do?\n\n",
+        "95": "As the lead ML Engineer for your company, you are responsible for building ML models to digitize scanned customer forms. You have developed a TensorFlow model that converts the scanned images into text and stores them in Cloud Storage. You need to use your ML model on the aggregated data collected at the end of each day with minimal manual intervention. What should you do?\n\n",
+        "96": "You need to train a computer vision model that predicts the type of government ID present in a given image using a GPU-powered virtual machine on Compute Engine. You use the following parameters:\nOptimizer: SGD\nImage shape = 224\u00d7224 \nBatch size = 64\nEpochs = 10\nVerbose =2\nDuring training you encounter the following error: ResourceExhaustedError: Out Of Memory (OOM) when allocating tensor. What should you do?\n                    ",
+        "97": "Your team trained and tested a DNN regression model with good results. Six months after deployment, the model is performing poorly due to a change in the distribution of the input data. How should you address the input differences in production?"
     },
     "answers": {
         "1": {
@@ -1325,6 +1354,532 @@
                 "BigTable",
                 false
             ]
+        },
+        "69": {
+            "A": [
+                "Normalize the data using Google Kubernetes Engine.",
+                false
+            ],
+            "B": [
+                "Translate the normalization algorithm into SQL for use with BigQuery.",
+                true
+            ],
+            "C": [
+                "Use the normalizer_fn argument in TensorFlow\u2019s Feature Column API.",
+                false
+            ],
+            "D": [
+                "Normalize the data with Apache Spark using the Dataproc connector for BigQuery.",
+                false
+            ]
+        },
+        "70": {
+            "A": [
+                "Normalize the data using Google Kubernetes Engine.",
+                false
+            ],
+            "B": [
+                "Translate the normalization algorithm into SQL for use with BigQuery.",
+                false
+            ],
+            "C": [
+                "Use the normalizer_fn argument in TensorFlow\u2019s Feature Column API.",
+                true
+            ],
+            "D": [
+                "Normalize the data with Apache Spark using the Dataproc connector for BigQuery.",
+                false
+            ]
+        },
+        "71": {
+            "A": [
+                "Use the BigQuery console to execute your query, and then save the query results into a new BigQuery table.",
+                true
+            ],
+            "B": [
+                "Write a Python script that uses the BigQuery API to execute queries against BigQuery. Execute this script as the first step in your Kubeflow pipeline.",
+                false
+            ],
+            "C": [
+                "Locate the Kubeflow Pipelines repository on GitHub. Find the BigQuery Query Component, copy that component\u2019s URL, and use it to load the component into your pipeline. Use the component to execute queries against BigQuery.",
+                false
+            ],
+            "D": [
+                "Use the Kubeflow Pipelines domain-specific language to create a custom component that uses the Python BigQuery client library to execute queries.",
+                false
+            ]
+        },
+        "72": {
+            "A": [
+                "Normalize the data for the training, and test datasets as two separate steps.",
+                false
+            ],
+            "B": [
+                "Split the training and test data based on time rather than a random split to avoid leakage.",
+                false
+            ],
+            "C": [
+                "Add more data to your test set to ensure that you have a fair distribution and sample for testing.",
+                false
+            ],
+            "D": [
+                "Apply data transformations before splitting, and cross-validate to make sure that the transformations are applied to both the training and test sets.",
+                true
+            ]
+        },
+        "73": {
+            "A": [
+                "Use AI Platform for distributed training.",
+                false
+            ],
+            "B": [
+                "Create a cluster on Dataproc for training.",
+                false
+            ],
+            "C": [
+                "Create a Managed Instance Group with autoscaling.",
+                true
+            ],
+            "D": [
+                "Use Kubeflow Pipelines to train on a Google Kubernetes Engine cluster.",
+                false
+            ]
+        },
+        "74": {
+            "A": [
+                "Export the model to BigQuery ML.",
+                true
+            ],
+            "B": [
+                "Deploy and version the model on AI Platform.",
+                false
+            ],
+            "C": [
+                "Use Dataflow with the SavedModel to read the data from BigQuery.",
+                false
+            ],
+            "D": [
+                "Submit a batch prediction job on AI Platform that points to the model location in Cloud Storage.",
+                false
+            ]
+        },
+        "75": {
+            "A": [
+                "Configure your pipeline with Dataflow, which saves the files in Cloud Storage. After the file is saved, start the training job on a GKE cluster.",
+                false
+            ],
+            "B": [
+                "Use App Engine to create a lightweight python client that continuously polls Cloud Storage for new files. As soon as a file arrives, initiate the training job.",
+                false
+            ],
+            "C": [
+                "Configure a Cloud Storage trigger to send a message to a Pub/Sub topic when a new file is available in a storage bucket. Use a Pub/Sub-triggered Cloud Function to start the training job on a GKE cluster.",
+                true
+            ],
+            "D": [
+                "Use Cloud Scheduler to schedule jobs at a regular interval. For the first step of the job, check the timestamp of objects in your Cloud Storage bucket. If there are no new files since the last run, abort the job.",
+                false
+            ]
+        },
+        "76": {
+            "A": [
+                "Decrease the number of parallel trials.",
+                false
+            ],
+            "B": [
+                "Decrease the range of floating-point values.",
+                true
+            ],
+            "C": [
+                "Set the early stopping parameter to TRUE.",
+                false
+            ],
+            "D": [
+                "Change the search algorithm from Bayesian search to random search.",
+                true
+            ],
+            "E": [
+                "Decrease the maximum number of trials during subsequent training phases.",
+                false
+            ]
+        },
+        "77": {
+            "A": [
+                "1. Create a Pub/Sub topic for each user.\n2. Deploy a Cloud Function that sends a notification when your model predicts that a user\u2019s account balance will drop below the $25 threshold.",
+                true
+            ],
+            "B": [
+                "1. Create a Pub/Sub topic for each user.\n2. Deploy an application on the App Engine standard environment that sends a notification when your model predicts that a user\u2019s account balance will drop below the $25 threshold.",
+                false
+            ],
+            "C": [
+                "1. Build a notification system on Firebase. \n2. Register each user with a user ID on the Firebase Cloud Messaging server, which sends a notification when the average of all account balance predictions drops below the $25 threshold.",
+                false
+            ],
+            "D": [
+                "1. Build a notification system on Firebase.\n2. Register each user with a user ID on the Firebase Cloud Messaging server, which sends a notification when your model predicts that a user\u2019s account balance will drop below the $25 threshold.\n",
+                false
+            ]
+        },
+        "78": {
+            "A": [
+                "Use AI Platform Notebooks\u2019 BigQuery cell magic to query the data, and ingest the results as a pandas dataframe.",
+                false
+            ],
+            "B": [
+                "Export your table as a CSV file from BigQuery to Google Drive, and use the Google Drive API to ingest the file into your notebook instance.",
+                false
+            ],
+            "C": [
+                "Download your table from BigQuery as a local CSV file, and upload it to your AI Platform notebook instance. Use pandas.read_csv to ingest he file as a pandas dataframe.",
+                true
+            ],
+            "D": [
+                "From a bash cell in your AI Platform notebook, use the bq extract command to export the table as a CSV file to Cloud Storage, and then use gsutil cp to copy the data into the notebook. Use pandas.read_csv to ingest the file as a pandas dataframe.",
+                false
+            ]
+        },
+        "79": {
+            "A": [
+                "Thee individual features: binned latitude, binned longitude, and one-hot encoded car type.",
+                false
+            ],
+            "B": [
+                "One feature obtained as an element-wise product between latitude, longitude, and car type.",
+                false
+            ],
+            "C": [
+                "One feature obtained as an element-wise product between binned latitude, binned longitude, and one-hot encoded car type.",
+                true
+            ],
+            "D": [
+                "Two feature crosses as an element-wise product: the first between binned latitude and one-hot encoded car type, and the second between binned longitude and one-hot encoded car type.",
+                false
+            ]
+        },
+        "80": {
+            "A": [
+                "Use the AI Platform Training built-in algorithms to create a custom model.",
+                true
+            ],
+            "B": [
+                "Use AutoMlL Natural Language to extract custom entities for classification.",
+                false
+            ],
+            "C": [
+                "Use the Cloud Natural Language API to extract custom entities for classification.",
+                false
+            ],
+            "D": [
+                "Build a custom model to identify the product keywords from the transcribed calls, and then run the keywords through a classification algorithm.",
+                false
+            ]
+        },
+        "81": {
+            "A": [
+                "Significantly increase the max_batch_size TensorFlow Serving parameter.",
+                false
+            ],
+            "B": [
+                "Switch to the tensorflow-model-server-universal version of TensorFlow Serving.",
+                false
+            ],
+            "C": [
+                "Significantly increase the max_enqueued_batches TensorFlow Serving parameter.",
+                false
+            ],
+            "D": [
+                "Recompile TensorFlow Serving using the source to support CPU-specific optimizations. Instruct GKE to choose an appropriate baseline minimum CPU platform for serving nodes.",
+                true
+            ]
+        },
+        "82": {
+            "A": [
+                "Load the data into BigQuery, and read the data from BigQuery.",
+                false
+            ],
+            "B": [
+                "Load the data into Cloud Bigtable, and read the data from Bigtable.",
+                true
+            ],
+            "C": [
+                "Convert the CSV files into shards of TFRecords, and store the data in Cloud Storage.",
+                false
+            ],
+            "D": [
+                "Convert the CSV files into shards of TFRecords, and store the data in the Hadoop Distributed File System (HDFS).",
+                false
+            ]
+        },
+        "83": {
+            "A": [
+                "Use Data Catalog to search the BigQuery datasets by using keywords in the table description.",
+                false
+            ],
+            "B": [
+                "Tag each of your model and version resources on AI Platform with the name of the BigQuery table that was used for training.",
+                true
+            ],
+            "C": [
+                "Maintain a lookup table in BigQuery that maps the table descriptions to the table ID. Query the lookup table to find the correct table ID for the data that you need.",
+                false
+            ],
+            "D": [
+                "Execute a query in BigQuery to retrieve all the existing table names in your project using the INFORMATION_SCHEMA metadata tables that are native to BigQuery. Use the result o find the table that you need.",
+                false
+            ]
+        },
+        "84": {
+            "A": [
+                "Address the model overfitting by using a less complex algorithm.",
+                false
+            ],
+            "B": [
+                "Address data leakage by applying nested cross-validation during model training.",
+                true
+            ],
+            "C": [
+                "Address data leakage by removing features highly correlated with the target value.",
+                false
+            ],
+            "D": [
+                "Address the model overfitting by tuning the hyperparameters to reduce the AUC ROC value.",
+                false
+            ]
+        },
+        "85": {
+            "A": [
+                "Embed the client on the website, and then deploy the model on AI Platform Prediction.",
+                false
+            ],
+            "B": [
+                "Embed the client on the website, deploy the gateway on App Engine, and then deploy the model on AI Platform Prediction.",
+                true
+            ],
+            "C": [
+                "Embed the client on the website, deploy the gateway on App Engine, deploy the database on Cloud Bigtable for writing and for reading the user\u2019s navigation context, and then deploy the model on AI Platform Prediction.",
+                false
+            ],
+            "D": [
+                "Embed the client on the website, deploy the gateway on App Engine, deploy the database on Memorystore for writing and for reading the user\u2019s navigation context, and then deploy the model on Google Kubernetes Engine.",
+                false
+            ]
+        },
+        "86": {
+            "A": [
+                "AVM on Compute Engine and 1 TPU with all dependencies installed manually.",
+                true
+            ],
+            "B": [
+                "AVM on Compute Engine and 8 GPUs with all dependencies installed manually.",
+                false
+            ],
+            "C": [
+                "A Deep Learning VM with an n1-standard-2 machine and 1 GPU with all libraries pre-installed.",
+                false
+            ],
+            "D": [
+                "A Deep Learning VM with more powerful CPU e2-highcpu-16 machines with all libraries pre-installed.",
+                false
+            ]
+        },
+        "87": {
+            "A": [
+                "Set up restrictive IAM permissions on the AI Platform notebooks so that only a single user or group can access a given instance.",
+                true
+            ],
+            "B": [
+                "Separate each data scientist\u2019s work into a different project to ensure that the jobs, models, and versions created by each data scientist are accessible only to that user.",
+                false
+            ],
+            "C": [
+                "Use labels to organize resources into descriptive categories. Apply a label to each created resource so that users can filter the results by label when viewing or monitoring the resources.",
+                false
+            ],
+            "D": [
+                "Set up a BigQuery sink for Cloud Logging logs that is appropriately filtered to capture information about AI Platform resource usage. In BigQuery, create a SQL view that maps users to the resources they are using",
+                false
+            ]
+        },
+        "88": {
+            "A": [
+                "Ensure that you have GPU quota in the selected region.",
+                true
+            ],
+            "B": [
+                "Ensure that the required GPU is available in the selected region.",
+                false
+            ],
+            "C": [
+                "Ensure that you have preemptible GPU quota in the selected region.",
+                false
+            ],
+            "D": [
+                "Ensure that the selected GPU has enough GPU memory for the workload.",
+                false
+            ]
+        },
+        "89": {
+            "A": [
+                "Distribute texts randomly across the train-test-eval subsets:\nTrain set: [TextA1, TextB2, ...]\nTest set: [TextA2, TextC1, TextD2, ...]\nEval set: [TextB1, TextC2, TextD1, ...]",
+                false
+            ],
+            "B": [
+                "Distribute authors randomly across the train-test-eval subsets: (*)\nTrain set: [TextA1, TextA2, TextD1, TextD2, ...]\nTest set: [TextB1, TextB2, ...]\nEval set: [TexC1,TextC2 ...]",
+                false
+            ],
+            "C": [
+                "Distribute sentences randomly across the train-test-eval subsets:\nTrain set: [SentenceA11, SentenceA21, SentenceB11, SentenceB21, SentenceC11, SentenceD21 ...]\nTest set: [SentenceA12, SentenceA22, SentenceB12, SentenceC22, SentenceC12, SentenceD22 ...]\nEval set: [SentenceA13, SentenceA23, SentenceB13, SentenceC23, SentenceC13, SentenceD31 ...]",
+                true
+            ],
+            "D": [
+                "Distribute paragraphs of texts (i.e., chunks of consecutive sentences) across the train-test-eval subsets:\nTrain set: [SentenceA11, SentenceA12, SentenceD11, SentenceD12 ...]\nTest set: [SentenceA13, SentenceB13, SentenceB21, SentenceD23, SentenceC12, SentenceD13 ...]\nEval set: [SentenceA11, SentenceA22, SentenceB13, SentenceD22, SentenceC23, SentenceD11 ...]\n",
+                false
+            ]
+        },
+        "90": {
+            "A": [
+                "Use the Natural Language API to classify support requests.",
+                false
+            ],
+            "B": [
+                "Use AutoML Natural Language to build the support requests classifier.",
+                false
+            ],
+            "C": [
+                "Use an established text classification model on AI Platform to perform transfer learning.",
+                false
+            ],
+            "D": [
+                "Use an established text classification model on AI Platform as-is to classify support requests.",
+                true
+            ]
+        },
+        "91": {
+            "A": [
+                "Ensure that training is reproducible.",
+                true
+            ],
+            "B": [
+                "Ensure that all hyperparameters are tuned.",
+                false
+            ],
+            "C": [
+                "Ensure that model performance is monitored.",
+                false
+            ],
+            "D": [
+                "Ensure that feature expectations are captured in the schema.",
+                false
+            ]
+        },
+        "92": {
+            "A": [
+                "An optimization objective that minimizes Log los",
+                false
+            ],
+            "B": [
+                "An optimization objective that maximizes the Precision at a Recall value of 0.50",
+                false
+            ],
+            "C": [
+                "An optimization objective that maximizes the area under the precision-recall curve (AUC PR) value",
+                true
+            ],
+            "D": [
+                "An optimization objective that maximizes the area under the receiver operating characteristic curve (AUC ROC) value",
+                false
+            ]
+        },
+        "93": {
+            "A": [
+                "The model predicts videos as popular if the user who uploads them has over 10,000 likes.",
+                false
+            ],
+            "B": [
+                "The model predicts 97.5% of the most popular clickbait videos measured by number of clicks.",
+                false
+            ],
+            "C": [
+                "The model predicts 95% of the most popular videos measured by watch time within 30 days of being uploaded.",
+                true
+            ],
+            "D": [
+                "The Pearson correlation coefficient between the log-transformed number of views after 7 days and 30 days after publication is equal to 0.",
+                false
+            ]
+        },
+        "94": {
+            "A": [
+                "Use feature construction to combine the strongest features.",
+                false
+            ],
+            "B": [
+                "Use the representation transformation (normalization) technique.",
+                false
+            ],
+            "C": [
+                "Improve the data cleaning step by removing features with missing values.",
+                true
+            ],
+            "D": [
+                "Change the partitioning step to reduce the dimension of the test set and have a larger training set.",
+                false
+            ]
+        },
+        "95": {
+            "A": [
+                "Use the batch prediction functionality of AI Platform.",
+                false
+            ],
+            "B": [
+                "Create a serving pipeline in Compute Engine for prediction.",
+                false
+            ],
+            "C": [
+                "Use Cloud Functions for prediction each time a new data point is ingested.",
+                false
+            ],
+            "D": [
+                "Deploy the model on AI Platform and create a version of it for online inference.",
+                true
+            ]
+        },
+        "96": {
+            "A": [
+                "Change the optimizer.",
+                false
+            ],
+            "B": [
+                "Reduce the batch size.",
+                true
+            ],
+            "C": [
+                "Change the learning rate.",
+                false
+            ],
+            "D": [
+                "Reduce the image shape.",
+                false
+            ]
+        },
+        "97": {
+            "A": [
+                "Create alerts to monitor for skew, and retrain the model.",
+                false
+            ],
+            "B": [
+                "Perform feature selection on the model, and retrain the model with fewer features.",
+                false
+            ],
+            "C": [
+                "Retrain the model, and select an L2 regularization parameter with a hyperparameter tuning service.",
+                true
+            ],
+            "D": [
+                "Perform feature selection on the model, and retrain the model on a monthly basis with fewer features.",
+                false
+            ]
         }
     },
     "images": {
@@ -1395,7 +1950,36 @@
         "65": false,
         "66": false,
         "67": false,
-        "68": false
+        "68": false,
+        "69": false,
+        "70": false,
+        "71": false,
+        "72": false,
+        "73": false,
+        "74": false,
+        "75": false,
+        "76": false,
+        "77": false,
+        "78": false,
+        "79": false,
+        "80": false,
+        "81": false,
+        "82": false,
+        "83": false,
+        "84": false,
+        "85": false,
+        "86": false,
+        "87": false,
+        "88": false,
+        "89": "quiz_data_devlop/images/ml_questions/89.png",
+        "90": false,
+        "91": false,
+        "92": false,
+        "93": false,
+        "94": false,
+        "95": false,
+        "96": false,
+        "97": false
     },
     "multiple_choice": {
         "1": false,
@@ -1465,6 +2049,35 @@
         "65": false,
         "66": false,
         "67": false,
-        "68": false
+        "68": false,
+        "69": false,
+        "70": false,
+        "71": false,
+        "72": false,
+        "73": false,
+        "74": false,
+        "75": false,
+        "76": true,
+        "77": false,
+        "78": false,
+        "79": false,
+        "80": false,
+        "81": false,
+        "82": false,
+        "83": false,
+        "84": false,
+        "85": false,
+        "86": false,
+        "87": false,
+        "88": false,
+        "89": false,
+        "90": false,
+        "91": false,
+        "92": false,
+        "93": false,
+        "94": false,
+        "95": false,
+        "96": false,
+        "97": false
     }
 }
