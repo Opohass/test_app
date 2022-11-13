@@ -3,6 +3,7 @@
     "Security Engineer": "quiz_data_devlop/quiz_json/Security Engineer.json",
     "Data Engineer": "quiz_data_devlop/quiz_json/Data Engineer.json",
     "Cloud Developer": "quiz_data_devlop/quiz_json/Cloud Developer.json",
-    "associate cloud engineer":"quiz_data_devlop/quiz_json/associate_cloud_engineer.json",
-    "cloud architect":"quiz_data_devlop/quiz_json/cloud_architect.json"
+    "associate cloud engineer": "quiz_data_devlop/quiz_json/associate_cloud_engineer.json",
+    "cloud architect": "quiz_data_devlop/quiz_json/cloud_architect.json",
+    "professional cloud devops engineer": "quiz_data_devlop/quiz_json/professional cloud devops engineer.json"
 }
