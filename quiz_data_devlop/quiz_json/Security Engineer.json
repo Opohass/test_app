@@ -113,7 +113,7 @@
         "1": {
             "A": [
                 "Public IP",
-                true
+                trueYour company is storing sensitive data in Cloud Storage. You want a key generated on-premises to be used in the encryption process. What should you do?
             ],
             "B": [
                 "IP Forwarding",
@@ -1511,11 +1511,11 @@
             ],
             "C": [
                 "Use customer-supplied encryption keys to manage the data encryption key (DEK).",
-                true
+                false
             ],
             "D": [
                 "Use customer-supplied encryption keys to manage the key encryption key (KEK).",
-                false
+                true
             ]
         },
         "77": {
