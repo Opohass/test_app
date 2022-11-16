@@ -176,7 +176,11 @@ class Ui_QuestionWindow(object):
         #check if time end
         if time<=0:
             self.timer.stop()
-            self.label_2.setText("Time end")  
+            self.label_2.setText("Time end")
+            msg = QtWidgets.QMessageBox()
+            msg.setWindowTitle("eror")
+            msg.setText("Time end")
+            msg.exec_()   
         else: self.label_2.setText(str(datetime.timedelta(seconds=time)))  
             
     def next_question(self):
