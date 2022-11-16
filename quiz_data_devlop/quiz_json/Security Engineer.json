@@ -113,7 +113,7 @@
         "1": {
             "A": [
                 "Public IP",
-                trueYour company is storing sensitive data in Cloud Storage. You want a key generated on-premises to be used in the encryption process. What should you do?
+                true
             ],
             "B": [
                 "IP Forwarding",
