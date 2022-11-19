@@ -66,7 +66,77 @@
         "64": "Your analytics system executes queries against a BigQuery dataset. The SQL query is executed in batch and passes the contents of a SQL file to the BigQuery CLI. Then it redirects the BigQuery CLI output to another process. However, you are getting a permission error from the BigQuery CLI when the queries are executed. You want to resolve the issue. What should you do?",
         "65": "Your application is running on Compute Engine and is showing sustained failures for a small number of requests. You have narrowed the cause down to a single Compute Engine instance, but the instance is unresponsive to SSH. What should you do next?",
         "66": "You configured your Compute Engine instance group to scale automatically according to overall CPU usage. However, your application's response latency increases sharply before the cluster has finished adding up instances. You want to provide a more consistent latency experience for your end users by changing the configuration of the instance group autoscaler. Which two configuration changes should you make? (Choose two.)",
-        "67": "You have an application controlled by a managed instance group. When you deploy a new version of the application, costs should be minimized and the number of instances should not increase. You want to ensure that, when each new instance is created, the deployment only continues if the new instance is healthy. What should you do?"
+        "67": "You have an application controlled by a managed instance group. When you deploy a new version of the application, costs should be minimized and the number of instances should not increase. You want to ensure that, when each new instance is created, the deployment only continues if the new instance is healthy. What should you do?",
+        "68": "You are capturing important audit activity in Stackdriver Logging. You need to read the information from Stackdriver Logging to perform real-time analysis of the logs.\nYou will have multiple processes performing different types of analysis on the logging data. What should you do?",
+        "69": "Your application starts on the VM as a systemd service. Your application outputs its log information to stdout.\nYou need to send the application logs to Stackdriver without changing the application. What should you do?",
+        "70": "You have a service running on Compute Engine virtual machine instances behind a global load balancer. You need to ensure that when the instance fails, it is recovered. What should you do?",
+        "71": "You are building a storage layer for an analytics Hadoop cluster for your company. This cluster will run multiple jobs on a nightly basis, and you need to access the data frequently.\nYou want to use Cloud Storage for this purpose. Which storage option should you choose?",
+        "72": "You have an application that accepts inputs from users. The application needs to kick off different background tasks based on these inputs.\nYou want to allow for automated asynchronous execution of these tasks as soon as input is submitted by the user.\nWhich product should you use?",
+        "73": "As part of their expansion, HipLocal is creating new projects in order to separate resources. They want to build a system to automate enabling of their APIs. What should they do?",
+        "74": "Your organization has grown, and new teams need access to manage network connectivity within and across projects. You are now seeing intermittent timeout errors in your application.\nYou want to find the cause of the problem. What should you do?",
+        "75": "Your company has a successful multi-player game that has become popular in the US. Now, it wants to expand to other regions. It is launching a new feature that allows users to trade points. This feature will work for users across the globe.\nYour company\u2019s current MySQL backend is reaching the limit of the Compute Engine instance that hosts the game. Your company wants to migrate to a different database that will provide global consistency and high availability across the regions.\nWhich database should they choose?",
+        "76": "Which architecture should HipLocal use for log analysis?",
+        "77": "Your company plans to expand their analytics use cases. One of the new use cases requires your data analysts to analyze events using SQL on a near real\u2013time basis.\nYou expect rapid growth and want to use managed services as much as possible. What should you do?",
+        "78": "A client of yours has asked you for advice because he is looking for a quick and convenient solution for adding functionalities to an Application.\nWhenever a new customer is created in the Firebase database, he wants to perform a series of welcome activities and a series of follow-up actions, regardless of the specific function that recorded the new customer record.\nWhich of the following solutions will you suggest?",
+        "79": "A team of mobile developers is developing a new application. It will require synchronizing data between mobile devices and a backend database. Which database service would you recommend?",
+        "80": "You are migrating a series of applications to Google Cloud Platform with a lift and shift methodology, using Compute Engine.\nApplications must be scalable, so Load Balancer and instance groups are being configured.\nSome applications manage session data in memory.\nWhich of the following configurations do you choose to allow apps to work properly?",
+        "81": "You work in an international Company based in North America and your boss told you that you have to plan the GDPR compliance for EUROPE.\nWhich of the following elements you have to take care of(select 2)?",
+        "82": "You are responsible for planning the migration to GCP of an important application that works with Oracle Database.\nA horizontally scalable and globally functioning SQL database is required.\nWhich service is better to use and which type of schema migration is recommended?",
+        "83": "With Cloud Storage, you may have different classes and it is possible to pass from one class to another.\nBut some transitions are not allowed.\nWhich one of the following is not possible?",
+        "84": "You are looking for a SQL system to integrate and query both historical and production data. The data must be organized in complex structures. In particular, it is necessary to store orders and invoices in a denormalized and complete manner with the header and detail within the same structure. Which of the following products do you choose?",
+        "85": "You are the leader of a development group that is migrating some applications to the Cloud and who has asked you how to set up a local work environment.\nIn the company they need to use specific development tools that are installed on the Clients.\nWhich of these tips would you provide?",
+        "86": "You are the leader of a development group; you want to start using Continuous Integration and Deployment Techniques and you care to organize procedure in the best way.\nIn your company you are not allowed to publish code in public or not internally certified Sites.\nWhere will the code developed by your team be stored and shared?",
+        "87": "You are the leader of a development group; you want to start using Continuous Integration and Deployment Techniques and you care to organize procedure in the best way.\nIn your company the new trend is to deploy apps and services within containers. The idea is to use Kubernetes.\nYou want to start the deployment as soon as new Source is committed.\nWhich product is the best suitable one for creating Docker images from code?",
+        "88": "The management asked you, as project leader of the development, to prepare a plan with the organizational proposals for the migration of corporate apps to the cloud, both as development projects and as an operational strategy.\nWhat do you propose for the new organization of development?",
+        "89": "You have this SQL Statement in Bigquery:\nSELECT ANY_VALUE(fruit) as any_value\nFROM UNNEST([\u201capple\u201d, \u201cbanana\u201d, \u201cpear\u201d]) as fruit;\nWhat is the result of this query?",
+        "90": "You set up an application to be deployed in a Kubernetes Cluster with GKE. Your app uses various Cloud services, including Cloud Spanner and Cloud Pub / Sub and you are requested to find an optimized way to run the system.\nWhat is the best way to securely authorize all operations?",
+        "91": "You have an application that examines the written requests of a Customer Care in order to prepare examples of ready-made answers in the operator assistance system.\nThe problem is that sometimes within the dialogues confidential information is transcribed that should not be disclosed.\nWhat is the most easy and immediate GCP technique to adopt in the program that processes these texts?",
+        "92": "You want to have more control over your Cloud GCP VMs. In particular, you want to optimize performance and find the optimal configuration so that your applications are always blazing fast and available.\nYou are looking for detailed Disk and Memory metrics and the statistics that you usually collect with the \u201ccollectd\u201d Linux command.\nWhich function can you activate and how?",
+        "93": "Your team has deployed some applications in GKE.\nThey asked you how they can view a detailed list of the containers with a few commands.\nWhich is the right statement to use?",
+        "94": "You need to migrate a Python app to GCP. The main problem is that the app may have sudden traffic bursts and you have to scale very quickly.\nThe main requirements for the app are therefore performance and availability.\nGiven these requirements, which platform do you choose?",
+        "95": "You have an application that periodically needs to fetch data online and then upload it to BigQuery and Cloud Storage.\nYou have prepared a bash script to complete the operation.\nWhat do you have to do in order to to authorize the procedure in an automated, simple and scalable way in the VM of the managed instance group on which it is installed?",
+        "96": "You have an app in App Engine Standard Edition that needs to use Cloud SQL.\nWhich, among the following, is the best method to authorize all operations safely?",
+        "97": "What is a columnar Database and which is the GCP Solution?",
+        "98": "You are looking for a low-cost database service that supports strong consistency, atomic transaction and serializable isolation.\nThe data have to be partially structured.\nWhat database and what configuration do you choose?",
+        "99": "Which languages ?? you can use with Cloud Spanner?",
+        "100": "You have been asked to design an app that allows to upload images and documents to Cloud Storage. These files must be processed, classified, and have to remain available for a month. Then they must be archived.\nYou want to create a simple and functional solution.\nWhich of the following is the best one?",
+        "101": "Your application is running as a container in a Google Kubernetes Engine (GKE) cluster. You need to add a secret to your application using a secure approach that prevents the secret being revealed by calls to the Kubernetes API server. What should you do?",
+        "102": "You manage a microservices application on Google Kubernetes Engine (GKE) using Istio. You secure the communication channels between your microservices by implementing an Istio AuthorizationPolicy, a Kubernetes NetworkPolicy, and mTLS on your GKE cluster. You discover that HTTP requests between two Pods to specific URLs fail, while other requests between the pods to other URLs succeed. What is the cause of the connection issue?",
+        "103": "You are developing a microservice-based application that will run on Google Kubernetes Engine (GKE). Some of the services need to access different Google Cloud APIs. How should you set up authentication of these services in the cluster following Google-recommended best practices? (choose two)",
+        "104": "Your company\u2019s product team has a new requirement based on customer demand to autoscale your stateless and distributed service running in a Google Kubernetes Engine (GKE) cluster. You want to find a solution that minimizes changes because this feature will go live in two weeks. What should you do?",
+        "105": "Your team is developing an ecommerce platform for your company. Users will log in to the website and add items to their shopping cart. Users will be automatically logged out after 30 minutes of inactivity. When users log back in, their shopping cart should be available. How should you store users\u2019 session and shopping cart information while following Google-recommended best practices?",
+        "106": "You need to build a public API that authenticates, enforces quotas, and reports metrics for API callers. Which tool should you use to complete this architecture?",
+        "107": "You recently developed a web application to transfer log data to a Cloud Storage bucket daily. Authenticated users will regularly review logs from the prior two weeks for critical events. After that, logs will be reviewed once annually by an external auditor. Data must be stored for a period of no less than 7 years. You want to propose a storage solution that meets these requirements and minimizes costs. What should you do? (Choose two)",
+        "108": "You are developing an application that will store and access objects in a Cloud Storage bucket. To comply with regulatory requirements, you need to ensure that all objects are available for at least 7 years after their initial creation. Objects created more than 3 years ago are accessed very infrequently (less than once a year). You need to configure object storage while ensuring that storage cost is optimized. What should you do? (choose two)",
+        "109": "You are developing a web application that will run on Google Cloud. The rate of the incoming user traffic is expected to be unpredictable, with no traffic on most days and large spikes on other days. You need the application to automatically scale up and down, and you need to minimize the cost associated with running the application. What should you do?",
+        "110": "Your company\u2019s development teams want to use various open source operating systems in their container images. When images are published, you need to scan them for Common Vulnerabilities and Exposures (CVEs). The scanning process must not impact software development agility. You want to use managed services where possible. What should you do?",
+        "111": "in photo",
+        "112": "You have developed an application and want to host it on Cloud Run. This application writes log records as text in local files. You want the logs to be written to Cloud Logging while minimizing the amount of code you have to maintain. What should you do?",
+        "113": "You want to migrate an on-premises container running in Knative to Google Cloud. You need to make sure that the migration doesn\u2019t affect your application\u2019s deployment strategy, and you want to use a fully managed service. Which Google Cloud service should you use to deploy your container?",
+        "114": "You have two Google Cloud projects - Project A and Project B. You need to create a Cloud Function in Project A that saves its output in a Cloud Storage bucket in Project B. You want to follow the principle of least privilege. What should you do?",
+        "115": "You are deploying your application on a Google Kubernetes Engine instance that communicates with Cloud SQL. You will use Cloud SQL Auth Proxy to allow your application to communicate to the database using the service account associated with the application\u2019s instance. You want to follow the principle of least privilege for the role assigned to the service account. What should you do?",
+        "116": "You recently developed an application. You need to call the Cloud Storage API from a Compute Engine instance that doesn't have a public IP address. What should you do?",
+        "117": "Your application performs well when tested locally, but it runs significantly slower after you deploy it to a Compute Engine instance. You need to diagnose the problem with the least number of changes. What should you do?",
+        "118": "You are developing an ecommerce web application that uses Cloud Run and Memorystore for Redis. When a user logs into the app, the application caches the user\u2019s information (e.g., session, name, address, preferences), which is stored for quick retrieval during checkout. While testing your application in a browser, you get a 502 Bad Gateway error. You have determined that the application is not connecting to Memorystore. What is the reason for this error?",
+        "119": "Your organization has recently begun an initiative to replatform their legacy applications onto Google Kubernetes Engine. You need to decompose a monolithic application into microservices. Multiple instances have read and write access to a configuration file, which is stored on a shared file system. You want to minimize the effort required to manage this transition, and you want to avoid rewriting the application code. What should you do?",
+        "120": "You are configuring logging for a Cloud Run service that is in development. Your container instance writes structured logs to standard output (stdout) and standard error (stderr) streams. You want to correlate the automatically created request logs with your container logs. What should you do?",
+        "121": "You need to redesign the ingestion of audit events from your authentication service to allow it to handle a large increase in traffic. Currently, the audit service and the authentication service run in the same Compute Engine virtual machine. You plan to split each service into their own pool of Compute Engine VM instances and use Pub/Sub to send events from the authentication service to the audit service. \nHow should you set up the Pub/Sub topics and subscriptions to ensure that the system can handle a large volume of messages and can scale efficiently?",
+        "122": "in photo",
+        "123": "You are developing an application using a new programming language that does not have support for Cloud Client Libraries. Your application makes REST API calls to invoke Google Cloud services. The application runs on Cloud Run with an associated service account. You want to configure this service account to act as the authorization identity for the Google Cloud service calls. What should you do?",
+        "124": "You are creating a web application designed to run on a Google Cloud runtime that writes a file to the user's Drive regardless of their account domain. You need to configure the application to authenticate to the Google Drive API. What should you do?",
+        "125": "Your team is responsible for maintaining an application that aggregates news articles from many different sources. Your monitoring dashboard contains publicly accessible real-time reports and runs on a Compute Engine instance as a web application. External stakeholders and analysts need to access these reports via a secure channel without authentication. How should you configure this secure channel?",
+        "126": "Your team has developed a mobile web application where global users vote on popular topics. For each topic, you expect a very high volume of votes during each individual 30-minute voting window. You need to capture and count each topic's votes within every 30 minute window. You also need to store the votes for future analysis and reporting. What should you do?",
+        "127": "in photo",
+        "128": "You have written a Cloud Function in Node.js with source code stored in a Git repository. You want any committed changes to the source code to be automatically tested. You write a Cloud Build configuration that pushes the source code to a uniquely named Cloud Function, then calls the function as a test, and then deletes the Cloud Function as cleanup. You discover that if the test fails, the Cloud Function is not deleted. What should you do?",
+        "129": "You have deployed a web application in a Google Kubernetes Engine (GKE) cluster. You are reviewing the Cloud Monitoring metrics and find that your cluster\u2019s CPU load fluctuates throughout the day. To maximize performance while minimizing cost, you want the number of pods and notes to automatically adjust. What should you do?",
+        "130": "You have a Java application running on Cloud Run. Your application\u2019s error messages do not appear in the Error Reporting console. What should you do?",
+        "131": "You are analyzing your application\u2019s performance. You observe that certain Cloud Bigtable tables in your cluster are used much more than others, causing inconsistent application performance for end users. You discover that some tablets have large sections of similarly named row keys and are heavily utilized, while other tablets are running idle. You discover that a user\u2019s ZIP code is the first component of the row key, and your application is being heavily used by profiles originating from that ZIP code. You want to change how you generate row keys so that they are human readable and so that Cloud Bigtable demand is more evenly distributed within the cluster. What should you do?",
+        "132": "\nYour company has a successful multi-player game that has become popular in the US. Now, it wants to expand to other regions. It is launching a new feature that allows users to trade points. This feature will work for users across the globe. Your company\u2019s current MySQL backend is reaching the limit of the Compute Engine instance that hosts the game. Your company wants to migrate to a different database that will provide global consistency and high availability across the regions. Which database should they choose?",
+        "133": "Your company plans to expand their analytics use cases. One of the new use cases requires your data analysts to analyze events using SQL on a near real\u2013time basis. You expect rapid growth and want to use managed services as much as possible. What should you do?",
+        "134": "Your application that is deployed on Cloud Run receives a large amount of traffic. You are concerned that deploying changes to the application could affect all users negatively. You want to avoid full-scale load testing due to cost concerns, but you still want to deploy new features as quickly as possible. Which approach should you take?",
+        "135": "Your website is deployed on Compute Engine. Your marketing team wants to test conversion rates between three different website designs. You are not able to make changes to your application code. What should you do?",
+        "136": "You are capturing important audit activity in Cloud Logging. You need to read the information from Cloud Logging to perform near real-time analysis of the logs. You will have multiple processes performing different types of analysis on the logging data. What should you do?",
+        "137": "You are writing an API endpoint to process orders from a web application and save the data into a collection in Firestore in Datastore mode. During application testing, you notice that when your application encounters an HTTP 5xx server error from the Datastore API, it catches this error and returns an HTTP 200 OK response code to the client, but does not store the data within Datastore. You want the consumers of your API endpoint to know that the write request was unsuccessful. What should you do?"
     },
     "answers": {
         "1": {
@@ -367,7 +437,7 @@
         },
         "17": {
             "A": [
-                " RESTful APIs",
+                "RESTful APIs",
                 true
             ],
             "B": [
@@ -843,7 +913,7 @@
                 true
             ],
             "C": [
-                " Install the Cloud Monitoring agent on the virtual machines.",
+                "Install the Cloud Monitoring agent on the virtual machines.",
                 false
             ],
             "D": [
@@ -901,7 +971,7 @@
                 true
             ],
             "D": [
-                " Use Google Kubernetes Engine for automated deployments.",
+                "Use Google Kubernetes Engine for automated deployments.",
                 true
             ],
             "E": [
@@ -1294,6 +1364,1314 @@
                 "Perform a rolling-action with maxHealthy set to 0, maxUnhealthy set to 1.",
                 false
             ]
+        },
+        "68": {
+            "A": [
+                "Read the logs directly from the Stackdriver Logging API.",
+                false
+            ],
+            "B": [
+                "Set up a Stackdriver Logging sync to BigQuery, and read the logs from the BigQuery table.",
+                false
+            ],
+            "C": [
+                "Set up a Stackdriver Logging sync to Cloud Pub/Sub, and read the logs from a Cloud Pub/Sub topic.",
+                true
+            ],
+            "D": [
+                "Set up a Stackdriver Logging sync to Cloud Storage, and read the logs from a Cloud Storage bucket.",
+                false
+            ]
+        },
+        "69": {
+            "A": [
+                "Review the application logs from the Compute Engine VM Instance activity logs in Stackdriver.",
+                false
+            ],
+            "B": [
+                "Review the application logs from the Compute Engine VM Instance data access logs in Stackdriver.",
+                false
+            ],
+            "C": [
+                "Install Stackdriver Logging Agent. Review the application logs from the Compute Engine VM Instance syslog logs in Stackdriver.",
+                true
+            ],
+            "D": [
+                "Install Stackdriver Logging Agent. Review the application logs from the Compute Engine VM Instance system event logs in Stackdriver.",
+                false
+            ]
+        },
+        "70": {
+            "A": [
+                "Set up health checks in the load balancer configuration.",
+                false
+            ],
+            "B": [
+                "Deploy a service to the instances to notify you when they fail.",
+                false
+            ],
+            "C": [
+                "Use Stackdriver alerting to trigger a workflow to reboot the instance.",
+                false
+            ],
+            "D": [
+                "Set up health checks in the managed instance group configuration.",
+                true
+            ]
+        },
+        "71": {
+            "A": [
+                "Multi-regional storage",
+                false
+            ],
+            "B": [
+                "Regional storage",
+                true
+            ],
+            "C": [
+                "Nearline storage",
+                false
+            ],
+            "D": [
+                "Coldline storage",
+                false
+            ]
+        },
+        "72": {
+            "A": [
+                "Cloud Tasks",
+                true
+            ],
+            "B": [
+                "Cloud Bigtable",
+                false
+            ],
+            "C": [
+                "Cloud Pub/Sub",
+                false
+            ],
+            "D": [
+                "Cloud Composer",
+                false
+            ]
+        },
+        "73": {
+            "A": [
+                "Copy existing persistent disks to the new project.",
+                false
+            ],
+            "B": [
+                "Use the service management API to define a new service.\n\n",
+                false
+            ],
+            "C": [
+                "Use the service management API to enable the Compute API.",
+                true
+            ],
+            "D": [
+                "Use the service management API to enable the Cloud Storage API.",
+                false
+            ]
+        },
+        "74": {
+            "A": [
+                "Set up wireshark on each Google Cloud Virtual Machine instance.",
+                false
+            ],
+            "B": [
+                "Configure VPC flow logs for each of the subnets in your VPC.",
+                true
+            ],
+            "C": [
+                "Review the instance admin activity logs in Stackdriver for the application instances.",
+                false
+            ],
+            "D": [
+                "Configure firewall rules logging for each of the firewalls in your VPC.\n\n",
+                false
+            ]
+        },
+        "75": {
+            "A": [
+                "BigQuery",
+                false
+            ],
+            "B": [
+                "Cloud Spanner",
+                true
+            ],
+            "C": [
+                "Cloud SQL",
+                false
+            ],
+            "D": [
+                "Cloud Bigtable",
+                false
+            ]
+        },
+        "76": {
+            "A": [
+                "Use Cloud Spanner to store each event.",
+                false
+            ],
+            "B": [
+                "Start storing key metrics in Cloud Memorystore.",
+                false
+            ],
+            "C": [
+                "Use Stackdriver Logging with a BigQuery sink.",
+                true
+            ],
+            "D": [
+                "Use Stackdriver Logging with a Cloud Storage sink.",
+                false
+            ]
+        },
+        "77": {
+            "A": [
+                "Create a Cloud Pub/Sub topic and a subscription. Stream your events from the source into the Pub/Sub topic. Leverage Cloud Dataflow to ingest these events into BigQuery.",
+                true
+            ],
+            "B": [
+                "Create a Cloud Pub/Sub topic and a subscription. Stream your events from the source into the Pub/Sub topic. Leverage Cloud Dataflow to ingest these events into Cloud Storage.",
+                false
+            ],
+            "C": [
+                "Create a Kafka instance on a large Compute Engine instance. Stream your events from the source into a Kafka pipeline. Leverage Cloud Dataflow to ingest these events into Cloud Storage.",
+                false
+            ],
+            "D": [
+                "Create a Cloud Pub/Sub topic and a subscription. Stream your events from the source into the Pub/Sub topic. Leverage Cloud Dataflow to ingest these events into Cloud Datastore.",
+                false
+            ]
+        },
+        "78": {
+            "A": [
+                "Compute Engine and Managed Instances",
+                false
+            ],
+            "B": [
+                "App Engine Flexible Environment",
+                false
+            ],
+            "C": [
+                "App Engine Standard Environment",
+                false
+            ],
+            "D": [
+                "Cloud Functions",
+                true
+            ],
+            "E": [
+                "Cloud Run (fully managed)",
+                false
+            ]
+        },
+        "79": {
+            "A": [
+                "Cloud SQL",
+                false
+            ],
+            "B": [
+                "BigQuery",
+                false
+            ],
+            "C": [
+                "Firestore",
+                true
+            ],
+            "D": [
+                "Spanner",
+                false
+            ],
+            "E": [
+                "Bigtable",
+                false
+            ]
+        },
+        "80": {
+            "A": [
+                "HTTP(S) load balancer with Session affinity",
+                true
+            ],
+            "B": [
+                "HTTP(S) load balancer with WebSocket proxy support",
+                false
+            ],
+            "C": [
+                "QUIC protocol support for HTTPS Load Balancing",
+                false
+            ],
+            "D": [
+                "Network Load Balancing ",
+                false
+            ],
+            "E": [
+                "SSL Proxy con Health Checks",
+                false
+            ]
+        },
+        "81": {
+            "A": [
+                "Create an updated inventory of personal data that you handle.",
+                true
+            ],
+            "B": [
+                "Let the common data to be public, if the Customer doesn\u2019t advice against",
+                false
+            ],
+            "C": [
+                "Use California Consumer Protection Act (CCPA) rules",
+                false
+            ],
+            "D": [
+                "Review your current controls, policies, and processes for managing and protecting data",
+                true
+            ]
+        },
+        "82": {
+            "A": [
+                "Cloud SQL with no schema migration",
+                false
+            ],
+            "B": [
+                "Cloud SQL with sequential primary keys migration ",
+                false
+            ],
+            "C": [
+                "Cloud Spanner with no schema migration",
+                false
+            ],
+            "D": [
+                "Cloud Spanner with sequential primary keys migratio.",
+                true
+            ]
+        },
+        "83": {
+            "A": [
+                "Regional to nearline",
+                false
+            ],
+            "B": [
+                "Multiregional to coldline",
+                false
+            ],
+            "C": [
+                "Regional to multiregional",
+                true
+            ],
+            "D": [
+                "Nearline to coldline",
+                false
+            ]
+        },
+        "84": {
+            "A": [
+                "Cloud Datastore",
+                false
+            ],
+            "B": [
+                "Cloud Spanner",
+                false
+            ],
+            "C": [
+                "Cloud Bigtable",
+                false
+            ],
+            "D": [
+                "BigQuery",
+                true
+            ],
+            "E": [
+                "Cloud SQL",
+                false
+            ]
+        },
+        "85": {
+            "A": [
+                "Develop locally by making remote calls to services with credentials within the code",
+                false
+            ],
+            "B": [
+                "Develop remotely with the setup of a VM with Compute Engine and a Development Disk Image",
+                false
+            ],
+            "C": [
+                "Use Cloud Shell",
+                false
+            ],
+            "D": [
+                "Install Cloud SDK and use Service Accounts",
+                true
+            ]
+        },
+        "86": {
+            "A": [
+                "Cloud Storage with versioned Objects",
+                false
+            ],
+            "B": [
+                "Github",
+                false
+            ],
+            "C": [
+                "Cloud Source Repository ",
+                true
+            ],
+            "D": [
+                "AppEngine and Blue green Integration",
+                false
+            ]
+        },
+        "87": {
+            "A": [
+                "Cloud Build ",
+                true
+            ],
+            "B": [
+                "Cloud Code",
+                false
+            ],
+            "C": [
+                "Cloud Tasks",
+                false
+            ],
+            "D": [
+                "Cloud Repositories",
+                false
+            ],
+            "E": [
+                "Cloud Run",
+                false
+            ]
+        },
+        "88": {
+            "A": [
+                "Create small groups with scrum master",
+                true
+            ],
+            "B": [
+                "No changes: keep on consolidated methods",
+                false
+            ],
+            "C": [
+                "Decentralize development and use offshore development",
+                false
+            ],
+            "D": [
+                "Maintain the current organization and modernize the deployment",
+                false
+            ]
+        },
+        "89": {
+            "A": [
+                "a table with 3 rows",
+                false
+            ],
+            "B": [
+                "Apple",
+                false
+            ],
+            "C": [
+                "Banana",
+                false
+            ],
+            "D": [
+                "Pear",
+                false
+            ],
+            "E": [
+                "one of the values, randomly",
+                true
+            ]
+        },
+        "90": {
+            "A": [
+                "Write the login credentials of a user enabled to those Services in the Deployment manifest file in YAML format",
+                false
+            ],
+            "B": [
+                "Associate a specific service account with the configuration of the specific node pool (NodeConfig)",
+                false
+            ],
+            "C": [
+                "Create a service account and use the corresponding key with a K8s secret",
+                true
+            ],
+            "D": [
+                "Write the credentials in the source repository or inside the container image",
+                false
+            ]
+        },
+        "91": {
+            "A": [
+                "Use Cloud Data Loss Prevention",
+                true
+            ],
+            "B": [
+                "Use Dialogflow",
+                false
+            ],
+            "C": [
+                "Create a Python app with a list of the sensitive data/words to be detected",
+                false
+            ],
+            "D": [
+                "Use Cloud Natural Language API",
+                false
+            ]
+        },
+        "92": {
+            "A": [
+                "Stackdriver Monitoring agent",
+                true
+            ],
+            "B": [
+                "Cloud Armor ",
+                false
+            ],
+            "C": [
+                "Nothing: GCP Console alone supply anything",
+                false
+            ],
+            "D": [
+                "You must use a third party tool to have an advanced monitor",
+                false
+            ]
+        },
+        "93": {
+            "A": [
+                "gcloud container images describe",
+                true
+            ],
+            "B": [
+                "gcloud container images list",
+                false
+            ],
+            "C": [
+                "kubectl container list images",
+                false
+            ],
+            "D": [
+                "kubectl container list images \u2013detail",
+                false
+            ]
+        },
+        "94": {
+            "A": [
+                "Compute Engine with Managed instances group",
+                false
+            ],
+            "B": [
+                "App Engine Standard with automatic scaling",
+                true
+            ],
+            "C": [
+                "App Engine Flex with Automatic scaling",
+                false
+            ],
+            "D": [
+                "Cloud Functions",
+                false
+            ]
+        },
+        "95": {
+            "A": [
+                "Create the virtual machine with an image or script that provides the necessary roles",
+                false
+            ],
+            "B": [
+                "Set up a service account with the correct privileges and create the instance template of the virtual machine with this service account",
+                true
+            ],
+            "C": [
+                "Write all the proper and needed credentials in the code",
+                false
+            ],
+            "D": [
+                "Create a procedure in App Engine and translate the script in code in order to load the data",
+                false
+            ]
+        },
+        "96": {
+            "A": [
+                "Configure the service account",
+                true
+            ],
+            "B": [
+                "Grant all authorizations in the app.yaml file",
+                false
+            ],
+            "C": [
+                "Use JWT",
+                false
+            ],
+            "D": [
+                "Grant all authorizations in the index.yaml file",
+                false
+            ],
+            "E": [
+                "Store the service account key in code",
+                false
+            ]
+        },
+        "97": {
+            "A": [
+                "A SQL Database organized in columns instead of rows. Cloud SQL may act as a columnar Database",
+                false
+            ],
+            "B": [
+                "noSQL Database: Cloud Datastore",
+                false
+            ],
+            "C": [
+                "A BigData Solution: Cloud Dataprep",
+                false
+            ],
+            "D": [
+                "A noSQL Database: Cloud BigTable",
+                true
+            ]
+        },
+        "98": {
+            "A": [
+                "Cloud SQL mySQL with default configuration",
+                false
+            ],
+            "B": [
+                "Cloud SQL Postgres with default configuration",
+                false
+            ],
+            "C": [
+                "Cloud Storage with lifecycle",
+                false
+            ],
+            "D": [
+                "Cloud Datastore with transactional commits",
+                true
+            ]
+        },
+        "99": {
+            "A": [
+                "Javascript, Json and GQL",
+                false
+            ],
+            "B": [
+                "Java and GQL",
+                false
+            ],
+            "C": [
+                "Python, Javascript and SQL",
+                false
+            ],
+            "D": [
+                "Python, Javascript, GO, Java, PhP, Ruby and SQL",
+                true
+            ]
+        },
+        "100": {
+            "A": [
+                "Use Google Cloud Storage Triggers and call a function that executes all the task requested",
+                false
+            ],
+            "B": [
+                "Use Google Cloud Storage Triggers and call a function that classifies files; configure the bucket with a lifecycle rule that changes the storage classes of Objects to Coldline Storage",
+                true
+            ],
+            "C": [
+                "Create a Linux Cron Job in a VM that executes all the task requested ",
+                false
+            ],
+            "D": [
+                "Use Cloud Scheduler and setup an Appengine app",
+                false
+            ]
+        },
+        "101": {
+            "A": [
+                "Create a Kubernetes Secret, and pass the Secret as an environment variable to the container.",
+                false
+            ],
+            "B": [
+                "Enable GKE Application-layer Secrets Encryption on the cluster using a Cloud Key Management Service (KMS) key.",
+                false
+            ],
+            "C": [
+                "Store the Secret in Cloud KMS. Create a Google service account to read the Secret from Cloud KMS. Export the service account key in JSON format, and mount the JSON file on the container as a ConfigMap volume which can read the Secret from Cloud KMS.",
+                false
+            ],
+            "D": [
+                "Store the Secret in Secret Manager. Create a Google service account to read the Secret from Secret Manager. Create a Kubernetes service account to run the container. Use Workload Identity to authenticate as the Google service account.",
+                true
+            ]
+        },
+        "102": {
+            "A": [
+                "A Kubernetes NetworkPolicy resource is blocking HTTP traffic between the Pods.",
+                false
+            ],
+            "B": [
+                "The Pod initiating the HTTP requests is attempting to connect to the target Pod via an incorrect TCP port.",
+                false
+            ],
+            "C": [
+                "The AuthorizationPolicy of your cluster is blocking HTTP requests for specific paths within your application.",
+                true
+            ],
+            "D": [
+                "The cluster has mTLS configured in permissive mode, but the Pod\u2019s sidecar proxy is sending unencrypted traffic in plain text.",
+                false
+            ]
+        },
+        "103": {
+            "A": [
+                "Use the service account attached to the GKE node.",
+                false
+            ],
+            "B": [
+                "Enable Workload Identity on the cluster via the gcloud command-line tool.",
+                true
+            ],
+            "C": [
+                "Access the Google service account keys from Secret Manager.",
+                false
+            ],
+            "D": [
+                "Store the Google service account keys in Secret Manager.",
+                false
+            ],
+            "E": [
+                "Use gcloud to bind the Google service accounts and the Kubernetes service accounts using roles/iam.workloadIdentityUser.",
+                true
+            ]
+        },
+        "104": {
+            "A": [
+                "Deploy a Vertical Pod Autoscaler, and scale based on the CPU load.",
+                false
+            ],
+            "B": [
+                "Deploy a Vertical Pod Autoscaler, and scale based on a custom metric.",
+                false
+            ],
+            "C": [
+                "Deploy a Horizontal Pod Autoscaler, and scale based on the CPU load.",
+                true
+            ],
+            "D": [
+                "Deploy a Horizontal Pod Autoscaler, and scale based on a custom metric.",
+                false
+            ]
+        },
+        "105": {
+            "A": [
+                "Store the session and shopping cart information in local memory and enable cookie-based session affinity in a global external HTTP(S) load balancer.",
+                false
+            ],
+            "B": [
+                "Store the shopping cart information in an object on Cloud Storage where the object name is the session identifier.",
+                false
+            ],
+            "C": [
+                "Store the session and shopping cart information in BigQuery.",
+                false
+            ],
+            "D": [
+                "Store the session information in Memorystore for Redis, and store the shopping cart information in Firestore.",
+                true
+            ]
+        },
+        "106": {
+            "A": [
+                "Cloud Run",
+                false
+            ],
+            "B": [
+                "Cloud Endpoints",
+                true
+            ],
+            "C": [
+                "Identity-Aware Proxy",
+                false
+            ],
+            "D": [
+                "GKE Ingress for HTTP(S) Load Balancing",
+                false
+            ]
+        },
+        "107": {
+            "A": [
+                "Use the Bucket Lock feature to set the retention policy on the data.",
+                true
+            ],
+            "B": [
+                "Run a scheduled job to set the storage class to Coldline for objects older than 14 days.",
+                false
+            ],
+            "C": [
+                "Create a JSON Web Token (JWT) for users needing access to the Coldline storage buckets.",
+                false
+            ],
+            "D": [
+                "Create a lifecycle management policy to set the storage class to Coldline for objects older than 14 days.",
+                true
+            ],
+            "E": [
+                "Create a lifecycle management policy to set the storage class to Nearline for objects older than 14 days.",
+                false
+            ]
+        },
+        "108": {
+            "A": [
+                "Set a retention policy on the bucket with a period of 7 years.",
+                true
+            ],
+            "B": [
+                "Include the creation time in the prefix name of the object, and use IAM Conditions to provide only read access to objects within 7 years of the object creation date.",
+                false
+            ],
+            "C": [
+                "Enable Object Versioning to prevent objects from being accidentally deleted for 7 years after object creation.",
+                false
+            ],
+            "D": [
+                "Create an object lifecycle policy on the bucket that moves objects from Standard Storage to Archive Storage after 3 years.",
+                true
+            ],
+            "E": [
+                "Implement a Cloud Function that checks the age of each object in the bucket and moves the objects older than 3 years to a second bucket with the Archive Storage class. Use Cloud Scheduler to trigger the Cloud Function on a daily schedule.",
+                false
+            ]
+        },
+        "109": {
+            "A": [
+                "Build the application with Firestore as the database. Deploy the application to Cloud Run.",
+                true
+            ],
+            "B": [
+                "Build the application with Firestore as the database. Deploy the application to a Google Kubernetes Engine Standard cluster.",
+                false
+            ],
+            "C": [
+                "Build the application with Cloud SQL as the database. Deploy the application to a Google Kubernetes Engine Autopilot cluster.",
+                false
+            ],
+            "D": [
+                "Build the application with Firestore as the database. Deploy the application to a Compute Engine managed instance group with autoscaling.",
+                false
+            ]
+        },
+        "110": {
+            "A": [
+                "Enable the Container Analysis API to conduct vulnerability scans on images in Artifact Registry.",
+                true
+            ],
+            "B": [
+                "Create a Cloud Run service that is triggered on a code check-in and scan the code for CVEs.",
+                false
+            ],
+            "C": [
+                "Disallow the use of non-commercially supported base images in your development environment.",
+                false
+            ],
+            "D": [
+                "Use Cloud Monitoring to review the output of Cloud Build to determine whether a vulnerable version has been used.",
+                false
+            ]
+        },
+        "111": {
+            "A": [
+                "Select a virtual machine (VM) size with higher CPU for Cloud Build runs.",
+                true
+            ],
+            "B": [
+                "Deploy a Container Registry on a Compute Engine VM in a VPC, and use it to store the final images.",
+                false
+            ],
+            "C": [
+                "Cache the container images for subsequent builds using the --cache-from argument in your build config file.",
+                true
+            ],
+            "D": [
+                "Change the base image in the build file to ubuntu:latest, and install Python 3.7 using a package manager utility.",
+                false
+            ],
+            "E": [
+                "Store application source code on Cloud Storage, and configure the pipeline to use gsutil to download the source code.",
+                false
+            ]
+        },
+        "112": {
+            "A": [
+                "Import the Cloud Logging library in your code and use it to write logs.",
+                false
+            ],
+            "B": [
+                "Use your programming language logger to write logs to Standard output (stdout) and Standard error (stderr) streams.",
+                true
+            ],
+            "C": [
+                "Expose the log files to www.mycompany.com/logs. Use a browser to manually download the files and upload them to Cloud Storage.",
+                false
+            ],
+            "D": [
+                "Using cron, schedule a job to copy the log files to Cloud Storage once a day.",
+                false
+            ]
+        },
+        "113": {
+            "A": [
+                "Cloud Run",
+                true
+            ],
+            "B": [
+                "Compute Engine",
+                false
+            ],
+            "C": [
+                "Google Kubernetes Engine",
+                false
+            ],
+            "D": [
+                "App Engine flexible environment",
+                false
+            ]
+        },
+        "114": {
+            "A": [
+                "1. Create a Google service account in Project B. 2. Assign this service account the roles/storage.objectCreator role on the storage bucket residing in Project B. 3. Deploy the Cloud Function in Project A using the service account from Project B.",
+                false
+            ],
+            "B": [
+                "1. Create a Google service account in Project A. 2. Assign this service account the roles/storage.objectCreator role on the storage bucket residing in Project B. 3. Deploy the Cloud Function using the service account from Project A.",
+                true
+            ],
+            "C": [
+                "1. Determine the default App Engine service account (PROJECT_ID@appspot.gserviceaccount.com) in Project A. 2. Assign the default App Engine service account the roles/storage.objectCreator role on the storage bucket residing in Project B. 3. Deploy the Cloud Function using the default App Engine service account in Project A.",
+                false
+            ],
+            "D": [
+                "1. Determine the default App Engine service account (PROJECT_ID@appspot.gserviceaccount.com) in Project B. 2. Assign the default App Engine service account the roles/storage.objectCreator role on the storage bucket residing in Project B. 3. Deploy the Cloud Function using the default App Engine service account in Project A.",
+                false
+            ]
+        },
+        "115": {
+            "A": [
+                "Assign the Project Editor role.",
+                false
+            ],
+            "B": [
+                "Assign the Project Owner role.",
+                false
+            ],
+            "C": [
+                "Assign the Cloud SQL Client role.",
+                true
+            ],
+            "D": [
+                "Assign the Cloud SQL Editor role.",
+                false
+            ]
+        },
+        "116": {
+            "A": [
+                "Use Carrier Peering",
+                false
+            ],
+            "B": [
+                "Use VPC Network Peering",
+                false
+            ],
+            "C": [
+                "Use Shared VPC networks",
+                false
+            ],
+            "D": [
+                "Use Private Google Access",
+                true
+            ]
+        },
+        "117": {
+            "A": [
+                "File a ticket with Cloud Support indicating that the application performs faster locally.",
+                false
+            ],
+            "B": [
+                "Use Cloud Debugger snapshots to look at a point-in-time execution of the application.",
+                false
+            ],
+            "C": [
+                "Use Cloud Profiler to determine which functions within the application take the longest amount of time.",
+                true
+            ],
+            "D": [
+                "Add logging commands to the application and use Cloud Logging to check where the latency problem occurs.",
+                false
+            ]
+        },
+        "118": {
+            "A": [
+                "Your Memorystore for Redis instance was deployed without a public IP address.",
+                false
+            ],
+            "B": [
+                "You configured your Serverless VPC Access connector in a different region than your Cloud Run service.",
+                true
+            ],
+            "C": [
+                "The firewall rule allowing a connection between Cloud Run and Memorystore was removed during an infrastructure update by the DevOps team.",
+                false
+            ],
+            "D": [
+                "You configured your application to use a Serverless VPC Access connector on a different subnet in a different region than your Cloud Run service.",
+                false
+            ]
+        },
+        "119": {
+            "A": [
+                "Create a new Cloud Storage bucket, and mount it via FUSE in the container.",
+                false
+            ],
+            "B": [
+                "Create a new persistent disk, and mount the volume as a shared PersistentVolume.",
+                false
+            ],
+            "C": [
+                "Create a new Filestore instance, and mount the volume as an nfs PersistentVolume.",
+                true
+            ],
+            "D": [
+                "Create a new ConfigMap and volumeMount to store the contents of the configuration file.",
+                false
+            ]
+        },
+        "120": {
+            "A": [
+                "Instrument your application to submit traces to Cloud Trace.",
+                false
+            ],
+            "B": [
+                "Use Snapshot Debugger to add logpoints with randomly generated unique identifiers for each request.",
+                false
+            ],
+            "C": [
+                "Add the logging.googleapis.com/trace field to your log statements with the X-Cloud-Trace-Context header value.",
+                true
+            ],
+            "D": [
+                "Add the logging.googleapis.com/labels field to your log statements with a randomly generated unique identifier for each request.",
+                false
+            ]
+        },
+        "121": {
+            "A": [
+                "Create one Pub/Sub topic. Create one pull subscription.",
+                true
+            ],
+            "B": [
+                "Create one Pub/Sub topic. Create one pull subscription per audit service instance.",
+                false
+            ],
+            "C": [
+                "Create one Pub/Sub topic. Create one push subscription.",
+                false
+            ],
+            "D": [
+                "Create one Pub/Sub topic per authentication service instance. Create one pull subscription per topic.",
+                false
+            ],
+            "E": [
+                "Create one Pub/Sub topic per authentication service instance. Create one push subscription per topic.",
+                false
+            ]
+        },
+        "122": {
+            "A": [
+                "Modernize and deploy the code on App Engine flexible environment",
+                false
+            ],
+            "B": [
+                "Modernize and deploy the code on Cloud Run.",
+                true
+            ],
+            "C": [
+                "Deploy the modernized application to an n1-standard-1 Compute Engine instance.",
+                false
+            ],
+            "D": [
+                "Ask the development team to rewrite the application to run as a container on Google Kubernetes Engine.",
+                false
+            ]
+        },
+        "123": {
+            "A": [
+                "Include an API key with the application and pass the value in the Authorization header.",
+                false
+            ],
+            "B": [
+                "Retrieve the access token from the metadata server and pass the value in the Authorization header.",
+                true
+            ],
+            "C": [
+                "Use an API key for the service account as the value of the GOOGLE_APPLICATION_CREDENTIALS environment variable.",
+                false
+            ],
+            "D": [
+                "Store the value for gcloud auth application-default print-access-token at startup in a file whose path is set in the GOOGLE_APPLICATION_CREDENTIALS environment variable.",
+                false
+            ]
+        },
+        "124": {
+            "A": [
+                "Use an OAuth Client ID with delegated domain-wide authority.",
+                false
+            ],
+            "B": [
+                "Use a service account with delegated domain-wide authority.",
+                false
+            ],
+            "C": [
+                "Use an OAuth Client ID and https://www.googleapis.com/auth/drive.file scope to obtain an access token for each user.",
+                true
+            ],
+            "D": [
+                "Use a service account and https://www.googleapis.com/auth/drive.file scope to generate a signed JSON Web Token (JWT).",
+                false
+            ]
+        },
+        "125": {
+            "A": [
+                "Use the service account key of the instance to encrypt the traffic.",
+                false
+            ],
+            "B": [
+                "Use Cloud Scheduler to trigger Cloud Build every hour to create an export from the reports. Store the reports in a public Cloud Storage bucket.",
+                false
+            ],
+            "C": [
+                "Add an HTTP(S) load balancer in front of the monitoring dashboard. Configure Identity-Aware Proxy to secure the communication channel.",
+                false
+            ],
+            "D": [
+                "Add an HTTP(S) load balancer in front of the monitoring dashboard. Set up a Google-managed SSL certificate on the load balancer for traffic encryption.",
+                true
+            ]
+        },
+        "126": {
+            "A": [
+                "Save the votes to Memorystore, and use Cloud Functions to insert the counts into BigQuery. Display the results in Google Data Studio.",
+                false
+            ],
+            "B": [
+                "Publish the votes to Pub/Sub, and use a Datafow pipeline to insert the counts and votes into BigQuery. Display the results in Google Data Studio.",
+                true
+            ],
+            "C": [
+                "Publish the votes to Pub/Sub, and use Cloud Functions to insert the counts and votes into Cloud Storage. Display the results in Google Data Studio.",
+                false
+            ],
+            "D": [
+                "Use Firebase to authenticate the mobile users, and publish the votes directly to Firestore. Export the votes to a CSV file, and import it into Sheets for reporting.",
+                false
+            ]
+        },
+        "127": {
+            "A": [
+                "Migrate the database to Cloud SQL. Then import the data into Cloud Storage.",
+                false
+            ],
+            "B": [
+                "Migrate the database to BigQuery. Then import the data into Firestore in Native mode.",
+                false
+            ],
+            "C": [
+                "Migrate the database to Cloud SQL. Then import the data into Firestore in Native mode.",
+                true
+            ],
+            "D": [
+                "Create a Compute Engine virtual machine instance in Google Cloud, and install PostgreSQL and MongoDB Server software. Migrate the database to the new PostgreSQL, and then migrate the data to MongoDB.",
+                false
+            ]
+        },
+        "128": {
+            "A": [
+                "Change the order of the steps to delete the Cloud Function before performing the test.",
+                false
+            ],
+            "B": [
+                "Include a waitFor option in the Cloud Build step that deletes the Cloud Function test step as a required preceding step.",
+                false
+            ],
+            "C": [
+                "Have the Cloud Build step write the Cloud Function results to a file and return 0. Add a step after the Cloud Function deletion that checks whether the file contains the expected results and fails if it doesn't",
+                true
+            ],
+            "D": [
+                "Have the Cloud Build test step set its outcome in an environment variable called result and return 0. Add a final step after the Cloud Function deletion that checks whether the environment variable contains the expected results.",
+                false
+            ]
+        },
+        "129": {
+            "A": [
+                "Modify the managed instance group (MIG) to enable Autoscaling to configure max and min amount of nodes based on CPU load.",
+                false
+            ],
+            "B": [
+                "Enable Cluster Autoscaler on the GKE cluster, and configure the Horizontal Pod Autoscaler (HPA) to autoscale the workload based on CPU load.",
+                true
+            ],
+            "C": [
+                "Enable Cluster Autoscaler on the GKE cluster, and configure the HPA to autoscale the workloads based on a custom metric.",
+                false
+            ],
+            "D": [
+                "Modify the MIG to enable Autoscaling to configure max and min amount of nodes based on CPU load, and configure the Vertical Pod Autoscaler (VPA) to scale workloads based on CPU load.",
+                false
+            ]
+        },
+        "130": {
+            "A": [
+                "Ensure that Cloud Monitoring client libraries are bundled with the Java application.",
+                false
+            ],
+            "B": [
+                "Verify that application logs are being written to the correct regional storage bucket.",
+                false
+            ],
+            "C": [
+                "Verify that application errors are being written to stderr.",
+                true
+            ],
+            "D": [
+                "Log exceptions using System.out.println.",
+                false
+            ]
+        },
+        "131": {
+            "A": [
+                "Use serially generated integer values.",
+                false
+            ],
+            "B": [
+                "Use a subset of the MD5 hash of the row contents.",
+                false
+            ],
+            "C": [
+                "Use a concatenation of multiple human-readable attributes.",
+                true
+            ],
+            "D": [
+                "Use UNIX epoch-styled timestamps represented in milliseconds.",
+                false
+            ]
+        },
+        "132": {
+            "A": [
+                "BigQuery",
+                false
+            ],
+            "B": [
+                "Cloud SQL",
+                false
+            ],
+            "C": [
+                "Cloud Spanner",
+                true
+            ],
+            "D": [
+                "Cloud Bigtable",
+                false
+            ]
+        },
+        "133": {
+            "A": [
+                "Create a Pub/Sub topic and a subscription. Stream your events from the source into the Pub/Sub topic. Leverage Dataflow to ingest these events into BigQuery.",
+                true
+            ],
+            "B": [
+                "Create a Pub/Sub topic and a subscription. Stream your events from the source into the Pub/Sub topic. Leverage Dataflow to ingest these events into Cloud Storage.",
+                false
+            ],
+            "C": [
+                "Create a Pub/Sub topic and a subscription. Stream your events from the source into the Pub/Sub topic. Leverage Dataflow to ingest these events into Firestore in Datastore mode.",
+                false
+            ],
+            "D": [
+                "Create a Kafka instance on a large Compute Engine instance. Stream your events from the source into a Kafka pipeline. Leverage Dataflow to ingest these events into Cloud Storage.",
+                false
+            ]
+        },
+        "134": {
+            "A": [
+                "Schedule weekly load tests against the production application.",
+                false
+            ],
+            "B": [
+                "Use the local development environment to perform load testing outside Google Cloud.",
+                false
+            ],
+            "C": [
+                "Before allowing users to access new features, deploy as a new version and perform smoke tests. Then enable all users to access the new features.",
+                false
+            ],
+            "D": [
+                "Use traffic splitting to have a smaller part of the users test out new features, and slowly adjust traffic splitting until all users get the new features.",
+                true
+            ]
+        },
+        "135": {
+            "A": [
+                "Deploy website on Cloud Run and use traffic splitting.",
+                true
+            ],
+            "B": [
+                "Deploy website on Cloud Run as three separate revisions.",
+                false
+            ],
+            "C": [
+                "Deploy website on Cloud Functions as three separate functions.",
+                false
+            ],
+            "D": [
+                "Deploy website on Cloud Functions and implement custom code to show different designs.",
+                false
+            ]
+        },
+        "136": {
+            "A": [
+                "Write an app to read the logs directly from the Cloud Logging API.",
+                false
+            ],
+            "B": [
+                "Set up a Cloud Logging sink to Pub/Sub, and read the logs from a Pub/Sub topic.",
+                true
+            ],
+            "C": [
+                "Write a Cloud Function endpoint to read directly from the Cloud Logging API, and copy the logs over to Dataproc.",
+                false
+            ],
+            "D": [
+                "Set up a Cloud Logging sink to Cloud Storage, and read the logs from a Cloud Storage bucket.",
+                false
+            ]
+        },
+        "137": {
+            "A": [
+                "Return an HTTP 204 No Content response.",
+                false
+            ],
+            "B": [
+                "Return an HTTP 406 Not Acceptable response.",
+                false
+            ],
+            "C": [
+                "Return an HTTP 500 Internal Server Error response.",
+                true
+            ],
+            "D": [
+                "Retry the Datastore API with exponential backoff until Firestore returns a HTTP 2xx response.",
+                false
+            ]
         }
     },
     "images": {
@@ -1363,7 +2741,77 @@
         "64": false,
         "65": false,
         "66": false,
-        "67": false
+        "67": false,
+        "68": false,
+        "69": false,
+        "70": false,
+        "71": false,
+        "72": false,
+        "73": false,
+        "74": false,
+        "75": false,
+        "76": false,
+        "77": false,
+        "78": false,
+        "79": false,
+        "80": false,
+        "81": false,
+        "82": false,
+        "83": false,
+        "84": false,
+        "85": false,
+        "86": false,
+        "87": false,
+        "88": false,
+        "89": false,
+        "90": false,
+        "91": false,
+        "92": false,
+        "93": false,
+        "94": false,
+        "95": false,
+        "96": false,
+        "97": false,
+        "98": false,
+        "99": false,
+        "100": false,
+        "101": false,
+        "102": false,
+        "103": false,
+        "104": false,
+        "105": false,
+        "106": "quiz_data_devlop/images/Cloud Developer/106.png",
+        "107": false,
+        "108": false,
+        "109": false,
+        "110": false,
+        "111": "quiz_data_devlop/images/Cloud Developer/111.png",
+        "112": false,
+        "113": false,
+        "114": false,
+        "115": false,
+        "116": false,
+        "117": false,
+        "118": false,
+        "119": false,
+        "120": false,
+        "121": false,
+        "122": "quiz_data_devlop/images/Cloud Developer/122.png",
+        "123": false,
+        "124": false,
+        "125": false,
+        "126": false,
+        "127": "quiz_data_devlop/images/Cloud Developer/127.png",
+        "128": false,
+        "129": false,
+        "130": false,
+        "131": false,
+        "132": false,
+        "133": false,
+        "134": false,
+        "135": false,
+        "136": false,
+        "137": false
     },
     "multiple_choice": {
         "1": false,
@@ -1432,6 +2880,76 @@
         "64": false,
         "65": false,
         "66": true,
-        "67": false
+        "67": false,
+        "68": false,
+        "69": false,
+        "70": false,
+        "71": false,
+        "72": false,
+        "73": false,
+        "74": false,
+        "75": false,
+        "76": false,
+        "77": false,
+        "78": false,
+        "79": false,
+        "80": false,
+        "81": true,
+        "82": false,
+        "83": false,
+        "84": false,
+        "85": false,
+        "86": false,
+        "87": false,
+        "88": false,
+        "89": false,
+        "90": false,
+        "91": false,
+        "92": false,
+        "93": false,
+        "94": false,
+        "95": false,
+        "96": false,
+        "97": false,
+        "98": false,
+        "99": false,
+        "100": false,
+        "101": false,
+        "102": false,
+        "103": true,
+        "104": false,
+        "105": false,
+        "106": false,
+        "107": true,
+        "108": true,
+        "109": false,
+        "110": false,
+        "111": true,
+        "112": false,
+        "113": false,
+        "114": false,
+        "115": false,
+        "116": false,
+        "117": false,
+        "118": false,
+        "119": false,
+        "120": false,
+        "121": false,
+        "122": false,
+        "123": false,
+        "124": false,
+        "125": false,
+        "126": false,
+        "127": false,
+        "128": false,
+        "129": false,
+        "130": false,
+        "131": false,
+        "132": false,
+        "133": false,
+        "134": false,
+        "135": false,
+        "136": false,
+        "137": false
     }
 }
