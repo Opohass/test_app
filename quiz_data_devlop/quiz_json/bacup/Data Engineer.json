@@ -55,7 +55,7 @@
         "53": "Your organization has been collecting and analyzing data in Google BigQuery for 6 months. The majority of the data analyzed is placed in a time-partitioned table named events_partitioned. To reduce the cost of queries, your organization created a view called events, which queries only the last 14 days of data. The view is described in legacy SQL. Next month, existing applications will be connecting to BigQuery to read the events data via an ODBC connection. You need to ensure the applications can connect. Which two actions should you take? (Choose two.)",
         "54": "You have enabled the free integration between Firebase Analytics and Google BigQuery. Firebase now automatically creates a new table daily in BigQuery in the format app_events_YYYYMMDD. You want to query all of the tables for the past 30 days in legacy SQL. What should you do?",
         "55": "Your company is currently setting up data pipelines for their campaign. For all the Google Cloud Pub/Sub streaming data, one of the important business requirements is to be able to periodically identify the inputs and their timings during their campaign. Engineers have decided to use windowing and transformation in Google Cloud Dataflow for this purpose. However, when testing this feature, they find that the Cloud Dataflow job fails for the all streaming insert. What is the most likely cause of this problem?",
-        "56": "\nTopic 1\nYou architect a system to analyze seismic data. Your extract, transform, and load (ETL) process runs as a series of MapReduce jobs on an Apache Hadoop cluster. The ETL process takes days to process a data set because some steps are computationally expensive. Then you discover that a sensor calibration step has been omitted. How should you change your ETL process to carry out sensor calibration systematically in the future?",
+        "56": "Topic 1\nYou architect a system to analyze seismic data. Your extract, transform, and load (ETL) process runs as a series of MapReduce jobs on an Apache Hadoop cluster. The ETL process takes days to process a data set because some steps are computationally expensive. Then you discover that a sensor calibration step has been omitted. How should you change your ETL process to carry out sensor calibration systematically in the future?",
         "57": "An online retailer has built their current application on Google App Engine. A new initiative at the company mandates that they extend their application to allow their customers to transact directly via the application. They need to manage their shopping transactions and analyze combined data from multiple datasets using a business intelligence (BI) tool. They want to use only a single database for this purpose. Which Google Cloud database should they choose?",
         "58": "You launched a new gaming app almost three years ago. You have been uploading log files from the previous day to a separate Google BigQuery table with the table name format LOGS_yyyymmdd. You have been using table wildcard functions to generate daily and monthly reports for all time ranges. Recently, you discovered that some queries that cover long date ranges are exceeding the limit of 1,000 tables and failing. How can you resolve this issue?",
         "59": "Your analytics team wants to build a simple statistical model to determine which customers are most likely to work with your company again, based on a few different metrics. They want to run the model on Apache Spark, using data housed in Google Cloud Storage, and you have recommended using Google Cloud Dataproc to execute this job. Testing has shown that this workload can run in approximately 30 minutes on a 15-node cluster, outputting the results into Google BigQuery. The plan is to run this workload weekly. How should you optimize the cluster for cost?",
@@ -64,7 +64,7 @@
         "62": "You are integrating one of your internal IT applications and Google BigQuery, so users can query BigQuery from the application's interface. You do not want individual users to authenticate to BigQuery and you do not want to give them access to the dataset. You need to securely access BigQuery from your IT application. What should you do?",
         "63": "You are building a data pipeline on Google Cloud. You need to prepare data using a casual method for a machine-learning process. You want to support a logistic regression model. You also need to monitor and adjust for null values, which must remain real-valued and cannot be removed. What should you do?",
         "64": "You set up a streaming data insert into a Redis cluster via a Kafka cluster. Both clusters are running on Compute Engine instances. You need to encrypt data at rest with encryption keys that you can create, rotate, and destroy as needed. What should you do?",
-        "65": "\nTopic 1\nYou are developing an application that uses a recommendation engine on Google Cloud. Your solution should display new videos to customers based on past views. Your solution needs to generate labels for the entities in videos that the customer has viewed. Your design must be able to provide very fast filtering suggestions based on data from other customer preferences on several TB of data. What should you do?",
+        "65": "Topic 1\nYou are developing an application that uses a recommendation engine on Google Cloud. Your solution should display new videos to customers based on past views. Your solution needs to generate labels for the entities in videos that the customer has viewed. Your design must be able to provide very fast filtering suggestions based on data from other customer preferences on several TB of data. What should you do?",
         "66": "You are selecting services to write and transform JSON messages from Cloud Pub/Sub to BigQuery for a data pipeline on Google Cloud. You want to minimize service costs. You also want to monitor and accommodate input data volume that will vary in size with minimal manual intervention. What should you do?",
         "67": "Your infrastructure includes a set of YouTube channels. You have been tasked with creating a process for sending the YouTube channel data to Google Cloud for analysis. You want to design a solution that allows your world-wide marketing teams to perform ANSI SQL and other types of analysis on up-to-date YouTube channels log data. How should you set up the log data transfer into Google Cloud?",
         "68": "You are designing storage for very large text files for a data pipeline on Google Cloud. You want to support ANSI SQL queries. You also want to support compression and parallel load from the input locations using Google recommended practices. What should you do?",
@@ -97,7 +97,27 @@
         "95": "You store historic data in Cloud Storage. You need to perform analytics on the historic data. You want to use a solution to detect invalid data entries and perform data transformations that will not require programming or knowledge of SQL. What should you do?",
         "96": "Your company needs to upload their historic data to Cloud Storage. The security rules don't allow access from external IPs to their on-premises resources. After an initial upload, they will add new data from existing on-premises applications every day. What should they do?",
         "97": "You have a query that filters a BigQuery table using a WHERE clause on timestamp and ID columns. By using bq query `\"-dry_run you learn that the query triggers a full scan of the table, even though the filter on timestamp and ID select a tiny fraction of the overall data. You want to reduce the amount of data scanned by BigQuery with minimal changes to existing SQL queries. What should you do?",
-        "98": "You have a requirement to insert minute-resolution data from 50,000 sensors into a BigQuery table. You expect significant growth in data volume and need the data to be available within 1 minute of ingestion for real-time analysis of aggregated trends. What should you do?"
+        "98": "You have a requirement to insert minute-resolution data from 50,000 sensors into a BigQuery table. You expect significant growth in data volume and need the data to be available within 1 minute of ingestion for real-time analysis of aggregated trends. What should you do?",
+        "99": "You are working on optimizing BigQuery for a query that is run repeatedly on a single table. The data queried is about 1 GB, and some rows are expected to change about 10 times every hour. You have optimized the SQL statements as much as possible. You want to further optimize the query's performance. What should you do?",
+        "100": "Several years ago, you built a machine learning model for an ecommerce company. Your model made good predictions. Then a global pandemic occurred, lockdowns were imposed, and many people started working from home. Now the quality of your model has degraded. You want to improve the quality of your model and prevent future performance degradation. What should you do?",
+        "101": "A new member of your development team works remotely. The developer will write code locally on their laptop, which will connect to a MySQL instance on Cloud SQL. The instance has an external (public) IP address. You want to follow Google-recommended practices when you give access to Cloud SQL to the new team member. What should you do?",
+        "102": "Your Cloud Spanner database stores customer address information that is frequently accessed by the marketing team. When a customer enters the country and the state where they live, this information is stored in different tables connected by a foreign key. The current architecture has performance issues. You want to follow Google-recommended practices to improve performance. What should you do?",
+        "103": "Your company runs its business-critical system on PostgreSQL. The system is accessed simultaneously from many locations around the world and supports millions of customers. Your database administration team manages the redundancy and scaling manually. You want to migrate the database to Google Cloud. You need a solution that will provide global scale and availability and require minimal maintenance. What should you do?",
+        "104": "Your company collects data about customers to regularly check their health vitals. You have millions of customers around the world. Data is ingested at an average rate of two events per 10 seconds per user. You need to be able to visualize data in Bigtable on a per user basis. You need to construct the Bigtable key so that the operations are performant. What should you do?",
+        "105": "Your company is hiring several business analysts who are new to BigQuery. The analysts will use BigQuery to analyze large quantities of data. You need to control costs in BigQuery and ensure that there is no budget overrun while you maintain  the quality of query results. What should you do?",
+        "106": "Your Bigtable database was recently deployed into production. The scale of data ingested and analyzed has increased significantly, but the performance has degraded. You want to identify the performance issue. What should you do?",
+        "107": "Your company is moving your data analytics to BigQuery. Your other operations will remain on-premises. You need to transfer 800 TB of historic data. You also need to plan for 30 Gbps of daily data transfers that must be appended for analysis the next day. You want to follow Google-recommended practices to transfer your data. What should you do?",
+        "108": "Your team runs Dataproc workloads where the worker node takes about 45 minutes to process. You have been exploring various options to optimize the system for cost, including shutting down worker nodes aggressively. However, in your metrics you see that the entire job takes even longer. You want to optimize the system for cost without increasing job completion time. What should you do?",
+        "109": "Your customer has a SQL Server database that contains about 5 TB of data in another public cloud. You expect the data to grow to a maximum of 25 TB. The database is the backend of an internal reporting application that is used once a week. You want to migrate the application to Google Cloud to reduce administrative effort while keeping costs the same or reducing them. What should you do?",
+        "110": "Your IT team uses BigQuery for storing structured data. Your finance team recently moved to Google Workspace Enterprise edition from a standalone, desktop-based spreadsheet processor. When the finance team needs data insights, the IT team runs a query on BigQuery, exports the data to a CSV file, and sends the file as an email attachment to the finance team members. You want to improve the process while you retain familiar methods of data analysis for the finance team. What should you do?",
+        "111": "Your scooter-sharing company collects information about their scooters, such as location, battery level, and speed. The company visualizes this data in real time. To guard against intermittent connectivity, each scooter sends repeats of certain messages within a short interval. Occasional data errors have been noticed. The messages are received in Pub/Sub and stored in BigQuery. You need to ensure that the data does not contain duplicates and that erroneous data with empty fields is rejected. What should you do?",
+        "112": "Your cryptocurrency trading company visualizes prices to help your customers make trading decisions. Because different trades happen in real time, the price data is fed to a data pipeline that uses Dataflow for processing. You want to compute moving averages. What should you do?",
+        "113": "You are building the trading platform for a stock exchange with millions of traders. Trading data is written rapidly. You need to retrieve data quickly to show visualizations to the traders, such as the changing price of a particular stock over time. You need to choose a storage solution in Google Cloud. What should you do?",
+        "114": "Your customer uses Hadoop and Spark to run data analytics on-premises. The main data is stored in hard disks that are centrally accessed. Your customer needs to migrate their workloads to Google Cloud efficiently while considering scalability. You want to select an architecture that requires minimal effort. What should you do?",
+        "115": "You are on a team of analysts who work with BigQuery and are already proficient in SQL. Your team needs to build a multi-label machine learning classification model that uses data in BigQuery. There are 6,000 rows of data in your training dataset. The inferences could be one of 200 possible labels. You want to create a high accuracy model. What should you do?",
+        "116": "You used a small amount of data to build a machine learning model that gives you good inferences during testing. However, the results show more errors when real-world data is used to run the model. No additional data can be collected for testing. You want to get a more accurate view of the model's capability. What should you do?",
+        "117": "Your organization has been collecting information for many years about your customers, including their address and credit card details. You plan to use this customer data to build machine learning models on Google Cloud. You are concerned about private data leaking into the machine learning model. Your management is also concerned that direct leaks of personal data could damage the company's reputation. You need to address these concerns about data security. What should you do?",
+        "118": "Your healthcare application has a backend system that accepts event data directly from IoT devices. Recent increases of the application's users and devices are causing a sudden influx of data that overwhelms the system. You need to redesign the data pipeline to ensure that all data is processed and that no events are lost. You want to follow Google-recommended practices. What should you do?  "
     },
     "answers": {
         "1": {
@@ -254,11 +274,11 @@
                 false
             ],
             "C": [
-                " 'bigquery-public-data.noaa_gsod.gsod'*",
+                "'bigquery-public-data.noaa_gsod.gsod'*",
                 false
             ],
             "D": [
-                " 'bigquery-public-data.noaa_gsod.gsod*`",
+                "'bigquery-public-data.noaa_gsod.gsod*`",
                 true
             ]
         },
@@ -816,7 +836,7 @@
                 false
             ],
             "D": [
-                " The maximum number of workers",
+                "The maximum number of workers",
                 true
             ]
         },
@@ -1164,7 +1184,7 @@
                 false
             ],
             "B": [
-                " Introduce a new MapReduce job to apply sensor calibration to raw data, and ensure all other MapReduce jobs are chained after this.",
+                "Introduce a new MapReduce job to apply sensor calibration to raw data, and ensure all other MapReduce jobs are chained after this.",
                 true
             ],
             "C": [
@@ -1939,6 +1959,366 @@
                 "Use the MERGE statement to apply updates in batch every 60 seconds.",
                 false
             ]
+        },
+        "99": {
+            "A": [
+                "Create a materialized view based on the table, and query that view.",
+                true
+            ],
+            "B": [
+                "Enable caching of the queried data so that subsequent queries are faster.",
+                false
+            ],
+            "C": [
+                "Create a scheduled query, and run it a few minutes before the report has to be created.",
+                false
+            ],
+            "D": [
+                "Reserve a larger number of slots in advance so that you have maximum compute power to execute the query.",
+                false
+            ]
+        },
+        "100": {
+            "A": [
+                "Retrain the model with data from the first 30 days of the lockdown.",
+                false
+            ],
+            "B": [
+                "Monitor data until usage patterns normalize, and then retrain the model.",
+                false
+            ],
+            "C": [
+                "Retrain the model with data from the last 30 days. After one year, return to the older model.",
+                false
+            ],
+            "D": [
+                "Retrain the model with data from the last 30 days. Add a step to continuously monitor model input data for changes, and retrain the model.",
+                true
+            ]
+        },
+        "101": {
+            "A": [
+                "Ask the developer for their laptop's IP address, and add it to the authorized networks list.",
+                false
+            ],
+            "B": [
+                "Remove the external IP address, and replace it with an internal IP address. Add only the IP address for the remote developer's laptop to the authorized list.",
+                false
+            ],
+            "C": [
+                "Give instance access permissions in Identity and Access Management (IAM), and have the developer run Cloud SQL Auth proxy to connect to a MySQL instance.",
+                true
+            ],
+            "D": [
+                "Give instance access permissions in Identity and Access Management (IAM), change the access to \"private service access\" for security, and allow the developer to access Cloud SQL from their laptop.",
+                false
+            ]
+        },
+        "102": {
+            "A": [
+                "Create interleaved tables, and store states under the countries.",
+                true
+            ],
+            "B": [
+                "Denormalize the data, and have a row for each state with its corresponding country.",
+                false
+            ],
+            "C": [
+                "Retain the existing architecture, but use short, two-letter codes for the countries and states.",
+                false
+            ],
+            "D": [
+                "Combine the countries in a single cell's text, for example \"country:state1,state2, \u2026\" and when required, split the data.",
+                false
+            ]
+        },
+        "103": {
+            "A": [
+                "Migrate to BigQuery.",
+                false
+            ],
+            "B": [
+                "Migrate to Cloud Spanner.",
+                true
+            ],
+            "C": [
+                "Migrate to a Cloud SQL for PostgreSQL instance.",
+                false
+            ],
+            "D": [
+                "Migrate to bare metal machines with PostgreSQL installed.",
+                false
+            ]
+        },
+        "104": {
+            "A": [
+                "Construct the key as user-id#device-id#activity-id#timestamp.",
+                true
+            ],
+            "B": [
+                "Construct the key as timestamp#user-id#device-id#activity-id.",
+                false
+            ],
+            "C": [
+                "Construct the key as timestamp#device-id#activity-id#user-id.",
+                false
+            ],
+            "D": [
+                "Construct the key as user-id#timestamp#device-id#activity-id.",
+                false
+            ]
+        },
+        "105": {
+            "A": [
+                "Set a customized project-level or user-level daily quota to acceptable values.",
+                true
+            ],
+            "B": [
+                "Reduce the data in the BigQuery table so that the analysts query less data, and then archive the remaining data.",
+                false
+            ],
+            "C": [
+                "Train the analysts to use the query validator or --dry_run to estimate costs so that the analysts can self-regulate usage.",
+                false
+            ],
+            "D": [
+                "Export the BigQuery daily costs, and visualize the data on Looker on a per-analyst basis so that the analysts can self-regulate usage.",
+                false
+            ]
+        },
+        "106": {
+            "A": [
+                "Use Key Visualizer to analyze performance.",
+                true
+            ],
+            "B": [
+                "Use Cloud Trace to identify the performance issue.",
+                false
+            ],
+            "C": [
+                "Add logging statements into the code to see which inserts cause the delay.",
+                false
+            ],
+            "D": [
+                "Add more nodes to the cluster to see if that resolves the performance issue.",
+                false
+            ]
+        },
+        "107": {
+            "A": [
+                "As early as possible every day, use Cloud VPN to transfer the existing data over the internet.",
+                false
+            ],
+            "B": [
+                "Use a Transfer Appliance to move the existing data to Google Cloud. Use Cloud VPN to transfer data daily.",
+                false
+            ],
+            "C": [
+                "Use a Transfer Appliance to move the existing data to Google Cloud.. Use VPC Network Peering to transfer data daily.",
+                false
+            ],
+            "D": [
+                "Use a Transfer Appliance to move the existing data to Google Cloud. Set up a Dedicated or Partner Interconnect for daily transfers.",
+                true
+            ]
+        },
+        "108": {
+            "A": [
+                "Set a graceful decommissioning timeout greater than 45 minutes.",
+                true
+            ],
+            "B": [
+                "Rewrite the processing in Cloud Data Fusion, and run the job automatically.",
+                false
+            ],
+            "C": [
+                "Rewrite the processing in Dataflow, and use stream processing of the same data.",
+                false
+            ],
+            "D": [
+                "Increase the number of vCPUs on each worker node so that the processing finishes sooner.",
+                false
+            ]
+        },
+        "109": {
+            "A": [
+                "Migrate the database to Bigtable.",
+                false
+            ],
+            "B": [
+                "Migrate the database to Cloud Spanner.",
+                false
+            ],
+            "C": [
+                "Install SQL Server on a Compute Engine VM",
+                false
+            ],
+            "D": [
+                "Migrate the database to SQL Server in Cloud SQL.",
+                true
+            ]
+        },
+        "110": {
+            "A": [
+                "Run the query in BigQuery, and give the finance team access to the results view, which can be analyzed.",
+                false
+            ],
+            "B": [
+                "Run the query in BigQuery, and give the finance team access to the data visualizations in Google Data Studio.",
+                false
+            ],
+            "C": [
+                "Run the query in BigQuery, export the data to CSV, upload the file to a Cloud Storage bucket, and share the file with the finance team.",
+                false
+            ],
+            "D": [
+                "Run the query in BigQuery, and save the results to a Google Sheets shared spreadsheet that can be accessed and analyzed by the finance team.",
+                true
+            ]
+        },
+        "111": {
+            "A": [
+                "Store the data in BigQuery, and run delete queries on erroneous and duplicate data.",
+                false
+            ],
+            "B": [
+                "Use Dataflow to subscribe to Pub/Sub, process the data, and store the data in BigQuery.",
+                true
+            ],
+            "C": [
+                "Use Kubernetes to create a microservices application that can remove duplicates and erroneous data. Then insert the data into BigQuery.",
+                false
+            ],
+            "D": [
+                "Create an application on Compute Engine with Managed Instance Groups that can remove duplicates and erroneous data. Then insert the data into BigQuery.",
+                false
+            ]
+        },
+        "112": {
+            "A": [
+                "Use hopping windows in Dataflow.",
+                true
+            ],
+            "B": [
+                "Use session windows in Dataflow.",
+                false
+            ],
+            "C": [
+                "Use tumbling windows in Dataflow.",
+                false
+            ],
+            "D": [
+                "Use Dataflow SQL, and compute averages grouped by time.",
+                false
+            ]
+        },
+        "113": {
+            "A": [
+                "Use Bigtable.",
+                true
+            ],
+            "B": [
+                "Use Firestore.",
+                false
+            ],
+            "C": [
+                "Use Cloud SQL.",
+                false
+            ],
+            "D": [
+                "Use Memorystore.",
+                false
+            ]
+        },
+        "114": {
+            "A": [
+                "Use Dataproc to run Hadoop and Spark jobs. Move the data to Cloud Storage.",
+                true
+            ],
+            "B": [
+                "Use Dataflow to recreate the jobs in a serverless approach. Move the data to Cloud Storage.",
+                false
+            ],
+            "C": [
+                "Use Dataproc to run Hadoop and Spark jobs. Retain the data on a Compute Engine VM with an attached persistent disk.",
+                false
+            ],
+            "D": [
+                "Use Dataflow to recreate the jobs in a serverless approach. Retain the data on a Compute Engine VM with an attached persistent disk.",
+                false
+            ]
+        },
+        "115": {
+            "A": [
+                "Use BigQuery ML to create a model.",
+                false
+            ],
+            "B": [
+                "Export the data to CSV files. Use TensorFlow to build a model.",
+                false
+            ],
+            "C": [
+                "Connect the data from BigQuery to AutoML, and build the model in AutoML.",
+                true
+            ],
+            "D": [
+                "Connect to the data through AI notebooks, and build your model interactively.",
+                false
+            ]
+        },
+        "116": {
+            "A": [
+                "Reduce the amount of data to improve the model.",
+                false
+            ],
+            "B": [
+                "Cross-validate the data, and re-run the model building process.",
+                true
+            ],
+            "C": [
+                "Create feature crosses that will add new columns to increase the data.",
+                false
+            ],
+            "D": [
+                "Duplicate the data twice to increase the data, and re-run the model building process.",
+                false
+            ]
+        },
+        "117": {
+            "A": [
+                "Remove all the tables that contain sensitive data.",
+                false
+            ],
+            "B": [
+                "Use libraries like SciPy to build the ML models on your local computer.",
+                false
+            ],
+            "C": [
+                "Remove the sensitive data by using the Cloud Data Loss Prevention (DLP) API.",
+                true
+            ],
+            "D": [
+                "Identify the rows that contain sensitive data, and apply SQL queries to remove only those rows.",
+                false
+            ]
+        },
+        "118": {
+            "A": [
+                "Use Kafka with pull mode.",
+                false
+            ],
+            "B": [
+                "Use Pub/Sub with pull mode.",
+                true
+            ],
+            "C": [
+                "Use Pub/Sub with push mode.",
+                false
+            ],
+            "D": [
+                "Run Cloud Scheduler at fixed intervals.",
+                false
+            ]
         }
     },
     "images": {
@@ -2039,7 +2419,27 @@
         "95": false,
         "96": false,
         "97": false,
-        "98": false
+        "98": false,
+        "99": false,
+        "100": false,
+        "101": false,
+        "102": false,
+        "103": false,
+        "104": false,
+        "105": false,
+        "106": false,
+        "107": false,
+        "108": false,
+        "109": false,
+        "110": false,
+        "111": false,
+        "112": false,
+        "113": false,
+        "114": false,
+        "115": false,
+        "116": false,
+        "117": false,
+        "118": false
     },
     "multiple_choice": {
         "1": false,
@@ -2139,6 +2539,26 @@
         "95": false,
         "96": false,
         "97": false,
-        "98": false
+        "98": false,
+        "99": false,
+        "100": false,
+        "101": false,
+        "102": false,
+        "103": false,
+        "104": false,
+        "105": false,
+        "106": false,
+        "107": false,
+        "108": false,
+        "109": false,
+        "110": false,
+        "111": false,
+        "112": false,
+        "113": false,
+        "114": false,
+        "115": false,
+        "116": false,
+        "117": false,
+        "118": false
     }
 }
