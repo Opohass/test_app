@@ -129,7 +129,94 @@
         "127": "True or False: A Virtual Warehouse can be resized while suspended.",
         "128": "True or False: When you create a custom role, it is a best practice to immediately grant that role to ACCOUNTADMIN.",
         "129": "Which of the following accurately represents how a table fits into Snowflake's logical container hierarchy?",
-        "130": "True or False: All Snowflake table types include fail-safe storage."
+        "130": "True or False: All Snowflake table types include fail-safe storage.",
+        "131": "What are two ways to create and manage Data Shares in Snowflake? (Choose two.)",
+        "132": "True or False: Fail-safe can be disabled within a Snowflake account.",
+        "133": "True or False: It is possible for a user to run a query against the query result cache without requiring an active Warehouse.",
+        "134": "True or False: When Snowflake is configured to use Single Sign-On (SSO), Snowflake receives the usernames and credentials from the SSO service and loads them into the customer's Snowflake account",
+        "135": "Which of the following are best practices for loading data into Snowflake? (Choose three.)",
+        "136": "Which Snowflake feature is used for both querying and restoring data?",
+        "137": "What do the terms scale up and scale out refer to in Snowflake? (Choose two.)",
+        "138": "What is the minimum Snowflake edition that has column-level security enabled?",
+        "139": "What parameter controls if the Virtual Warehouse starts immediately after the CREATE WAREHOUSE statement?",
+        "140": "When cloning a database, what is cloned with the database? (Choose two.)",
+        "141": "Which of the following describes the Snowflake Cloud Services layer?",
+        "142": "What is the maximum total Continuous Data Protection (CDP) charges incurred for a temporary table?",
+        "143": "When reviewing a query profile, what is a symptom that a query is too large to fit into the memory?",
+        "144": "What type of query benefits the MOST from search optimization?",
+        "145": "What transformations are supported in a CREATE PIPE ... AS COPY `\u00a6 FROM (`\u00a6) statement? (Choose two.)",
+        "146": "Which of the following are characteristics of Snowflake virtual warehouses? (Choose two.)",
+        "147": "Which command should be used to load data from a file, located in an external stage, into a table in Snowflake?",
+        "148": "The Snowflake Cloud Data Platform is described as having which of the following architectures?",
+        "149": "Which of the following is a data tokenization integration partner?",
+        "150": "What versions of Snowflake should be used to manage compliance with Personal Identifiable Information (PII) requirements? (Choose two.)",
+        "151": "What are supported file formats for unloading data from Snowflake? (Choose three.)",
+        "152": "The Snowflake cloud services layer is responsible for which tasks? (Choose two.)",
+        "153": "What is a key feature of Snowflake architecture?",
+        "154": "When publishing a Snowflake Data Marketplace listing into a remote region what should be taken into consideration? (Choose two.)",
+        "155": "When loading data into Snowflake via Snowpipe what is the compressed file size recommendation?",
+        "156": "Which Snowflake feature allows a user to substitute a randomly generated identifier for sensitive data, in order to prevent unauthorized users access to the data, before loading it into Snowflake?",
+        "157": "Which of the following are examples of operations that require a Virtual Warehouse to complete, assuming no queries have been executed previously? (Choose three.)",
+        "158": "What is the SNOWFLAKE.ACCOUNT_USAGE view that contains information about which objects were read by queries within the last 365 days (1 year)?",
+        "159": "Which feature is only available in the Enterprise or higher editions of Snowflake?",
+        "160": "Will data cached in a warehouse be lost when the warehouse is resized?",
+        "161": "Which semi-structured file formats are supported when unloading data from a table? (Choose two.)",
+        "162": "A running virtual warehouse is suspended.\nWhat is the MINIMUM amount of time that the warehouse will incur charges for when it is restarted?",
+        "163": "What are the responsibilities of Snowflake's Cloud Service layer? (Choose three.)",
+        "164": "How long is the Fail-safe period for temporary and transient tables?",
+        "165": "Which command should be used to download files from a Snowflake stage to a local folder on a client's machine?",
+        "166": "How does Snowflake Fail-safe protect data in a permanent table?",
+        "167": "A virtual warehouse is created using the following command:\nCreate warehouse my_WH with - \nwarehouse_size = MEDIUM \nmin_cluster_count = 1 \nmax_cluster_count = 1 \nauto_suspend = 60 \nauto_resume = true; \nThe image below is a graphical representation of the warehouse utilization across two days.\n\nWhat action should be taken to address this situation?",
+        "168": "Which minimum Snowflake edition allows for a dedicated metadata store?",
+        "169": "Network policies can be set at which Snowflake levels? (Choose two.)",
+        "170": "What are the correct parameters for time travel and fail-safe in the Snowflake Enterprise Edition?",
+        "171": "Which of the following objects are contained within a schema? (Choose two.)",
+        "172": "Which of the following statements describe features of Snowflake data caching? (Choose two.)",
+        "173": "A table needs to be loaded. The input data is in JSON format and is a concatenation of multiple JSON documents. The file size is 3 GB. A warehouse size S is being used.\nThe following COPY INTO command was executed:\nCOPY INTO SAMPLE FROM @~/SAMPLE.JSON (TYPE=JSON)\n\nThe load failed with this error:\nMax LOB size (16777216) exceeded, actual size of parsed column is 17894470.\n\nHow can this issue be resolved?",
+        "174": "What is a feature of a stored procedure in Snowflake?",
+        "175": "Which columns are part of the result set of the Snowflake LATERAL FLATTEN command? (Choose two.)",
+        "176": "What is the minimum Snowflake edition required to create a materialized view?",
+        "177": "Which Snowflake function will interpret an input string as a JSON document, and produce a VARIANT value?",
+        "178": "How are serverless features billed?",
+        "179": "Which Snowflake architectural layer is responsible for a query execution plan?",
+        "180": "When unloading to a stage, which of the following is a recommended practice or approach?",
+        "181": "Which SQL commands, when committed, will consume a stream and advance the stream offset? (Choose two.)",
+        "182": "Which methods can be used to delete staged files from a Snowflake stage? (Choose two.)",
+        "183": "On which of the following cloud platforms can a Snowflake account be hosted? (Choose three.)",
+        "184": "What Snowflake role must be granted for a user to create and manage accounts?",
+        "185": "What feature can be used to reorganize a very large table on one or more columns",
+        "186": "What is an advantage of using an explain plan instead of the query profiler to evaluate the performance of a query?",
+        "187": "Which data types are supported by Snowflake when using semi-structured data? (Choose two.)",
+        "188": "Why does Snowflake recommend file sizes of 100-250 MB compressed when loading data?",
+        "189": "Which of the following features are available with the Snowflake Enterprise edition? (Choose two.)",
+        "190": "What is the default file size when unloading data from Snowflake using the COPY command?",
+        "191": "What features that are part of the Continuous Data Protection (CDP) feature set in Snowflake do not require additional configuration? (Choose two.)",
+        "192": "Which Snowflake layer is always leveraged when accessing a query from the result cache?",
+        "193": "Which connectors are available in the downloads section of the Snowflake web interface (UI)? (Choose two.)",
+        "194": "A Snowflake Administrator needs to ensure that sensitive corporate data in Snowflake tables is not visible to end users, but is partially visible to functional managers.\n\nHow can this requirement be met?",
+        "195": "Users are responsible for data storage costs until what occurs?",
+        "196": "A user has an application that writes a new file to a cloud storage location every 5 minutes.\n\nWhat would be the MOST efficient way to get the files into Snowflake?",
+        "197": "What affects whether the query results cache can be used?",
+        "198": "Which of the following is an example of an operation that can be completed without requiring compute, assuming no queries have been executed previously?",
+        "199": "How many days is load history for Snowpipe retained?",
+        "200": "What Snowflake features allow virtual warehouses to handle high concurrency workloads? (Choose two.)",
+        "201": "Which COPY INTO command outputs the data into one file?",
+        "202": "In which scenarios would a user have to pay Cloud Services costs? (Choose two.)",
+        "203": "A user created a new worksheet within the Snowsight UI and wants to share this with teammates.\n\nHow can this worksheet be shared?",
+        "204": "How can a row access policy be applied to a table or a view? (Choose two.)",
+        "205": "Which command can be used to load data files into a Snowflake stage?",
+        "206": "What types of data listings are available in the Snowflake Data Marketplace? (Choose two.)",
+        "207": "What is the maximum Time Travel retention period for a temporary Snowflake table?",
+        "208": "When should a multi-cluster warehouse be used in auto-scaling mode?",
+        "209": "What happens when a cloned table is replicated to a secondary database? (Choose two.)",
+        "210": "Snowflake supports the use of external stages with which cloud platforms? (Choose three.)",
+        "211": "What is a limitation of a Materialized View?",
+        "212": "In the Snowflake access control model, which entity owns an object by default?",
+        "213": "What is the minimum Snowflake edition required to use Dynamic Data Masking?",
+        "214": "Which services does the Snowflake Cloud Services layer manage? (Choose two.)",
+        "215": "A company needs to allow some users to see Personally Identifiable Information (PII) while limiting other users from seeing the full value of the PII.\n\nWhich Snowflake feature will support this?",
+        "216": "A user has unloaded data from a Snowflake table to an external stage.\n\nWhich command can be used to verify if data has been uploaded to the external stage named my_stage?",
+        "217": "Which tasks are performed in the Snowflake Cloud Services layer? (Choose two.)"
     },
     "answers": {
         "1": {
@@ -2103,6 +2190,1716 @@
                 "False",
                 true
             ]
+        },
+        "131": {
+            "A": [
+                "Via the Snowflake Web Interface (UI)",
+                true
+            ],
+            "B": [
+                "Via the DATA_SHARE=TRUE parameter",
+                false
+            ],
+            "C": [
+                "Via SQL commands",
+                true
+            ],
+            "D": [
+                "Via Virtual Warehouses",
+                false
+            ]
+        },
+        "132": {
+            "A": [
+                "True",
+                false
+            ],
+            "B": [
+                "False",
+                true
+            ]
+        },
+        "133": {
+            "A": [
+                "True",
+                true
+            ],
+            "B": [
+                "False",
+                false
+            ]
+        },
+        "134": {
+            "A": [
+                "True",
+                false
+            ],
+            "B": [
+                "False",
+                true
+            ]
+        },
+        "135": {
+            "A": [
+                "Aim to produce data files that are between 100 MB and 250 MB in size, compressed.",
+                true
+            ],
+            "B": [
+                "Load data from files in a cloud storage service in a different region or cloud platform from the service or region containing the Snowflake account, to save on cost.",
+                false
+            ],
+            "C": [
+                " Enclose fields that contain delimiter characters in single or double quotes.",
+                true
+            ],
+            "D": [
+                "Split large files into a greater number of smaller files to distribute the load among the compute resources in an active warehouse.",
+                true
+            ],
+            "E": [
+                "When planning which warehouse(s) to use for data loading, start with the largest warehouse possible.",
+                false
+            ],
+            "F": [
+                "Partition the staged data into large folders with random paths, allowing Snowflake to determine the best way to load each file.",
+                false
+            ]
+        },
+        "136": {
+            "A": [
+                "Cluster keys",
+                false
+            ],
+            "B": [
+                "Time Travel",
+                true
+            ],
+            "C": [
+                "Fail-safe",
+                false
+            ],
+            "D": [
+                "Cloning",
+                false
+            ]
+        },
+        "137": {
+            "A": [
+                "Scaling out adds clusters of the same size to a virtual warehouse to handle more concurrent queries.",
+                true
+            ],
+            "B": [
+                "Scaling out adds clusters of varying sizes to a virtual warehouse.",
+                false
+            ],
+            "C": [
+                "Scaling out adds additional database servers to an existing running cluster to handle more concurrent queries.",
+                false
+            ],
+            "D": [
+                "Snowflake recommends using both scaling up and scaling out to handle more concurrent queries.",
+                false
+            ],
+            "E": [
+                "Scaling up resizes a virtual warehouse so it can handle more complex workloads.",
+                true
+            ],
+            "F": [
+                "Scaling up adds additional database servers to an existing running cluster to handle larger workloads.",
+                false
+            ]
+        },
+        "138": {
+            "A": [
+                "Standard",
+                false
+            ],
+            "B": [
+                "Enterprise",
+                true
+            ],
+            "C": [
+                "Business Critical",
+                false
+            ],
+            "D": [
+                "Virtual Private Snowflake",
+                false
+            ]
+        },
+        "139": {
+            "A": [
+                "INITIALLY_SUSPENDED = TRUE/FALSE",
+                true
+            ],
+            "B": [
+                "START_AFTER_CREATE = TRUE/FALSE",
+                false
+            ],
+            "C": [
+                "START_THE = 60 // (seconds from now)",
+                false
+            ],
+            "D": [
+                "START_TIME = CURRENT_DATE()",
+                false
+            ]
+        },
+        "140": {
+            "A": [
+                "Privileges on the database",
+                false
+            ],
+            "B": [
+                "Existing child objects within the database",
+                true
+            ],
+            "C": [
+                "Future child objects within the database",
+                false
+            ],
+            "D": [
+                "Privileges on the schemas within the database",
+                true
+            ],
+            "E": [
+                "Only schemas and tables within the database",
+                false
+            ]
+        },
+        "141": {
+            "A": [
+                "Coordinates activities in the Snowflake account",
+                true
+            ],
+            "B": [
+                "Executes queries submitted by the Snowflake account users",
+                false
+            ],
+            "C": [
+                "Manages quotas on the Snowflake account storage",
+                false
+            ],
+            "D": [
+                "Manages the virtual warehouse cache to speed up queries",
+                false
+            ]
+        },
+        "142": {
+            "A": [
+                "30 days",
+                false
+            ],
+            "B": [
+                "7 days",
+                false
+            ],
+            "C": [
+                "48 hours",
+                false
+            ],
+            "D": [
+                "24 hours",
+                true
+            ]
+        },
+        "143": {
+            "A": [
+                "A single join node uses more than 50% of the query time",
+                false
+            ],
+            "B": [
+                "Partitions scanned is equal to partitions total",
+                false
+            ],
+            "C": [
+                "An AggregateOperator node is present",
+                false
+            ],
+            "D": [
+                "The query is spilling to remote storage",
+                true
+            ]
+        },
+        "144": {
+            "A": [
+                "A query that uses only disjunction (i.e., OR) predicates",
+                false
+            ],
+            "B": [
+                "A query that includes analytical expressions",
+                false
+            ],
+            "C": [
+                "A query that uses equality predicates or predicates that use IN",
+                true
+            ],
+            "D": [
+                "A query that filters on semi-structured data types",
+                false
+            ]
+        },
+        "145": {
+            "A": [
+                "Data can be filtered by an optional WHERE clause.",
+                false
+            ],
+            "B": [
+                "Incoming data can be joined with other tables.",
+                false
+            ],
+            "C": [
+                "Columns can be reordered.",
+                true
+            ],
+            "D": [
+                "Columns can be omitted.",
+                true
+            ],
+            "E": [
+                "Row level access can be defined.",
+                false
+            ]
+        },
+        "146": {
+            "A": [
+                "Auto-resume applies only to the last warehouse that was started in a multi-cluster warehouse.",
+                false
+            ],
+            "B": [
+                "The ability to auto-suspend a warehouse is only available in the Enterprise edition or above.",
+                false
+            ],
+            "C": [
+                "SnowSQL supports both a configuration file and a command line option for specifying a default warehouse.",
+                true
+            ],
+            "D": [
+                "A user cannot specify a default warehouse when using the ODBC driver.",
+                false
+            ],
+            "E": [
+                "The default virtual warehouse size can be changed at any time.",
+                true
+            ]
+        },
+        "147": {
+            "A": [
+                "INSERT",
+                false
+            ],
+            "B": [
+                "PUT",
+                false
+            ],
+            "C": [
+                "GET",
+                false
+            ],
+            "D": [
+                "COPY",
+                true
+            ]
+        },
+        "148": {
+            "A": [
+                "Shared-disk",
+                false
+            ],
+            "B": [
+                "Shared-nothing",
+                false
+            ],
+            "C": [
+                "Multi-cluster shared data",
+                true
+            ],
+            "D": [
+                "Serverless query engine",
+                false
+            ]
+        },
+        "149": {
+            "A": [
+                "Protegrity",
+                true
+            ],
+            "B": [
+                "Tableau",
+                false
+            ],
+            "C": [
+                "DBeaver",
+                false
+            ],
+            "D": [
+                "SAP",
+                false
+            ]
+        },
+        "150": {
+            "A": [
+                "Custom Edition",
+                false
+            ],
+            "B": [
+                "Virtual Private Snowflake",
+                true
+            ],
+            "C": [
+                "Business Critical Edition",
+                true
+            ],
+            "D": [
+                "Standard Edition",
+                false
+            ],
+            "E": [
+                "Enterprise Edition",
+                false
+            ]
+        },
+        "151": {
+            "A": [
+                "XML",
+                false
+            ],
+            "B": [
+                "JSON",
+                true
+            ],
+            "C": [
+                "Parquet",
+                true
+            ],
+            "D": [
+                "ORC",
+                false
+            ],
+            "E": [
+                "AVRO",
+                false
+            ],
+            "F": [
+                "CSV",
+                true
+            ]
+        },
+        "152": {
+            "A": [
+                "Local disk caching",
+                false
+            ],
+            "B": [
+                "Authentication and access control",
+                true
+            ],
+            "C": [
+                "Metadata management",
+                true
+            ],
+            "D": [
+                "Query processing",
+                false
+            ],
+            "E": [
+                "Database storage",
+                false
+            ]
+        },
+        "153": {
+            "A": [
+                "Zero-copy cloning creates a mirror copy of a database that updates with the original.",
+                false
+            ],
+            "B": [
+                "Software updates are automatically applied on a quarterly basis.",
+                false
+            ],
+            "C": [
+                "Snowflake eliminates resource contention with its virtual warehouse implementation.",
+                true
+            ],
+            "D": [
+                "Multi-cluster warehouses allow users to run a query that spans across multiple clusters.",
+                false
+            ],
+            "E": [
+                "Snowflake automatically sorts DATE columns during ingest, for fast retrieval by date.",
+                false
+            ]
+        },
+        "154": {
+            "A": [
+                "There is no need to have a Snowflake account in the target region, a share will be created for each user.",
+                false
+            ],
+            "B": [
+                "The listing is replicated into all selected regions automatically, the data is not.",
+                true
+            ],
+            "C": [
+                "The user must have the ORGADMIN role available in at least one account to link accounts for replication.",
+                false
+            ],
+            "D": [
+                "Shares attached to listings in remote regions can be viewed from any account in an organization.",
+                false
+            ],
+            "E": [
+                "For a standard listing the user can wait until the first customer requests the data before replicating it to the target region.",
+                true
+            ]
+        },
+        "155": {
+            "A": [
+                "10-50 MB",
+                false
+            ],
+            "B": [
+                "100-250 MB",
+                true
+            ],
+            "C": [
+                "300-500 MB",
+                false
+            ],
+            "D": [
+                "1000-1500 MB",
+                false
+            ]
+        },
+        "156": {
+            "A": [
+                "External Tokenization",
+                true
+            ],
+            "B": [
+                "External Tables",
+                false
+            ],
+            "C": [
+                "Materialized Views",
+                false
+            ],
+            "D": [
+                "User-Defined Table Functions (UDTF)",
+                false
+            ]
+        },
+        "157": {
+            "A": [
+                "MIN(<< column value >>)",
+                false
+            ],
+            "B": [
+                "COPY",
+                true
+            ],
+            "C": [
+                "SUM(<< column value >>)",
+                true
+            ],
+            "D": [
+                "UPDATE",
+                true
+            ]
+        },
+        "158": {
+            "A": [
+                "VIEWS_HISTORY",
+                false
+            ],
+            "B": [
+                "OBJECT_HISTORY",
+                false
+            ],
+            "C": [
+                "ACCESS_HISTORY",
+                true
+            ],
+            "D": [
+                "LOGIN_HISTORY",
+                false
+            ]
+        },
+        "159": {
+            "A": [
+                "Column-level security",
+                true
+            ],
+            "B": [
+                "SOC 2 type II certification",
+                false
+            ],
+            "C": [
+                "Multi-factor Authentication (MFA)",
+                false
+            ],
+            "D": [
+                "Object-level access control",
+                false
+            ]
+        },
+        "160": {
+            "A": [
+                "Possibly, if the warehouse is resized to a smaller size and the cache no longer fits.",
+                true
+            ],
+            "B": [
+                "Yes, because the compute resource is replaced in its entirety with a new compute resource.",
+                false
+            ],
+            "C": [
+                "No, because the size of the cache is independent from the warehouse size.",
+                false
+            ],
+            "D": [
+                "Yes, because the new compute resource will no longer have access to the cache encryption key.",
+                false
+            ]
+        },
+        "161": {
+            "A": [
+                "ORC",
+                false
+            ],
+            "B": [
+                "XML",
+                false
+            ],
+            "C": [
+                "Avro",
+                false
+            ],
+            "D": [
+                "Parquet",
+                true
+            ],
+            "E": [
+                "JSON",
+                true
+            ]
+        },
+        "162": {
+            "A": [
+                "1 second",
+                false
+            ],
+            "B": [
+                "60 seconds",
+                true
+            ],
+            "C": [
+                "5 minutes",
+                false
+            ],
+            "D": [
+                "60 minutes",
+                false
+            ]
+        },
+        "163": {
+            "A": [
+                "Authentication",
+                true
+            ],
+            "B": [
+                "Resource management",
+                true
+            ],
+            "C": [
+                "Virtual warehouse caching",
+                false
+            ],
+            "D": [
+                "Query parsing and optimization",
+                true
+            ],
+            "E": [
+                "Query execution",
+                false
+            ],
+            "F": [
+                "Physical storage of micro-partitions",
+                false
+            ]
+        },
+        "164": {
+            "A": [
+                "There is no Fail-safe period for these tables.",
+                true
+            ],
+            "B": [
+                "1 day",
+                false
+            ],
+            "C": [
+                "7 days",
+                false
+            ],
+            "D": [
+                "31 days",
+                false
+            ],
+            "E": [
+                "90 days",
+                false
+            ]
+        },
+        "165": {
+            "A": [
+                "PUT",
+                false
+            ],
+            "B": [
+                "GET",
+                true
+            ],
+            "C": [
+                "COPY",
+                false
+            ],
+            "D": [
+                "SELECT",
+                false
+            ]
+        },
+        "166": {
+            "A": [
+                "Fail-safe makes data available up to 1 day, recoverable by user operations.",
+                false
+            ],
+            "B": [
+                "Fail-safe makes data available for 7 days, recoverable by user operations.",
+                false
+            ],
+            "C": [
+                "Fail-safe makes data available for 7 days, recoverable only by Snowflake Support.",
+                true
+            ],
+            "D": [
+                "Fail-safe makes data available up to 1 day, recoverable only by Snowflake Support.",
+                false
+            ]
+        },
+        "167": {
+            "A": [
+                "Increase the warehouse size from Medium to 2XL.",
+                false
+            ],
+            "B": [
+                "Increase the value for the parameter MAX_CONCURRENCY_LEVEL.",
+                false
+            ],
+            "C": [
+                "Configure the warehouse to a multi-cluster warehouse.",
+                true
+            ],
+            "D": [
+                "Lower the value of the parameter STATEMENT_QUEUED_TIMEOUT_IN_SECONDS.",
+                false
+            ]
+        },
+        "168": {
+            "A": [
+                "Standard",
+                false
+            ],
+            "B": [
+                "Enterprise",
+                false
+            ],
+            "C": [
+                "Business Critical",
+                false
+            ],
+            "D": [
+                "Virtual Private Snowflake",
+                true
+            ]
+        },
+        "169": {
+            "A": [
+                "Role",
+                false
+            ],
+            "B": [
+                "Schema",
+                false
+            ],
+            "C": [
+                "User",
+                true
+            ],
+            "D": [
+                "Database",
+                false
+            ],
+            "E": [
+                "Account",
+                true
+            ],
+            "F": [
+                "Tables",
+                false
+            ]
+        },
+        "170": {
+            "A": [
+                "Default Time Travel Retention is set to 0 days. Maximum Time Travel Retention is 30 days. Fail Safe retention time is 1 day.",
+                false
+            ],
+            "B": [
+                "Default Time Travel Retention is set to 1 day. Maximum Time Travel Retention is 365 days. Fail Safe retention time is 7 days.",
+                false
+            ],
+            "C": [
+                "Default Time Travel Retention is set to 0 days. Maximum Time Travel Retention is 90 days. Fail Safe retention time is 7 days.",
+                false
+            ],
+            "D": [
+                "Default Time Travel Retention is set to 1 day. Maximum Time Travel Retention is 90 days. Fail Safe retention time is 7 days.",
+                true
+            ],
+            "E": [
+                "Default Time Travel Retention is set to 7 days. Maximum Time Travel Retention is 1 day. Fail Safe retention time is 90 days.",
+                false
+            ],
+            "F": [
+                "Default Time Travel Retention is set to 90 days. Maximum Time Travel Retention is 7 days. Fail Safe retention time is 356 days.",
+                false
+            ]
+        },
+        "171": {
+            "A": [
+                "Role",
+                false
+            ],
+            "B": [
+                "Stream",
+                true
+            ],
+            "C": [
+                "Warehouse",
+                false
+            ],
+            "D": [
+                "External table",
+                true
+            ],
+            "E": [
+                "User",
+                false
+            ],
+            "F": [
+                "Share",
+                false
+            ]
+        },
+        "172": {
+            "A": [
+                "When a virtual warehouse is suspended, the data cache is saved on the remote storage layer.",
+                false
+            ],
+            "B": [
+                "When the data cache is full, the least-recently used data will be cleared to make room.",
+                true
+            ],
+            "C": [
+                "A user can only access their own queries from the query result cache.",
+                false
+            ],
+            "D": [
+                "A user must set USE_METADATA_CACHE to TRUE to use the metadata cache in queries.",
+                false
+            ],
+            "E": [
+                "The RESULT_SCAN table function can access and filter the contents of the query result cache.",
+                true
+            ]
+        },
+        "173": {
+            "A": [
+                "Compress the file and load the compressed file.",
+                false
+            ],
+            "B": [
+                "Split the file into multiple files in the recommended size range (100 MB - 250 MB).",
+                false
+            ],
+            "C": [
+                "Use a larger-sized warehouse.",
+                false
+            ],
+            "D": [
+                "Set STRIP_OUTER_ARRAY=TRUE in the COPY INTO command.",
+                true
+            ]
+        },
+        "174": {
+            "A": [
+                "They can be created as secure and hide the underlying metadata from all users.",
+                false
+            ],
+            "B": [
+                "They can access tables from a single database.",
+                false
+            ],
+            "C": [
+                "They can only contain a single SQL statement.",
+                false
+            ],
+            "D": [
+                "They can be created to run with a caller's rights or an owner's rights.",
+                true
+            ]
+        },
+        "175": {
+            "A": [
+                "CONTENT",
+                false
+            ],
+            "B": [
+                "PATH",
+                true
+            ],
+            "C": [
+                "BYTE_SIZE",
+                false
+            ],
+            "D": [
+                "INDEX",
+                true
+            ],
+            "E": [
+                "DATATYPE",
+                false
+            ]
+        },
+        "176": {
+            "A": [
+                "Standard Edition",
+                false
+            ],
+            "B": [
+                "Enterprise Edition",
+                true
+            ],
+            "C": [
+                "Business Critical Edition",
+                false
+            ],
+            "D": [
+                "Virtual Private Snowflake Edition",
+                false
+            ]
+        },
+        "177": {
+            "A": [
+                "parse_json()",
+                true
+            ],
+            "B": [
+                "json_extract_path_text()",
+                false
+            ],
+            "C": [
+                "object_construct()",
+                false
+            ],
+            "D": [
+                "flatten",
+                false
+            ]
+        },
+        "178": {
+            "A": [
+                "Per second multiplied by an automatic sizing for the job",
+                true
+            ],
+            "B": [
+                "Per minute multiplied by an automatic sizing for the job, with a minimum of one minute",
+                false
+            ],
+            "C": [
+                "Per second multiplied by the size, as determined by the SERVERLESS_FEATURES_SIZE account parameter",
+                false
+            ],
+            "D": [
+                "Serverless features are not billed, unless the total cost for the month exceeds 10% of the warehouse credits, on the account",
+                false
+            ]
+        },
+        "179": {
+            "A": [
+                "Compute",
+                false
+            ],
+            "B": [
+                "Data storage",
+                false
+            ],
+            "C": [
+                "Cloud services",
+                true
+            ],
+            "D": [
+                "Cloud provider",
+                false
+            ]
+        },
+        "180": {
+            "A": [
+                "Set SINGLE = TRUE for larger files.",
+                false
+            ],
+            "B": [
+                "Use OBJECT_CONSTRUCT(*) when using Parquet.",
+                false
+            ],
+            "C": [
+                "Avoid the use of the CAST function.",
+                false
+            ],
+            "D": [
+                "Define an individual file format.",
+                true
+            ]
+        },
+        "181": {
+            "A": [
+                "UPDATE TABLE FROM STREAM",
+                true
+            ],
+            "B": [
+                "SELECT FROM STREAM",
+                false
+            ],
+            "C": [
+                "INSERT INTO TABLE SELECT FROM STREAM",
+                true
+            ],
+            "D": [
+                "ALTER TABLE AS SELECT FROM STREAM",
+                false
+            ],
+            "E": [
+                "BEGIN COMMIT",
+                false
+            ]
+        },
+        "182": {
+            "A": [
+                "Use the DROP command after the load completes.",
+                false
+            ],
+            "B": [
+                "Specify the TEMPORARY option when creating the file format.",
+                false
+            ],
+            "C": [
+                "Specify the PURGE copy option in the COPY INTO command.",
+                true
+            ],
+            "D": [
+                "Use the REMOVE command after the load completes.",
+                true
+            ],
+            "E": [
+                "Use the DELETE LOAD HISTORY command after the load completes.",
+                false
+            ]
+        },
+        "183": {
+            "A": [
+                "Amazon Web Services",
+                true
+            ],
+            "B": [
+                "Private Virtual Cloud",
+                false
+            ],
+            "C": [
+                "Oracle Cloud",
+                false
+            ],
+            "D": [
+                "Microsoft Azure Cloud",
+                true
+            ],
+            "E": [
+                "Google Cloud Platform",
+                true
+            ],
+            "F": [
+                "Alibaba Cloud",
+                false
+            ]
+        },
+        "184": {
+            "A": [
+                "ACCOUNTADMIN",
+                false
+            ],
+            "B": [
+                "ORGADMIN",
+                true
+            ],
+            "C": [
+                "SECURITYADMIN",
+                false
+            ],
+            "D": [
+                "SYSADMIN",
+                false
+            ]
+        },
+        "185": {
+            "A": [
+                "Micro-partitions",
+                false
+            ],
+            "B": [
+                "Clustering keys",
+                true
+            ],
+            "C": [
+                "Key partitions",
+                false
+            ],
+            "D": [
+                "Clustered partitions",
+                false
+            ]
+        },
+        "186": {
+            "A": [
+                "The explain plan output is available graphically.",
+                false
+            ],
+            "B": [
+                "An explain plan can be used to conduct performance analysis without executing a query.",
+                true
+            ],
+            "C": [
+                "An explain plan will handle queries with temporary tables and the query profiler will not.",
+                false
+            ],
+            "D": [
+                "An explain plan's output will display automatic data skew optimization information.",
+                false
+            ]
+        },
+        "187": {
+            "A": [
+                "VARIANT",
+                true
+            ],
+            "B": [
+                "VARRAY",
+                false
+            ],
+            "C": [
+                "STRUCT",
+                false
+            ],
+            "D": [
+                "ARRAY",
+                true
+            ],
+            "E": [
+                "QUEUE",
+                false
+            ]
+        },
+        "188": {
+            "A": [
+                "Optimizes the virtual warehouse size and multi-cluster setting to economy mode",
+                false
+            ],
+            "B": [
+                "Allows a user to import the files in a sequential order",
+                false
+            ],
+            "C": [
+                "Increases the latency staging and accuracy when loading the data",
+                false
+            ],
+            "D": [
+                "Allows optimization of parallel operations",
+                true
+            ]
+        },
+        "189": {
+            "A": [
+                "Database replication and failover",
+                true
+            ],
+            "B": [
+                "Automated index management",
+                false
+            ],
+            "C": [
+                "Customer managed keys (Tri-secret secure)",
+                false
+            ],
+            "D": [
+                "Extended time travel",
+                true
+            ],
+            "E": [
+                "Native support for geospatial data",
+                false
+            ]
+        },
+        "190": {
+            "A": [
+                "5 MB",
+                false
+            ],
+            "B": [
+                "8 GB",
+                false
+            ],
+            "C": [
+                "16 MB",
+                true
+            ],
+            "D": [
+                "32 MB",
+                false
+            ]
+        },
+        "191": {
+            "A": [
+                "Row level access policies",
+                false
+            ],
+            "B": [
+                "Data masking policies",
+                false
+            ],
+            "C": [
+                "Data encryption",
+                true
+            ],
+            "D": [
+                "Time Travel",
+                true
+            ],
+            "E": [
+                "External tokenization",
+                false
+            ]
+        },
+        "192": {
+            "A": [
+                "Metadata",
+                false
+            ],
+            "B": [
+                "Data Storage",
+                false
+            ],
+            "C": [
+                "Compute",
+                false
+            ],
+            "D": [
+                "Cloud Services",
+                true
+            ]
+        },
+        "193": {
+            "A": [
+                "SnowSQL",
+                false
+            ],
+            "B": [
+                "JDBC",
+                true
+            ],
+            "C": [
+                "ODBC",
+                true
+            ],
+            "D": [
+                "HIVE",
+                false
+            ],
+            "E": [
+                "Scala",
+                false
+            ]
+        },
+        "194": {
+            "A": [
+                "Use data encryption.",
+                false
+            ],
+            "B": [
+                "Use dynamic data masking.",
+                true
+            ],
+            "C": [
+                "Use secure materialized views.",
+                false
+            ],
+            "D": [
+                "Revoke all roles for functional managers and end users.",
+                false
+            ]
+        },
+        "195": {
+            "A": [
+                "Data expires from Time Travel",
+                false
+            ],
+            "B": [
+                "Data expires from Fail-safe",
+                true
+            ],
+            "C": [
+                "Data is deleted from a table",
+                false
+            ],
+            "D": [
+                "Data is truncated from a table",
+                false
+            ]
+        },
+        "196": {
+            "A": [
+                "Create a task that runs a COPY INTO operation from an external stage every 5 minutes.",
+                false
+            ],
+            "B": [
+                "Create a task that PUTS the files in an internal stage and automate the data loading wizard.",
+                false
+            ],
+            "C": [
+                "Create a task that runs a GET operation to intermittently check for new files.",
+                false
+            ],
+            "D": [
+                "Set up cloud provider notifications on the file location and use Snowpipe with auto-ingest.",
+                true
+            ]
+        },
+        "197": {
+            "A": [
+                "If the query contains a deterministic function",
+                false
+            ],
+            "B": [
+                "If the virtual warehouse has been suspended",
+                false
+            ],
+            "C": [
+                "If the referenced data in the table has changed",
+                true
+            ],
+            "D": [
+                "If multiple users are using the same virtual warehouse",
+                false
+            ]
+        },
+        "198": {
+            "A": [
+                "SELECT SUM (ORDER_AMT) FROM SALES;",
+                false
+            ],
+            "B": [
+                "SELECT AVG(ORDER_QTY) FROM SALES;",
+                false
+            ],
+            "C": [
+                "SELECT MIN(ORDER_AMT) FROM SALES;",
+                true
+            ],
+            "D": [
+                "SELECT ORDER_AMT * ORDER_QTY FROM SALES;",
+                false
+            ]
+        },
+        "199": {
+            "A": [
+                "1 day",
+                false
+            ],
+            "B": [
+                "7 days",
+                false
+            ],
+            "C": [
+                "14 days",
+                true
+            ],
+            "D": [
+                "64 days",
+                false
+            ]
+        },
+        "200": {
+            "A": [
+                "The ability to scale up warehouses",
+                false
+            ],
+            "B": [
+                "The use of warehouse auto scaling",
+                true
+            ],
+            "C": [
+                "The ability to resize warehouses",
+                false
+            ],
+            "D": [
+                "Use of multi-clustered warehouses",
+                true
+            ],
+            "E": [
+                "The use of warehouse indexing",
+                false
+            ]
+        },
+        "201": {
+            "A": [
+                "SINGLE=TRUE",
+                true
+            ],
+            "B": [
+                "MAX_FILE_NUMBER=1",
+                false
+            ],
+            "C": [
+                "FILE_NUMBER=1",
+                false
+            ],
+            "D": [
+                "MULTIPLE=FALSE",
+                false
+            ]
+        },
+        "202": {
+            "A": [
+                "Compute Credits = 50 Credits Cloud Services = 10",
+                true
+            ],
+            "B": [
+                "Compute Credits = 80 Credits Cloud Services = 5",
+                false
+            ],
+            "C": [
+                "Compute Credits = 100 Credits Cloud Services = 9",
+                false
+            ],
+            "D": [
+                "Compute Credits = 120 Credits Cloud Services = 10",
+                false
+            ],
+            "E": [
+                "Compute Credits = 200 Credits Cloud Services = 26",
+                true
+            ]
+        },
+        "203": {
+            "A": [
+                "Create a zero-copy clone of the worksheet and grant permissions to teammates.",
+                false
+            ],
+            "B": [
+                "Create a private Data Exchange so that any teammate can use the worksheet.",
+                false
+            ],
+            "C": [
+                "Share the worksheet with teammates within Snowsight.",
+                true
+            ],
+            "D": [
+                "Create a database and grant all permissions to teammates.",
+                false
+            ]
+        },
+        "204": {
+            "A": [
+                "Within the policy DDL",
+                false
+            ],
+            "B": [
+                "Within the create table or create view DDL",
+                true
+            ],
+            "C": [
+                "By future APPLY for all objects in a schema",
+                false
+            ],
+            "D": [
+                "Within a control table",
+                false
+            ],
+            "E": [
+                "Using the command ALTER ADD ROW ACCESS POLIC;",
+                true
+            ]
+        },
+        "205": {
+            "A": [
+                "JOIN",
+                false
+            ],
+            "B": [
+                "COPY INTO",
+                false
+            ],
+            "C": [
+                "PUT",
+                true
+            ],
+            "D": [
+                "GET",
+                false
+            ]
+        },
+        "206": {
+            "A": [
+                "Reader",
+                false
+            ],
+            "B": [
+                "Consumer",
+                false
+            ],
+            "C": [
+                "Vendor",
+                false
+            ],
+            "D": [
+                "Standard",
+                true
+            ],
+            "E": [
+                "Personalized",
+                true
+            ]
+        },
+        "207": {
+            "A": [
+                "90 days",
+                false
+            ],
+            "B": [
+                "1 day",
+                true
+            ],
+            "C": [
+                "7 days",
+                false
+            ],
+            "D": [
+                "45 days",
+                false
+            ]
+        },
+        "208": {
+            "A": [
+                "When it is unknown how much compute power is needed",
+                false
+            ],
+            "B": [
+                "If the select statement contains a large number of temporary tables or Common Table Expressions (CTEs)",
+                false
+            ],
+            "C": [
+                "If the runtime of the executed query is very slow",
+                false
+            ],
+            "D": [
+                "When a large number of concurrent queries are run on the same warehouse",
+                true
+            ]
+        },
+        "209": {
+            "A": [
+                "A read-only copy of the cloned tables is stored.",
+                false
+            ],
+            "B": [
+                "The replication will not be successful.",
+                false
+            ],
+            "C": [
+                "The physical data is replicated.",
+                true
+            ],
+            "D": [
+                "Additional costs for storage are charged to a secondary account.",
+                true
+            ],
+            "E": [
+                "Metadata pointers to cloned tables are replicated.",
+                false
+            ]
+        },
+        "210": {
+            "A": [
+                "Amazon Web Services",
+                true
+            ],
+            "B": [
+                "Docker",
+                false
+            ],
+            "C": [
+                "IBM Cloud",
+                false
+            ],
+            "D": [
+                "Microsoft Azure Cloud",
+                true
+            ],
+            "E": [
+                "Google Cloud Platform",
+                true
+            ],
+            "F": [
+                "Oracle Cloud",
+                false
+            ]
+        },
+        "211": {
+            "A": [
+                "A Materialized View cannot support any aggregate functions",
+                false
+            ],
+            "B": [
+                "A Materialized View can only reference up to two tables",
+                false
+            ],
+            "C": [
+                "A Materialized View cannot be joined with other tables",
+                false
+            ],
+            "D": [
+                "A Materialized View cannot be defined with a JOIN",
+                true
+            ]
+        },
+        "212": {
+            "A": [
+                "The user who created the object",
+                false
+            ],
+            "B": [
+                "The SYSADMIN role",
+                false
+            ],
+            "C": [
+                "Ownership depends on the type of object",
+                false
+            ],
+            "D": [
+                "The role used to create the object",
+                true
+            ]
+        },
+        "213": {
+            "A": [
+                "Standard",
+                false
+            ],
+            "B": [
+                "Enterprise",
+                true
+            ],
+            "C": [
+                "Business Critical",
+                false
+            ],
+            "D": [
+                "Virtual Private Snowflake (VPC)",
+                false
+            ]
+        },
+        "214": {
+            "A": [
+                "Compute resources",
+                false
+            ],
+            "B": [
+                "Query execution",
+                false
+            ],
+            "C": [
+                "Authentication",
+                true
+            ],
+            "D": [
+                "Data storage",
+                false
+            ],
+            "E": [
+                "Metadata",
+                true
+            ]
+        },
+        "215": {
+            "A": [
+                "Row access policies",
+                false
+            ],
+            "B": [
+                "Data masking policies",
+                true
+            ],
+            "C": [
+                "Data encryption",
+                false
+            ],
+            "D": [
+                "Role based access control",
+                false
+            ]
+        },
+        "216": {
+            "A": [
+                "view @my_stage",
+                false
+            ],
+            "B": [
+                "list @my_stage",
+                true
+            ],
+            "C": [
+                "show @my_stage",
+                false
+            ],
+            "D": [
+                "display @my_stage",
+                false
+            ]
+        },
+        "217": {
+            "A": [
+                "Management of metadata",
+                true
+            ],
+            "B": [
+                "Computing the data",
+                false
+            ],
+            "C": [
+                "Maintaining Availability Zones",
+                false
+            ],
+            "D": [
+                "Infrastructure security",
+                false
+            ],
+            "E": [
+                "Parsing and optimizing queries",
+                true
+            ]
         }
     },
     "images": {
@@ -2235,7 +4032,94 @@
         "127": false,
         "128": false,
         "129": false,
-        "130": false
+        "130": false,
+        "131": false,
+        "132": false,
+        "133": false,
+        "134": false,
+        "135": false,
+        "136": false,
+        "137": false,
+        "138": false,
+        "139": false,
+        "140": false,
+        "141": false,
+        "142": false,
+        "143": false,
+        "144": false,
+        "145": false,
+        "146": false,
+        "147": false,
+        "148": false,
+        "149": false,
+        "150": false,
+        "151": false,
+        "152": false,
+        "153": false,
+        "154": false,
+        "155": false,
+        "156": false,
+        "157": false,
+        "158": false,
+        "159": false,
+        "160": false,
+        "161": false,
+        "162": false,
+        "163": false,
+        "164": false,
+        "165": false,
+        "166": false,
+        "167": "quiz_data_devlop/images/snowflake_cof_c02/167.jpg",
+        "168": false,
+        "169": false,
+        "170": false,
+        "171": false,
+        "172": false,
+        "173": false,
+        "174": false,
+        "175": false,
+        "176": false,
+        "177": false,
+        "178": false,
+        "179": false,
+        "180": false,
+        "181": false,
+        "182": false,
+        "183": false,
+        "184": false,
+        "185": false,
+        "186": false,
+        "187": false,
+        "188": false,
+        "189": false,
+        "190": false,
+        "191": false,
+        "192": false,
+        "193": false,
+        "194": false,
+        "195": false,
+        "196": false,
+        "197": false,
+        "198": false,
+        "199": false,
+        "200": false,
+        "201": false,
+        "202": false,
+        "203": false,
+        "204": false,
+        "205": false,
+        "206": false,
+        "207": false,
+        "208": false,
+        "209": false,
+        "210": false,
+        "211": false,
+        "212": false,
+        "213": false,
+        "214": false,
+        "215": false,
+        "216": false,
+        "217": false
     },
     "multiple_choice": {
         "1": false,
@@ -2367,6 +4251,93 @@
         "127": false,
         "128": false,
         "129": false,
-        "130": false
+        "130": false,
+        "131": true,
+        "132": false,
+        "133": false,
+        "134": false,
+        "135": true,
+        "136": false,
+        "137": true,
+        "138": false,
+        "139": false,
+        "140": true,
+        "141": false,
+        "142": false,
+        "143": false,
+        "144": false,
+        "145": true,
+        "146": true,
+        "147": false,
+        "148": false,
+        "149": false,
+        "150": true,
+        "151": true,
+        "152": true,
+        "153": false,
+        "154": true,
+        "155": false,
+        "156": false,
+        "157": true,
+        "158": false,
+        "159": false,
+        "160": false,
+        "161": true,
+        "162": false,
+        "163": true,
+        "164": false,
+        "165": false,
+        "166": false,
+        "167": false,
+        "168": false,
+        "169": true,
+        "170": false,
+        "171": true,
+        "172": true,
+        "173": false,
+        "174": false,
+        "175": true,
+        "176": false,
+        "177": false,
+        "178": false,
+        "179": false,
+        "180": false,
+        "181": true,
+        "182": true,
+        "183": true,
+        "184": false,
+        "185": false,
+        "186": false,
+        "187": true,
+        "188": false,
+        "189": true,
+        "190": false,
+        "191": true,
+        "192": false,
+        "193": true,
+        "194": false,
+        "195": false,
+        "196": false,
+        "197": false,
+        "198": false,
+        "199": false,
+        "200": true,
+        "201": false,
+        "202": true,
+        "203": false,
+        "204": true,
+        "205": false,
+        "206": true,
+        "207": false,
+        "208": false,
+        "209": true,
+        "210": true,
+        "211": false,
+        "212": false,
+        "213": false,
+        "214": true,
+        "215": false,
+        "216": false,
+        "217": true
     }
 }
