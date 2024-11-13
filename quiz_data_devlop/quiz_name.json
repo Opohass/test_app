@@ -6,5 +6,6 @@
     "associate cloud engineer": "quiz_data_devlop/quiz_json/associate_cloud_engineer.json",
     "cloud architect": "quiz_data_devlop/quiz_json/cloud_architect.json",
     "professional cloud devops engineer": "quiz_data_devlop/quiz_json/professional cloud devops engineer.json",
-    "snowflake_cof_c02": "quiz_data_devlop/quiz_json/snowflake_cof_c02.json"
+    "snowflake_cof_c02": "quiz_data_devlop/quiz_json/snowflake_cof_c02.json",
+    "Devops": "quiz_data_devlop/quiz_json/Devops.json"
 }
